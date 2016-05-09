@@ -58,6 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201605091004355_Initial.cs" />
+    <Compile Include="Migrations\201605091004355_Initial.Designer.cs">
+      <DependentUpon>201605091004355_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +74,11 @@
       <Project>{62103D38-F322-40C4-B9F2-FA0473FC0D4D}</Project>
       <Name>KongOrange.Squares.DomainClasses</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605091004355_Initial.resx">
+      <DependentUpon>201605091004355_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
