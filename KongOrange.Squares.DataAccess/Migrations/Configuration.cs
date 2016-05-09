@@ -1,3 +1,7 @@
+using KongOrange.Squares.DomainClasses;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+
 namespace KongOrange.Squares.DataAccess.Migrations
 {
     using System;
@@ -14,18 +18,52 @@ namespace KongOrange.Squares.DataAccess.Migrations
 
         protected override void Seed(KongOrange.Squares.DataAccess.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            #region Users
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            var marty = new ApplicationUser()
+            {
+                UserName = "Admin",
+                Email = "admin@email.com",
+                EmailConfirmed = true
+            };
+
+            manager.Create(marty, "bobcat_01");
+            
+            var julie = new ApplicationUser()
+            {
+                UserName = "Julie",
+                Email = "julie@email.com",
+                EmailConfirmed = true
+            };
+
+            manager.Create(julie, "bobcat_01");
+
+            var peter = new ApplicationUser()
+            {
+                UserName = "Peter",
+                Email = "peter@email.com",
+                EmailConfirmed = true
+            };
+
+            manager.Create(peter, "bobcat_01");
+
+            if (roleManager.Roles.Count() == 0)
+            {
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
+
+            var admin = manager.FindByName("Admin");
+            var userJulie = manager.FindByName("Julie");
+            var userPeter = manager.FindByName("Peter");
+
+            manager.AddToRoles(admin.Id, new string[] { "Admin", "User" });
+            manager.AddToRoles(userJulie.Id, new string[] { "User" });
+            manager.AddToRoles(userPeter.Id, new string[] { "User" });
+
+            #endregion
         }
     }
 }
