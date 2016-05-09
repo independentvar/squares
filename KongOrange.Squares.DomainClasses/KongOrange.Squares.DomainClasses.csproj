@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SquareSet.cs" />
+    <Compile Include="SquareSetPiece.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
