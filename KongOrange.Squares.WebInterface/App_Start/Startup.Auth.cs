@@ -1,4 +1,6 @@
 ﻿using System;
+using KongOrange.Squares.DataAccess;
+using KongOrange.Squares.DomainClasses;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;

@@ -175,7 +175,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -256,6 +255,16 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KongOrange.Squares.DataAccess\KongOrange.Squares.DataAccess.csproj">
+      <Project>{8e0137d8-cd34-40af-bea1-7fa5d3a35b79}</Project>
+      <Name>KongOrange.Squares.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KongOrange.Squares.DomainClasses\KongOrange.Squares.DomainClasses.csproj">
+      <Project>{62103d38-f322-40c4-b9f2-fa0473fc0d4d}</Project>
+      <Name>KongOrange.Squares.DomainClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

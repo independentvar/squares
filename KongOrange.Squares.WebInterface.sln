@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KongOrange.Squares.WebInterface", "KongOrange.Squares.WebInterface\KongOrange.Squares.WebInterface.csproj", "{99AF4086-37A1-4070-BAC4-A30469559153}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KongOrange.Squares.DomainClasses", "KongOrange.Squares.DomainClasses\KongOrange.Squares.DomainClasses.csproj", "{62103D38-F322-40C4-B9F2-FA0473FC0D4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KongOrange.Squares.DataAccess", "KongOrange.Squares.DataAccess\KongOrange.Squares.DataAccess.csproj", "{8E0137D8-CD34-40AF-BEA1-7FA5D3A35B79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{99AF4086-37A1-4070-BAC4-A30469559153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99AF4086-37A1-4070-BAC4-A30469559153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99AF4086-37A1-4070-BAC4-A30469559153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62103D38-F322-40C4-B9F2-FA0473FC0D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62103D38-F322-40C4-B9F2-FA0473FC0D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62103D38-F322-40C4-B9F2-FA0473FC0D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62103D38-F322-40C4-B9F2-FA0473FC0D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0137D8-CD34-40AF-BEA1-7FA5D3A35B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0137D8-CD34-40AF-BEA1-7FA5D3A35B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0137D8-CD34-40AF-BEA1-7FA5D3A35B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0137D8-CD34-40AF-BEA1-7FA5D3A35B79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
