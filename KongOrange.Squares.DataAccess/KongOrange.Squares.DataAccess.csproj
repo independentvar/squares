@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201605091004355_Initial.Designer.cs">
       <DependentUpon>201605091004355_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605101111300_SquareSets.cs" />
+    <Compile Include="Migrations\201605101111300_SquareSets.Designer.cs">
+      <DependentUpon>201605101111300_SquareSets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201605091004355_Initial.resx">
       <DependentUpon>201605091004355_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605101111300_SquareSets.resx">
+      <DependentUpon>201605101111300_SquareSets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

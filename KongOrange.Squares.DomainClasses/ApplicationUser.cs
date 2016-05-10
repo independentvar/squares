@@ -19,5 +19,7 @@ namespace KongOrange.Squares.DomainClasses
             // Add custom user claims here
             return userIdentity;
         }
+
+        public ICollection<SquareSet> SquareSets { get; set; }
     }
 }
