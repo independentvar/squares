@@ -18,13 +18,13 @@ namespace KongOrange.Squares.DataAccess.Migrations
 
         protected override void Seed(KongOrange.Squares.DataAccess.ApplicationDbContext context)
         {
-            //SeedUsers();
+            SeedUsers(context);
         }
 
-        private static void SeedUsers()
+        private static void SeedUsers(ApplicationDbContext contex)
         {
-            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
-            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(contex));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(contex));
 
             var marty = new ApplicationUser()
             {
