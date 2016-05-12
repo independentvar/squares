@@ -70,6 +70,14 @@
     <Compile Include="Migrations\201605121134134_SquareSetsNavigationProperties.Designer.cs">
       <DependentUpon>201605121134134_SquareSetsNavigationProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605121203586_SquareSetsRequiredNavProperties.cs" />
+    <Compile Include="Migrations\201605121203586_SquareSetsRequiredNavProperties.Designer.cs">
+      <DependentUpon>201605121203586_SquareSetsRequiredNavProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605121240379_SquareSetPiecesRequiredProperties.cs" />
+    <Compile Include="Migrations\201605121240379_SquareSetPiecesRequiredProperties.Designer.cs">
+      <DependentUpon>201605121240379_SquareSetPiecesRequiredProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605121134134_SquareSetsNavigationProperties.resx">
       <DependentUpon>201605121134134_SquareSetsNavigationProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605121203586_SquareSetsRequiredNavProperties.resx">
+      <DependentUpon>201605121203586_SquareSetsRequiredNavProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605121240379_SquareSetPiecesRequiredProperties.resx">
+      <DependentUpon>201605121240379_SquareSetPiecesRequiredProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,5 +22,6 @@ namespace KongOrange.Squares.DataAccess
         }
 
         public DbSet<SquareSet> SquareSets { get; set; }
+        public DbSet<SquareSetPiece> SquareSetPieces { get; set; }
     }
 }
