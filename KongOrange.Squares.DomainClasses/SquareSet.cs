@@ -7,5 +7,6 @@ namespace KongOrange.Squares.DomainClasses
         public int Id { get; set; }
         public string Name { get; set; }
         public virtual ICollection<SquareSetPiece> Pieces { get; set; }
+        public virtual ApplicationUser User { get; set; }
     }
 }
