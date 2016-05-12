@@ -18,7 +18,11 @@ namespace KongOrange.Squares.DataAccess.Migrations
 
         protected override void Seed(KongOrange.Squares.DataAccess.ApplicationDbContext context)
         {
-            #region Users
+            //SeedUsers();
+        }
+
+        private static void SeedUsers()
+        {
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
 
@@ -30,7 +34,7 @@ namespace KongOrange.Squares.DataAccess.Migrations
             };
 
             manager.Create(marty, "bobcat_01");
-            
+
             var julie = new ApplicationUser()
             {
                 UserName = "Julie",
@@ -51,19 +55,17 @@ namespace KongOrange.Squares.DataAccess.Migrations
 
             if (roleManager.Roles.Count() == 0)
             {
-                roleManager.Create(new IdentityRole { Name = "Admin" });
-                roleManager.Create(new IdentityRole { Name = "User" });
+                roleManager.Create(new IdentityRole {Name = "Admin"});
+                roleManager.Create(new IdentityRole {Name = "User"});
             }
 
             var admin = manager.FindByName("Admin");
             var userJulie = manager.FindByName("Julie");
             var userPeter = manager.FindByName("Peter");
 
-            manager.AddToRoles(admin.Id, new string[] { "Admin", "User" });
-            manager.AddToRoles(userJulie.Id, new string[] { "User" });
-            manager.AddToRoles(userPeter.Id, new string[] { "User" });
-
-            #endregion
+            manager.AddToRoles(admin.Id, new string[] {"Admin", "User"});
+            manager.AddToRoles(userJulie.Id, new string[] {"User"});
+            manager.AddToRoles(userPeter.Id, new string[] {"User"});
         }
     }
 }
