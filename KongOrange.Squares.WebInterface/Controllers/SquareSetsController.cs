@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
@@ -14,6 +10,7 @@ using Microsoft.AspNet.Identity;
 
 namespace KongOrange.Squares.WebInterface.Controllers
 {
+    [Authorize]
     public class SquareSetsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -21,7 +18,8 @@ namespace KongOrange.Squares.WebInterface.Controllers
         // GET: SquareSets
         public async Task<ActionResult> Index()
         {
-            var squareSets = db.SquareSets.Include(s => s.User);
+            var userId = User.Identity.GetUserId();
+            var squareSets = db.SquareSets.Where(o => o.UserId == userId);
             return View(await squareSets.ToListAsync());
         }
 
@@ -89,16 +87,18 @@ namespace KongOrange.Squares.WebInterface.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Name,UserId")] SquareSet squareSet)
+        public async Task<ActionResult> Edit(EditSquareSetViewModel squareSetViewModel)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(squareSet).State = EntityState.Modified;
+                var squareSet = db.SquareSets.First(o => o.Id == squareSetViewModel.Id);
+                squareSet.Name = squareSetViewModel.Name;
+
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Email", squareSet.UserId);
-            return View(squareSet);
+
+            return RedirectToAction("Edit", new {id = squareSetViewModel.Id});
         }
 
         // GET: SquareSets/Delete/5
