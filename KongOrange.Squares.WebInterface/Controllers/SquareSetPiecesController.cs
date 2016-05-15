@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
@@ -9,17 +8,20 @@ using System.Web;
 using System.Web.Mvc;
 using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
+using KongOrange.Squares.WebInterface.Models;
 
 namespace KongOrange.Squares.WebInterface.Controllers
 {
     public class SquareSetPiecesController : Controller
     {
+        private const string UploadDir = "Content/Uploads";
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: SquareSetPieces
         public async Task<ActionResult> Index(int squareSetId)
         {
-            return View(await db.SquareSetPieces.Where(s => s.SquareSetId == squareSetId) .ToListAsync());
+            ViewBag.SquareSetId = squareSetId;
+            return View(await db.SquareSetPieces.Where(s => s.SquareSetId == squareSetId).ToListAsync());
         }
 
         // GET: SquareSetPieces/Details/5
@@ -38,8 +40,9 @@ namespace KongOrange.Squares.WebInterface.Controllers
         }
 
         // GET: SquareSetPieces/Create
-        public ActionResult Create()
+        public ActionResult Create(int squareSetId)
         {
+            ViewBag.SquareSetId = squareSetId;
             return View();
         }
 
@@ -48,16 +51,41 @@ namespace KongOrange.Squares.WebInterface.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Name,ImageUrl")] SquareSetPiece squareSetPiece)
+        public async Task<ActionResult> Create(CreateSquareSetPieceViewModel squareSetPieceViewModel)
         {
             if (ModelState.IsValid)
             {
+                var file = squareSetPieceViewModel.Image;
+                var fileName = SaveFile(file);
+
+                var squareSetPiece = new SquareSetPiece
+                {
+                    Name = squareSetPieceViewModel.Name,
+                    SquareSetId = squareSetPieceViewModel.SquareSetId,
+                    ImageUrl = UploadDir + "/" + fileName
+                };
+
                 db.SquareSetPieces.Add(squareSetPiece);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { squareSetId = squareSetPieceViewModel .SquareSetId });
             }
 
-            return View(squareSetPiece);
+            return View(squareSetPieceViewModel);
+        }
+
+        private string SaveFile(HttpPostedFileBase file)
+        {
+            if (file.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/" + UploadDir), fileName);
+                file.SaveAs(path);
+
+                return fileName;
+            }
+
+            // todo handle situactions when file saving fails
+            throw new NotImplementedException();
         }
 
         // GET: SquareSetPieces/Edit/5
@@ -92,7 +120,7 @@ namespace KongOrange.Squares.WebInterface.Controllers
         }
 
         // GET: SquareSetPieces/Delete/5
-        public async Task<ActionResult> Delete(int? id)
+        public async Task<ActionResult> Delete(int? id, int squareSetId)
         {
             if (id == null)
             {
@@ -103,18 +131,20 @@ namespace KongOrange.Squares.WebInterface.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.SquareSetId = squareSetId;
             return View(squareSetPiece);
         }
 
         // POST: SquareSetPieces/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(int id, int squareSetId)
         {
             SquareSetPiece squareSetPiece = await db.SquareSetPieces.FindAsync(id);
             db.SquareSetPieces.Remove(squareSetPiece);
             await db.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { squareSetId = squareSetId });
         }
 
         protected override void Dispose(bool disposing)

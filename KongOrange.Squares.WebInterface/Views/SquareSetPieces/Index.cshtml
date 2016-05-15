@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "SquareSetPieces", new { squareSetId = ViewBag.SquareSetId }, null)
 </p>
 <table class="table">
     <tr>
@@ -26,12 +26,13 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
+            <img src="@item.ImageUrl" alt="@item.Name" width="150" height="150" /> 
             @Html.DisplayFor(modelItem => item.ImageUrl)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Details", "Details", new { id=item.Id,  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id, squareSetId = ViewBag.SquareSetId })
         </td>
     </tr>
 }
