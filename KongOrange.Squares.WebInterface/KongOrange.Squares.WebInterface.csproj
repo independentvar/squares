@@ -272,6 +272,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KongOrange.Squares.Business\KongOrange.Squares.Business.csproj">
+      <Project>{d92bf4d2-12ff-4d77-a9e7-4c425f81568e}</Project>
+      <Name>KongOrange.Squares.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KongOrange.Squares.DataAccess\KongOrange.Squares.DataAccess.csproj">
       <Project>{8e0137d8-cd34-40af-bea1-7fa5d3a35b79}</Project>
       <Name>KongOrange.Squares.DataAccess</Name>

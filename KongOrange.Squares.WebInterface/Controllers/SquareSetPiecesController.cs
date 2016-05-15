@@ -1,20 +1,18 @@
-﻿using System;
-using System.Data.Entity;
-using System.IO;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
+using KongOrange.Squares.Business;
 using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
 using KongOrange.Squares.WebInterface.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KongOrange.Squares.WebInterface.Controllers
 {
     public class SquareSetPiecesController : Controller
     {
-        private const string UploadDir = "Content/Uploads";
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: SquareSetPieces
@@ -56,13 +54,14 @@ namespace KongOrange.Squares.WebInterface.Controllers
             if (ModelState.IsValid)
             {
                 var file = squareSetPieceViewModel.Image;
-                var fileName = SaveFile(file);
+                var storage = new StorageFacade();
+                var url = storage.Store(file.FileName, file.InputStream, User.Identity.GetUserId());
 
                 var squareSetPiece = new SquareSetPiece
                 {
                     Name = squareSetPieceViewModel.Name,
                     SquareSetId = squareSetPieceViewModel.SquareSetId,
-                    ImageUrl = UploadDir + "/" + fileName
+                    ImageUrl = url
                 };
 
                 db.SquareSetPieces.Add(squareSetPiece);
@@ -71,21 +70,6 @@ namespace KongOrange.Squares.WebInterface.Controllers
             }
 
             return View(squareSetPieceViewModel);
-        }
-
-        private string SaveFile(HttpPostedFileBase file)
-        {
-            if (file.ContentLength > 0)
-            {
-                var fileName = Path.GetFileName(file.FileName);
-                var path = Path.Combine(Server.MapPath("~/" + UploadDir), fileName);
-                file.SaveAs(path);
-
-                return fileName;
-            }
-
-            // todo handle situactions when file saving fails
-            throw new NotImplementedException();
         }
 
         // GET: SquareSetPieces/Edit/5
