@@ -59,14 +59,13 @@ namespace KongOrange.Squares.WebInterface.Controllers
 
                 var squareSetPiece = new SquareSetPiece
                 {
-                    Name = squareSetPieceViewModel.Name,
                     SquareSetId = squareSetPieceViewModel.SquareSetId,
                     ImageUrl = url
                 };
 
                 db.SquareSetPieces.Add(squareSetPiece);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index", new { squareSetId = squareSetPieceViewModel .SquareSetId });
+                return RedirectToAction("Edit", "SquareSets", new { id = squareSetPieceViewModel.SquareSetId });
             }
 
             return View(squareSetPieceViewModel);

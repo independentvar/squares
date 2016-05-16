@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201605121240379_SquareSetPiecesRequiredProperties.Designer.cs">
       <DependentUpon>201605121240379_SquareSetPiecesRequiredProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605161149543_SquareSetPieceNameRemoved.cs" />
+    <Compile Include="Migrations\201605161149543_SquareSetPieceNameRemoved.Designer.cs">
+      <DependentUpon>201605161149543_SquareSetPieceNameRemoved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605121240379_SquareSetPiecesRequiredProperties.resx">
       <DependentUpon>201605121240379_SquareSetPiecesRequiredProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605161149543_SquareSetPieceNameRemoved.resx">
+      <DependentUpon>201605161149543_SquareSetPieceNameRemoved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

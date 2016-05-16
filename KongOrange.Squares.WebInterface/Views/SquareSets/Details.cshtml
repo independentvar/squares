@@ -19,6 +19,17 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Pieces)
+        </dt>
+
+        <dd>
+            @foreach (var piece in Model.Pieces)
+            {
+                <img src="@piece.ImageUrl" alt="" width="150" height="150" />
+            }
+        </dd>
+
     </dl>
 </div>
 <p>

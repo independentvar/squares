@@ -6,9 +6,6 @@ namespace KongOrange.Squares.DomainClasses
     {
         public int Id { get; set; }
 
-        [StringLength(255, MinimumLength = 3, ErrorMessage = "Name is either too short or too long")]
-        public string Name { get; set; }
-
         [Required]
         public string ImageUrl { get; set; }
 

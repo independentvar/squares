@@ -19,7 +19,7 @@ namespace KongOrange.Squares.WebInterface.Controllers
         public async Task<ActionResult> Index()
         {
             var userId = User.Identity.GetUserId();
-            var squareSets = db.SquareSets.Where(o => o.UserId == userId);
+            var squareSets = db.SquareSets.Where(o => o.UserId == userId).Include(o => o.Pieces);
             return View(await squareSets.ToListAsync());
         }
 
