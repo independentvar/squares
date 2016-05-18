@@ -276,7 +276,6 @@
     <Content Include="Views\SquareSetPieces\Delete.cshtml" />
     <Content Include="Views\SquareSetPieces\Details.cshtml" />
     <Content Include="Views\SquareSetPieces\Edit.cshtml" />
-    <Content Include="Views\SquareSetPieces\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -16,7 +16,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ImageUrl)
+            <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="piece" width="300" height="300"/>
         </dd>
 
     </dl>
@@ -31,7 +31,8 @@
             }
 
             <input type="submit" value="Delete" class="btn btn-default"/> |
-            @Html.ActionLink("Back to List", "Index")
+            
+            @Html.ActionLink("Back to List", (string)ViewBag.Action, (string)ViewBag.Controller, new { id = (int)ViewBag.RouteId }, null)
         </div>
     }
 </div>

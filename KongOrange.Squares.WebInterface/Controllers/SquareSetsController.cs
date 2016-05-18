@@ -42,7 +42,6 @@ namespace KongOrange.Squares.WebInterface.Controllers
         // GET: SquareSets/Create
         public ActionResult Create()
         {
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Email");
             return View();
         }
 
@@ -60,30 +59,35 @@ namespace KongOrange.Squares.WebInterface.Controllers
             if (ModelState.IsValid)
             {
                 db.SquareSets.Add(squareSet);
-                if (squareSetViewModel.Images != null && squareSetViewModel.Images.Any())
-                {
-                    var storage = new StorageFacade();
-                    foreach (var image in squareSetViewModel.Images)
-                    {
-                        if (image.ContentLength > 0)
-                        {
-                            var url = storage.Store(image.FileName, image.InputStream, User.Identity.GetUserId());
-                            var squareSetPiece = new SquareSetPiece
-                            {
-                                SquareSetId = squareSetViewModel.Id,
-                                ImageUrl = url
-                            };
-
-                            db.SquareSetPieces.Add(squareSetPiece);
-                        }
-                    }
-                }
+                UploadImages(squareSetViewModel);
 
                 await db.SaveChangesAsync();
                 return RedirectToAction("Details", new { id = squareSet.Id });
             }
 
             return View(squareSet);
+        }
+
+        private void UploadImages(ISquareSetViewModel squareSetViewModel)
+        {
+            if (squareSetViewModel.Images != null && squareSetViewModel.Images.Any())
+            {
+                var storage = new StorageFacade();
+                foreach (var image in squareSetViewModel.Images)
+                {
+                    if (image != null && image.ContentLength > 0)
+                    {
+                        var url = storage.Store(image.FileName, image.InputStream, User.Identity.GetUserId());
+                        var squareSetPiece = new SquareSetPiece
+                        {
+                            SquareSetId = squareSetViewModel.Id,
+                            ImageUrl = url
+                        };
+
+                        db.SquareSetPieces.Add(squareSetPiece);
+                    }
+                }
+            }
         }
 
         // GET: SquareSets/Edit/5
@@ -93,31 +97,46 @@ namespace KongOrange.Squares.WebInterface.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             SquareSet squareSet = await db.SquareSets.FindAsync(id);
             if (squareSet == null)
             {
                 return HttpNotFound();
             }
 
-            return View(squareSet);
+            var squareSetViewModel = new EditSquareSetViewModel
+            {
+                Id = squareSet.Id,
+                Name = squareSet.Name,
+                CurrentPieces = squareSet.Pieces
+            };
+
+            return View(squareSetViewModel);
         }
 
         // POST: SquareSets/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(EditSquareSetViewModel squareSetViewModel)
+        public async Task<ActionResult> Edit([Bind(Exclude = "CurrentPieces")]EditSquareSetViewModel squareSetViewModel)
         {
-            if (ModelState.IsValid)
+            if (squareSetViewModel.Id == 0)
             {
-                var squareSet = db.SquareSets.First(o => o.Id == squareSetViewModel.Id);
-                squareSet.Name = squareSetViewModel.Name;
-
-                await db.SaveChangesAsync();
+                return View(squareSetViewModel);
             }
 
-            return RedirectToAction("Edit", new {id = squareSetViewModel.Id});
+            SquareSet squareSet = db.SquareSets.First(o => o.Id == squareSetViewModel.Id);
+            squareSetViewModel.CurrentPieces = squareSet.Pieces;
+
+            if (ModelState.IsValid)
+            {
+                squareSet.Name = squareSetViewModel.Name;
+                UploadImages(squareSetViewModel);
+
+                await db.SaveChangesAsync();
+                return RedirectToAction("Details", new {id = squareSet.Id});
+            }
+
+            return View(squareSetViewModel);
         }
 
         // GET: SquareSets/Delete/5

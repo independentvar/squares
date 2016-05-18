@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using System.Linq;
+using System.Dynamic;
 using System.Threading.Tasks;
 using System.Net;
 using System.Web.Mvc;
@@ -8,19 +8,14 @@ using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
 using KongOrange.Squares.WebInterface.Models;
 using Microsoft.AspNet.Identity;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace KongOrange.Squares.WebInterface.Controllers
 {
     public class SquareSetPiecesController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: SquareSetPieces
-        public async Task<ActionResult> Index(int squareSetId)
-        {
-            ViewBag.SquareSetId = squareSetId;
-            return View(await db.SquareSetPieces.Where(s => s.SquareSetId == squareSetId).ToListAsync());
-        }
+        private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: SquareSetPieces/Details/5
         public async Task<ActionResult> Details(int? id)
@@ -29,11 +24,13 @@ namespace KongOrange.Squares.WebInterface.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SquareSetPiece squareSetPiece = await db.SquareSetPieces.FindAsync(id);
+
+            SquareSetPiece squareSetPiece = await _db.SquareSetPieces.FindAsync(id);
             if (squareSetPiece == null)
             {
                 return HttpNotFound();
             }
+
             return View(squareSetPiece);
         }
 
@@ -45,8 +42,6 @@ namespace KongOrange.Squares.WebInterface.Controllers
         }
 
         // POST: SquareSetPieces/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(CreateSquareSetPieceViewModel squareSetPieceViewModel)
@@ -63,10 +58,10 @@ namespace KongOrange.Squares.WebInterface.Controllers
                         ImageUrl = url
                     };
 
-                    db.SquareSetPieces.Add(squareSetPiece);
+                    _db.SquareSetPieces.Add(squareSetPiece);
                 }
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Edit", "SquareSets", new { id = squareSetPieceViewModel.SquareSetId });
             }
 
@@ -80,44 +75,71 @@ namespace KongOrange.Squares.WebInterface.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SquareSetPiece squareSetPiece = await db.SquareSetPieces.FindAsync(id);
+
+            SquareSetPiece squareSetPiece = await _db.SquareSetPieces.FindAsync(id);
             if (squareSetPiece == null)
             {
                 return HttpNotFound();
             }
-            return View(squareSetPiece);
+
+            var squareSetPieceViewModel = new EditSquareSetPieceViewModel
+            {
+                Id = squareSetPiece.Id,
+                CurrentImageUrl = squareSetPiece.ImageUrl,
+                SquareSetId = squareSetPiece.SquareSetId
+            };
+
+            return View(squareSetPieceViewModel);
         }
 
         // POST: SquareSetPieces/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Name,ImageUrl")] SquareSetPiece squareSetPiece)
+        public async Task<ActionResult> Edit(EditSquareSetPieceViewModel squareSetPieceViewModel)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(squareSetPiece).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                // upload the new image
+                var storage = new StorageFacade();
+                var image = squareSetPieceViewModel.UpdatedImage;
+                var url = storage.Store(image.FileName, image.InputStream, User.Identity.GetUserId());
+
+                // update the db
+                var setPiece = await _db.SquareSetPieces.FirstAsync(o => o.Id == squareSetPieceViewModel.Id);
+                setPiece.ImageUrl = url;
+
+                await _db.SaveChangesAsync();
+                return RedirectToAction("Details", new { id = squareSetPieceViewModel.Id });
             }
-            return View(squareSetPiece);
+
+            return View(squareSetPieceViewModel);
         }
 
         // GET: SquareSetPieces/Delete/5
-        public async Task<ActionResult> Delete(int? id, int squareSetId)
+        public async Task<ActionResult> Delete(
+            int? id,
+            int squareSetId,
+            int backToRouteId,
+            string backToAction = "Details", 
+            string backToController = "SquareSetPieces"
+            )
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SquareSetPiece squareSetPiece = await db.SquareSetPieces.FindAsync(id);
+
+            SquareSetPiece squareSetPiece = await _db.SquareSetPieces.FindAsync(id);
             if (squareSetPiece == null)
             {
                 return HttpNotFound();
             }
 
+            ViewBag.Action = backToAction;
+            ViewBag.Controller = backToController;
+            ViewBag.RouteId = backToRouteId;
             ViewBag.SquareSetId = squareSetId;
+
             return View(squareSetPiece);
         }
 
@@ -126,17 +148,17 @@ namespace KongOrange.Squares.WebInterface.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id, int squareSetId)
         {
-            SquareSetPiece squareSetPiece = await db.SquareSetPieces.FindAsync(id);
-            db.SquareSetPieces.Remove(squareSetPiece);
-            await db.SaveChangesAsync();
-            return RedirectToAction("Index", new { squareSetId = squareSetId });
+            SquareSetPiece squareSetPiece = await _db.SquareSetPieces.FindAsync(id);
+            _db.SquareSetPieces.Remove(squareSetPiece);
+            await _db.SaveChangesAsync();
+            return RedirectToAction("Details", "SquareSets", new { Id = squareSetId });
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

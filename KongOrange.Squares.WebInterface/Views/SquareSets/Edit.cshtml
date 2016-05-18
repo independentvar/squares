@@ -1,11 +1,10 @@
-﻿@model KongOrange.Squares.DomainClasses.SquareSet
+﻿@model KongOrange.Squares.WebInterface.Models.EditSquareSetViewModel
 
 @{
     ViewBag.Title = "Edit";
 }
 
 <h2>Edit</h2>
-
 
 @using (Html.BeginForm("Edit", "SquareSets", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -26,19 +25,19 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Pieces, htmlAttributes: new {@class = "control-label col-md-2"})
+            @Html.LabelFor(model => model.CurrentPieces, htmlAttributes: new {@class = "control-label col-md-2"})
             <div class="col-md-10">
-                @foreach (var piece in Model.Pieces)
+                @foreach (var piece in Model.CurrentPieces)
                 {
-                    <img src="@piece.ImageUrl" alt="" width="150" height="150"/>
+                    <a href="@Url.Action("Edit", "SquareSetPieces", new {id = piece.Id})"><img src="@piece.ImageUrl" alt="" width="150" height="150" /></a>
                 }
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2">Image</label>
+            @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="Image" class="form-control" multiple />
+                <input type="file" name="images" class="form-control" multiple />
             </div>
         </div>
 

@@ -29,7 +29,7 @@
         <td>
             @foreach (var piece in item.Pieces)
             {
-                <img src="@piece.ImageUrl" alt="" width="150" height="150"/>
+                <a href="@Url.Action("Details", "SquareSetPieces", new {id = piece.Id})"><img src="@piece.ImageUrl" alt="" width="150" height="150" /></a>
             }
         </td>
         <td>
