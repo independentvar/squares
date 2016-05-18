@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
 using System.Web.Mvc;
+using KongOrange.Squares.Business;
 using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
 using KongOrange.Squares.WebInterface.Models;
@@ -48,7 +49,7 @@ namespace KongOrange.Squares.WebInterface.Controllers
         // POST: SquareSets/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(CreateSquareSetViewModel squareSetViewModel)
+        public async Task<ActionResult> Create(SquareSetViewModel squareSetViewModel)
         {
             var squareSet = new SquareSet
             {
@@ -59,8 +60,27 @@ namespace KongOrange.Squares.WebInterface.Controllers
             if (ModelState.IsValid)
             {
                 db.SquareSets.Add(squareSet);
+                if (squareSetViewModel.Images != null && squareSetViewModel.Images.Any())
+                {
+                    var storage = new StorageFacade();
+                    foreach (var image in squareSetViewModel.Images)
+                    {
+                        if (image.ContentLength > 0)
+                        {
+                            var url = storage.Store(image.FileName, image.InputStream, User.Identity.GetUserId());
+                            var squareSetPiece = new SquareSetPiece
+                            {
+                                SquareSetId = squareSetViewModel.Id,
+                                ImageUrl = url
+                            };
+
+                            db.SquareSetPieces.Add(squareSetPiece);
+                        }
+                    }
+                }
+
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = squareSet.Id });
             }
 
             return View(squareSet);
@@ -78,7 +98,7 @@ namespace KongOrange.Squares.WebInterface.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Email", squareSet.UserId);
+
             return View(squareSet);
         }
 
@@ -95,7 +115,6 @@ namespace KongOrange.Squares.WebInterface.Controllers
                 squareSet.Name = squareSetViewModel.Name;
 
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
             }
 
             return RedirectToAction("Edit", new {id = squareSetViewModel.Id});

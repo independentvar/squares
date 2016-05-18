@@ -53,17 +53,19 @@ namespace KongOrange.Squares.WebInterface.Controllers
         {
             if (ModelState.IsValid)
             {
-                var file = squareSetPieceViewModel.Image;
                 var storage = new StorageFacade();
-                var url = storage.Store(file.FileName, file.InputStream, User.Identity.GetUserId());
-
-                var squareSetPiece = new SquareSetPiece
+                foreach (var image in squareSetPieceViewModel.Images)
                 {
-                    SquareSetId = squareSetPieceViewModel.SquareSetId,
-                    ImageUrl = url
-                };
+                    var url = storage.Store(image.FileName, image.InputStream, User.Identity.GetUserId());
+                    var squareSetPiece = new SquareSetPiece
+                    {
+                        SquareSetId = squareSetPieceViewModel.SquareSetId,
+                        ImageUrl = url
+                    };
 
-                db.SquareSetPieces.Add(squareSetPiece);
+                    db.SquareSetPieces.Add(squareSetPiece);
+                }
+
                 await db.SaveChangesAsync();
                 return RedirectToAction("Edit", "SquareSets", new { id = squareSetPieceViewModel.SquareSetId });
             }
