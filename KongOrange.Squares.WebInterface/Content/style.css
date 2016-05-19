@@ -40,9 +40,9 @@ header nav ul{
 	right: -193px;
 	transition: right 300ms ease-in-out;
 	border-left: 13px solid transparent;
-	-webkit-border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch;
+	-webkit-border-image: url(../Content/Images/menuBorderMobile.png) 0 0 0 13 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/menuBorderMobile.png) 0 0 0 13 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/menuBorderMobile.png) 0 0 0 13 stretch;
 }
 
 nav ul li{
@@ -114,7 +114,7 @@ nav button{
 	text-align: center;
 	width: 100%;
 	padding: 30px;
-	background-image: url(../images/loginBackground.png);
+	background-image: url(../Content/Images/loginBackground.png);
 	background-size: 100% 100%;
 }
 
@@ -126,7 +126,7 @@ nav button{
 	height: 70px;
 	background-color: transparent;
 	border: none;
-	background-image: url(../images/facebook.png);
+	background-image: url(../Content/Images/facebook.png);
 	background-size: 100% 100%;
 	margin: 15px 0;
 	cursor: pointer;
@@ -151,9 +151,9 @@ nav button{
 	height: 15px;
 	border: 20px solid transparent;
 	margin: 0 0 0 -15px;
-    -webkit-border-image: url(../images/inputBorder.png) 40 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/inputBorder.png) 40 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/inputBorder.png) 40 stretch;
+    -webkit-border-image: url(../Content/Images/inputBorder.png) 40 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/inputBorder.png) 40 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/inputBorder.png) 40 stretch;
 }
 
 .loginDiv input[type=submit]{
@@ -166,7 +166,7 @@ nav button{
 #login div{
 	width: 100%;
 	height: 50px;
-	background-image: url(../images/loginButtonsBackground.png);
+	background-image: url(../Content/Images/loginButtonsBackground.png);
 	background-size: 100% 100%;
 }
 #login div button{
@@ -185,7 +185,7 @@ nav button{
 	margin: 0 auto;
 	width: 120px;
 	height: 120px;
-	background-image: url(../images/userIcon.png);
+	background-image: url(../Content/Images/userIcon.png);
 	background-size: 100% 100%;
 }
 
@@ -217,7 +217,7 @@ footer{
 	left: -3.75%;
 	top: -3.75%;
 	z-index: 1;
-	background-image: url(../images/gridBorder.png);
+	background-image: url(../Content/Images/gridBorder.png);
 	background-size: 100% 100%;
 	transition: all 100ms linear;
 }
@@ -227,7 +227,7 @@ footer{
 	height: 100%;
 	z-index: 2;
 	position: absolute;
-	background-image: url(../images/grid4.png);
+	background-image: url(../Content/Images/grid4.png);
 	background-size: 100% 100%;
 }
 
@@ -252,7 +252,7 @@ footer{
 	margin-top: -25%;
 	margin-left: 16%;
 	z-index: 5;
-	background-image: url(../images/rotate.png);
+	background-image: url(../Content/Images/rotate.png);
 	background-size: 100% 100%;
 	cursor: pointer;
 }
@@ -268,7 +268,7 @@ footer{
 #tl{
 	top: -10px;
 	left: -10px; 
-	background-image: url(../images/button_tl.png);
+	background-image: url(../Content/Images/button_tl.png);
 	background-size: 100% 100%;
 }
   
@@ -277,7 +277,7 @@ footer{
 	top: -10px;
 	left: 260px;
 	left: calc(100% - 20px);
-	background-image: url(../images/button_tr.png);
+	background-image: url(../Content/Images/button_tr.png);
 	background-size: 100% 100%; 
 }
 
@@ -285,7 +285,7 @@ footer{
 	top: 260px;
 	top: calc(100% - 20px);
 	left: -10px;
-	background-image: url(../images/button_bl.png);
+	background-image: url(../Content/Images/button_bl.png);
 	background-size: 100% 100%;
 }
 
@@ -294,7 +294,7 @@ footer{
 	top: calc(100% - 20px);
 	left: 260px;
 	left: calc(100% - 20px);
-	background-image: url(../images/button_br.png);
+	background-image: url(../Content/Images/button_br.png);
 	background-size: 100% 100%;
 }
 
@@ -315,9 +315,9 @@ footer{
 	position: absolute;
 	left: 110%;	
 	border: 4px solid transparent;
-    -webkit-border-image: url(../images/pieceBorder.png) 8 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/pieceBorder.png) 30 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/pieceBorder.png) 8 stretch;
+    -webkit-border-image: url(../Content/Images/pieceBorder.png) 8 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/pieceBorder.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/pieceBorder.png) 8 stretch;
 }
 
 .pieces{
@@ -345,9 +345,9 @@ footer{
 	display: inline-block;
 	margin: 10px 3%;
 	border: 12px solid transparent;
-    -webkit-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorder.png) 20 stretch;
+    -webkit-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch;
 }
 
 #browseSection #popularImagesContainer img:nth-child(3){
@@ -458,9 +458,9 @@ footer{
 	width: 100px;
 	height: 100px;
 	border: 10px solid transparent;
-	-webkit-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorder.png) 20 stretch;
+	-webkit-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch;
 }
 
 .browse #browseShowMore{
@@ -487,9 +487,9 @@ footer{
 	padding: 15px;
 	margin: 20px auto;
 	border: 10px solid transparent;
-	-webkit-border-image: url(../images/profileUploadBorderMobile.png) 3% stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/profileUploadBorderMobile.png) 10% stretch; /* Opera 11-12.1 */
-    border-image: url(../images/profileUploadBorderMobile.png) 10 round;
+	-webkit-border-image: url(../Content/Images/profileUploadBorderMobile.png) 3% stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/profileUploadBorderMobile.png) 10% stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/profileUploadBorderMobile.png) 10 round;
 	
 }
 #profileMain div p{
@@ -523,9 +523,9 @@ footer{
 	display: inline-block;
 	margin: 10px 10px;
 	border: 4px solid transparent;
-	-webkit-border-image: url(../images/profileSetBorderMobile.png) 10% stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/profileSetBorderMobile.png) 10% stretch; /* Opera 11-12.1 */
-    border-image: url(../images/profileSetBorderMobile.png) 10% stretch;
+	-webkit-border-image: url(../Content/Images/profileSetBorderMobile.png) 10% stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/profileSetBorderMobile.png) 10% stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/profileSetBorderMobile.png) 10% stretch;
 }
 
 .setPiece img{
@@ -627,7 +627,7 @@ footer{
 #tl{
 	top: -10px;
 	left: -10px; 
-	background-image: url(../images/button_tl.png);
+	background-image: url(../Content/Images/button_tl.png);
 	background-size: 100% 100%;
 }
   
@@ -636,7 +636,7 @@ footer{
 	top: -10px;
 	left: 380px;
 	left: calc(100% - 20px);
-	background-image: url(../images/button_tr.png);
+	background-image: url(../Content/Images/button_tr.png);
 	background-size: 100% 100%; 
 }
 
@@ -644,7 +644,7 @@ footer{
 	top: 380px;
 	top: calc(100% - 20px);
 	left: -10px;
-	background-image: url(../images/button_bl.png);
+	background-image: url(../Content/Images/button_bl.png);
 	background-size: 100% 100%;
 }
 
@@ -653,7 +653,7 @@ footer{
 	top: calc(100% - 20px);
 	left: 380px;
 	left: calc(100% - 20px);
-	background-image: url(../images/button_br.png);
+	background-image: url(../Content/Images/button_br.png);
 	background-size: 100% 100%;
 }
 
@@ -666,9 +666,9 @@ footer{
 	height: 120px;
 	left: 105%;	
 	border: 8px solid transparent;
-    -webkit-border-image: url(../images/pieceBorder.png) 8 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/pieceBorder.png) 8 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/pieceBorder.png) 12 stretch;
+    -webkit-border-image: url(../Content/Images/pieceBorder.png) 8 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/pieceBorder.png) 8 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/pieceBorder.png) 12 stretch;
 }
 
 .resizeButton{
@@ -682,16 +682,16 @@ footer{
 	width: 160px;
 	margin: 20px 5%;
 	border: 12px solid transparent;
-    -webkit-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorder.png) 20 stretch;
+    -webkit-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch;
 }
 
 #browseSection #browseArrow{
 	float: right;
 }
 #browseSection #browseArrow:hover{
-	background-image: url(../images/browseArrowBold.png);
+	background-image: url(../Content/Images/browseArrowBold.png);
 }
 
 /*Profile*/
@@ -718,9 +718,9 @@ footer{
 	display: inline-block;
 	margin: 20px 25px;
 	border: 4px solid transparent;
-	-webkit-border-image: url(../images/profileSetBorderMobile.png) 10% stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/profileSetBorderMobile.png) 10% stretch; /* Opera 11-12.1 */
-    border-image: url(../images/profileSetBorderMobile.png) 10% stretch;
+	-webkit-border-image: url(../Content/Images/profileSetBorderMobile.png) 10% stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/profileSetBorderMobile.png) 10% stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/profileSetBorderMobile.png) 10% stretch;
 }
 
 /*BROWSE*/
@@ -871,9 +871,9 @@ nav ul #profileMenu{
 	border-left: 8px solid transparent;
 	border-bottom: 8px solid transparent;
 	border-right: 8px solid transparent;
-	-webkit-border-image: url(../images/menuBorder.png) 8 round; /* Safari 3.1-5 */
-    -o-border-image: url(../images/menuBorder.png) 8 round; /* Opera 11-12.1 */
-    border-image: url(../images/menuBorder.png) 8 round;
+	-webkit-border-image: url(../Content/Images/menuBorder.png) 8 round; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/menuBorder.png) 8 round; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/menuBorder.png) 8 round;
 	font-size: 0.8em; 
 }
 
@@ -936,7 +936,7 @@ nav ul #profileMenu:hover ul{
 	text-align: center;
 	width: 450px;
 	padding: 30px;
-	background-image: url(../images/loginBackground.png);
+	background-image: url(../Content/Images/loginBackground.png);
 	background-size: 100% 100%;
 }
 
@@ -950,7 +950,7 @@ nav ul #profileMenu:hover ul{
 	height: 140px;
 	background-color: transparent;
 	border: none;
-	background-image: url(../images/facebook.png);
+	background-image: url(../Content/Images/facebook.png);
 	background-size: 100% 100%;
 	margin: 15px 0;
 	cursor: pointer;
@@ -975,9 +975,9 @@ nav ul #profileMenu:hover ul{
 	height: 15px;
 	border: 20px solid transparent;
 	margin: 0 0 0 -15px;
-    -webkit-border-image: url(../images/inputBorder.png) 40 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/inputBorder.png) 40 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/inputBorder.png) 40 stretch;
+    -webkit-border-image: url(../Content/Images/inputBorder.png) 40 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/inputBorder.png) 40 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/inputBorder.png) 40 stretch;
 }
 
 .loginDiv input[type=submit]{
@@ -990,7 +990,7 @@ nav ul #profileMenu:hover ul{
 #login div{
 	width: 100%;
 	height: 50px;
-	background-image: url(../images/loginButtonsBackground.png);
+	background-image: url(../Content/Images/loginButtonsBackground.png);
 	background-size: 100% 100%;
 }
 #login div button{
@@ -1009,7 +1009,7 @@ nav ul #profileMenu:hover ul{
 	margin: 0 auto;
 	width: 120px;
 	height: 120px;
-	background-image: url(../images/userIcon.png);
+	background-image: url(../Content/Images/userIcon.png);
 	background-size: 100% 100%;
 }
 
@@ -1058,7 +1058,7 @@ footer img{
 	margin-top: -25%;
 	margin-left: 21%;
 	display: none;
-	background-image: url(../images/rotate.png);
+	background-image: url(../Content/Images/rotate.png);
 }
 .pieceWrapper:hover .rotationButton{
 	display: block;
@@ -1074,7 +1074,7 @@ footer img{
 #tl{
 	top: -10px;
 	left: -10px; 
-	background-image: url(../images/button_tl.png);
+	background-image: url(../Content/Images/button_tl.png);
 	background-size: 100% 100%;
 }
   
@@ -1083,7 +1083,7 @@ footer img{
 	top: -10px;
 	left: 380px;
 	left: calc(100% - 20px);
-	background-image: url(../images/button_tr.png);
+	background-image: url(../Content/Images/button_tr.png);
 	background-size: 100% 100%; 
 }
 
@@ -1091,7 +1091,7 @@ footer img{
 	top: 380px;
 	top: calc(100% - 20px);
 	left: -10px;
-	background-image: url(../images/button_bl.png);
+	background-image: url(../Content/Images/button_bl.png);
 	background-size: 100% 100%;
 }
 
@@ -1100,7 +1100,7 @@ footer img{
 	top: calc(100% - 20px);
 	left: 380px;
 	left: calc(100% - 20px);
-	background-image: url(../images/button_br.png);
+	background-image: url(../Content/Images/button_br.png);
 	background-size: 100% 100%;
 }
 
@@ -1108,7 +1108,7 @@ footer img{
 	display: block;
 	width: 80px;
 	height: 59px;
-	background-image: url(../images/playButton.png);
+	background-image: url(../Content/Images/playButton.png);
 	background-size: 100% 100%;
 	background-color: transparent;
 	border: none;
@@ -1124,9 +1124,9 @@ footer img{
 #piecesContainer .pieces{
 	left: 105%;	
 	border: 8px solid transparent;
-    -webkit-border-image: url(../images/pieceBorder.png) 8 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/pieceBorder.png) 8 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/pieceBorder.png) 12 stretch;
+    -webkit-border-image: url(../Content/Images/pieceBorder.png) 8 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/pieceBorder.png) 8 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/pieceBorder.png) 12 stretch;
 }
 
 .pieces{
@@ -1147,15 +1147,15 @@ footer img{
 	display: inline-block;
 	margin: 20px 20px 40px 20px;
 	border: 15px solid transparent;
-    -webkit-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorder.png) 20 stretch;
+    -webkit-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch;
 }
 
 #browseSection #popularImagesContainer img:hover{
-	-webkit-border-image: url(../images/MainGalleryBorderBold.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorderBold.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorderBold.png) 20 stretch;
+	-webkit-border-image: url(../Content/Images/MainGalleryBorderBold.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorderBold.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorderBold.png) 20 stretch;
 }
 
 #browseSection #popularImagesContainer img:nth-child(3){
@@ -1192,7 +1192,7 @@ footer img{
     width: 200px;
     height: 200px;
     line-height: 200px;
-	background-image: url(../images/h1Border.png);
+	background-image: url(../Content/Images/h1Border.png);
 	background-size: 100% 100%;
 }
 #aboutSection article{
@@ -1201,9 +1201,9 @@ footer img{
 	border: 15px solid transparent;
 	padding: 5px;
 	
-    -webkit-border-image: url(../images/gridBorder.png) 30 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/gridBorder.png) 30 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/gridBorder.png) 30 round;
+    -webkit-border-image: url(../Content/Images/gridBorder.png) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/gridBorder.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/gridBorder.png) 30 round;
 	background-color: white;
 }
 #aboutSection article:nth-child(2){
@@ -1328,15 +1328,15 @@ footer img{
 	width: 260px;
 	height: 260px;
 	border: 15px solid transparent;
-	-webkit-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorder.png) 20 stretch;
+	-webkit-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorder.png) 20 stretch;
 }
 
 .browse article img:hover{
-	-webkit-border-image: url(../images/MainGalleryBorderBold.png) 20 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/MainGalleryBorderBold.png) 20 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/MainGalleryBorderBold.png) 20 stretch;
+	-webkit-border-image: url(../Content/Images/MainGalleryBorderBold.png) 20 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../Content/Images/MainGalleryBorderBold.png) 20 stretch; /* Opera 11-12.1 */
+    border-image: url(../Content/Images/MainGalleryBorderBold.png) 20 stretch;
 }
 }
 @media only screen and (min-width: 1920px){
