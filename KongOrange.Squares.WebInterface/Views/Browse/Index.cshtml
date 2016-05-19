@@ -1,0 +1,28 @@
+﻿@model IEnumerable<KongOrange.Squares.DomainClasses.SquareSet>
+
+@{
+    ViewBag.Title = "Browse square sets and creations";
+}
+
+<section id="browseSets" class="browse">
+    <h1>Artists Sets</h1>
+
+    @foreach (var set in Model)
+    {
+        var piece = set.Pieces.FirstOrDefault();
+        if (piece == null)
+        {
+            return;
+        }
+        
+        <article>
+            <div>
+                <h1>@Html.DisplayFor(modelItem => set.Name)</h1>
+                <h2>by @Html.DisplayFor(modelItem => set.User.UserName)</h2>
+            </div>
+            <a href="@Url.Action("Details", "SquareSets", new { id = set.Id })"><img src="@piece.ImageUrl" class="topRatedImages" alt="@Html.DisplayFor(modelItem => set.Name)" /></a>
+        </article>
+    }
+    
+    <a id="browseShowMore" href="#" title="Browse art">Show more...</a>
+</section>

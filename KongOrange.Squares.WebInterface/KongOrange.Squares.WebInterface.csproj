@@ -175,6 +175,7 @@
     <Compile Include="Areas\Admin\Models\SquareSetPiecesViewModels.cs" />
     <Compile Include="Areas\Admin\Models\SquareSetViewModels.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BrowseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SquareSetPiecesController.cs" />
@@ -377,6 +378,7 @@
     <Content Include="Views\SquareSetPieces\Delete.cshtml" />
     <Content Include="Views\SquareSetPieces\Details.cshtml" />
     <Content Include="Views\SquareSetPieces\Edit.cshtml" />
+    <Content Include="Views\Browse\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
