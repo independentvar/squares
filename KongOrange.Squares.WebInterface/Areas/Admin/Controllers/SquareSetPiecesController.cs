@@ -1,14 +1,14 @@
 ﻿using System.Data.Entity;
-using System.Threading.Tasks;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using KongOrange.Squares.Business;
 using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
-using KongOrange.Squares.WebInterface.Models;
+using KongOrange.Squares.WebInterface.Areas.Admin.Models;
 using Microsoft.AspNet.Identity;
 
-namespace KongOrange.Squares.WebInterface.Controllers
+namespace KongOrange.Squares.WebInterface.Areas.Admin.Controllers
 {
     [Authorize]
     public class SquareSetPiecesController : Controller

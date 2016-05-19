@@ -1,26 +1,35 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using KongOrange.Squares.Business;
 using KongOrange.Squares.DataAccess;
 using KongOrange.Squares.DomainClasses;
-using KongOrange.Squares.WebInterface.Models;
+using KongOrange.Squares.WebInterface.Areas.Admin.Models;
 using Microsoft.AspNet.Identity;
 
-namespace KongOrange.Squares.WebInterface.Controllers
+namespace KongOrange.Squares.WebInterface.Areas.Admin.Controllers
 {
     [Authorize]
     public class SquareSetsController : Controller
     {
         private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
-        // GET: SquareSets
-        public async Task<ActionResult> Index()
+        // GET: SquareSets/userId
+        public async Task<ActionResult> Index(string userId = null)
         {
-            var userId = User.Identity.GetUserId();
-            var squareSets = _db.SquareSets.Where(o => o.UserId == userId).Include(o => o.Pieces);
+            IQueryable<SquareSet> squareSets;
+            if (userId != null)
+            {
+                squareSets = _db.SquareSets.Where(o => o.UserId == userId).Include(o => o.Pieces);
+            }
+            else
+            {
+                squareSets = _db.SquareSets.Include(o => o.Pieces);
+            }
+            
             return View(await squareSets.ToListAsync());
         }
 

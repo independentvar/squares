@@ -1,0 +1,42 @@
+﻿@model KongOrange.Squares.DomainClasses.SquareSet
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SquareSet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pieces)
+        </dt>
+
+        <dd>
+            @foreach (var piece in Model.Pieces)
+            {
+                <a href="@Url.Action("Delete", "SquareSetPieces", new {id = piece.Id, squareSetId = piece.SquareSetId})"><img src="@piece.ImageUrl" alt="piece" width="150" height="150" /></a>
+            }
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
