@@ -190,10 +190,42 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\browseArrow.png" />
+    <Content Include="Content\Images\browseArrowBold.png" />
+    <Content Include="Content\Images\button_bl.png" />
+    <Content Include="Content\Images\button_br.png" />
+    <Content Include="Content\Images\button_tl.png" />
+    <Content Include="Content\Images\button_tr.png" />
+    <Content Include="Content\Images\facebook.png" />
+    <Content Include="Content\Images\grid2.png" />
+    <Content Include="Content\Images\grid3.png" />
+    <Content Include="Content\Images\grid4.png" />
+    <Content Include="Content\Images\grid5.png" />
+    <Content Include="Content\Images\grid6.png" />
+    <Content Include="Content\Images\gridBorder.png" />
+    <Content Include="Content\Images\h1Border.png" />
+    <Content Include="Content\Images\inputBorder.png" />
+    <Content Include="Content\Images\loginBackground.png" />
+    <Content Include="Content\Images\loginButtonsBackground.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\MainGalleryBorder.png" />
+    <Content Include="Content\Images\MainGalleryBorderBold.png" />
+    <Content Include="Content\Images\menuBorder.png" />
+    <Content Include="Content\Images\menuBorderMobile.png" />
+    <Content Include="Content\Images\pieceBorder.png" />
+    <Content Include="Content\Images\playButton.png" />
+    <Content Include="Content\Images\profileSetBorderMobile.png" />
+    <Content Include="Content\Images\profileUploadBorderMobile.png" />
+    <Content Include="Content\Images\rotate.png" />
+    <Content Include="Content\Images\square.png" />
+    <Content Include="Content\Images\userIcon.png" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -225,6 +257,8 @@
     <Content Include="Areas\Admin\Views\SquareSetPieces\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\KongOrangeSquares.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\carousel.js" />
+    <Content Include="Scripts\grid.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -238,8 +272,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\mobileMenu.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\resize.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -292,7 +329,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Uploads\" />
+    <Folder Include="Content\Images\about\" />
+    <Folder Include="Content\Images\menu\" />
+    <Folder Include="Content\Images\social\" />
+    <Folder Include="Content\Images\tool\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
