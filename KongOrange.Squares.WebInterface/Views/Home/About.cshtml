@@ -1,7 +1,85 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+@section styles {
+    @Styles.Render("~/Content/about")
+}
+
+<div id="about">
+    
+    <article id="article-1" class="article-container">
+        <h1>About</h1>
+
+        <p>Squares is</p>
+        <p>
+            A stylish mix of classic point`n`click`ìsh puzzle.
+            A graphic novel in the iPhone format.
+            A hardcore, old school and unforgiving experience.
+            A short story where each pages is the puzzle,
+            unlocks the next.
+        </p>
+
+
+        <p>
+            A bunch of Spotify playlists as game music made
+            by cool friends who knoow their music
+            A game where the first three levels are for free.
+            A game where the remaining seven levels cost
+            only $ 0.99.
+        </p>
+    </article>
+
+    <article id="article-2" class="article-container">
+        <h1>For Artist</h1>
+        <p>
+            “We loved the experience.
+            It`s not, long but it`s both deep
+            and deeply satisfyin."
+            -Cnet, Best mobile
+            games of March 2015
+            puzzles told within the framing
+            device of a wistful narrative”
+            — AppSpy/PocketGamer
+            “We loved the experience.
+            It’s not long, but it’s both deep
+            and deeply satisfying.”
+            — Cnet, Best mobile
+            games of March 2015
+        </p>
+    </article>
+
+    <article id="article-3" class="article-container">
+        <h1>For Users</h1>
+        <p>
+            Squares is
+            A stylish mix of classic point'n'click'ish puzzles.
+            A graphic novel in the iPhone format.
+            A hardcore, old school and unforgiving experience.
+            A short story where each pages is the puzzle, that
+            unlocks the next.
+        </p>
+    </article>
+    <div></div>
+
+    <!-------------position absolute----->
+    <img src="/Content/Images/about/blizniak.jpg" id="art1" class="art-container"/>
+    <img src="/Content/Images/about/panie.jpg" id="art2" class="art-container"/>
+    <img src="/Content/Images/about/panreka.jpg" id="art3" class="art-container"/>
+    <img src="/Content/Images/about/ulvogkat.jpg" id="art4" class="art-container"/>
+
+
+    <h2 id="followUsOnFacebook">Follow Us On Facebook</h2>
+    <h2 id="Didyoualredyseeourvideo">Did you alredy see our video?</h2>
+    <h2 id="FollowourinstagramItssoocool">Follow our instagram. Its soo cool!</h2>
+    <h2 id="Sendmessagetous">Send message to us!</h2>
+    <h2 id="checkOurTwitter">Check our Twitter!</h2>
+    <h2 id="CreateAtmosphere">Create Atmosphere with our playlist!</h2>
+    <img src="/Content/Images/about/twitter.png" id="twitter" alt="twitter"/>
+    <img src="/Content/Images/about/spotify.png" id="spotify" alt="spotify"/>
+    <img src="/Content/Images/about/inst.png" id="inst" alt="instagram"/>
+    <img src="/Content/Images/about/youtube.png" id="youtube" alt="youtube"/>
+    <img src="/Content/Images/about/facebook.png" id="facebook" alt="facebook"/>
+    <img src="/Content/Images/about/mail.png" id="letter" alt="email"/>
+
+</div>

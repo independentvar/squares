@@ -10,9 +10,9 @@
     height: 290px;
     margin-top: -10px;
     border: 15px solid transparent;
-    -webkit-border-image: url(../images/gridBorder.png) 40 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/gridBorder.png) 40 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/gridBorder.png) 40 stretch;
+    -webkit-border-image: url(/Content/images/gridBorder.png) 40 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(/Content/images/gridBorder.png) 40 stretch; /* Opera 11-12.1 */
+    border-image: url(/Content/images/gridBorder.png) 40 stretch;
 }
 
     .article-container h1 {
@@ -141,9 +141,9 @@
         height: 490px;
         margin-top: -10px;
         border: 30px solid transparent;
-        -webkit-border-image: url(../images/gridBorder.png) 40 stretch; /* Safari 3.1-5 */
-        -o-border-image: url(../images/gridBorder.png) 40 stretch; /* Opera 11-12.1 */
-        border-image: url(../images/gridBorder.png) 40 stretch;
+        -webkit-border-image: url(/Content/images/gridBorder.png) 40 stretch; /* Safari 3.1-5 */
+        -o-border-image: url(/Content/images/gridBorder.png) 40 stretch; /* Opera 11-12.1 */
+        border-image: url(/Content/images/gridBorder.png) 40 stretch;
     }
 
         .article-container h1 {
@@ -273,9 +273,9 @@
         width: 150px;
         height: 150px;
         border: 9px solid transparent;
-        -webkit-border-image: url(../images/pieceBorder.png) 9 stretch; /* Safari 3.1-5 */
-        -o-border-image: url(../images/pieceBorder.png) 9 stretch; /* Opera 11-12.1 */
-        border-image: url(../images/pieceBorder.png) 9 stretch;
+        -webkit-border-image: url(/Content/images/pieceBorder.png) 9 stretch; /* Safari 3.1-5 */
+        -o-border-image: url(/Content/images/pieceBorder.png) 9 stretch; /* Opera 11-12.1 */
+        border-image: url(/Content/images/pieceBorder.png) 9 stretch;
     }
 
     #art1 {
