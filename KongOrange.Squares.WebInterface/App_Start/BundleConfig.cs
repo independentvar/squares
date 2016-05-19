@@ -38,8 +38,10 @@ namespace KongOrange.Squares.WebInterface
 
             bundles.Add(new StyleBundle("~/Content/style").Include(
                       "~/Content/reset.css",
-                      "~/Content/about.css",
                       "~/Content/style.css"));
+
+            bundles.Add(new StyleBundle("~/Content/about").Include(
+                      "~/Content/about.css"));
         }
     }
 }

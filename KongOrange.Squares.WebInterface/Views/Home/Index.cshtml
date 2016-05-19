@@ -1,35 +1,106 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Create";
 }
 
 @section scripts{
     @Scripts.Render("~/bundles/squareTool")
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<section class="mainSections" id="homeSection">
+    <div id="canvas">
+        <div id="gridBorder"></div>
+        <div id="grid"></div>
+        <div class="resizeButton" id="tl"></div>
+        <div class="resizeButton" id="tr"></div>
+        <div class="resizeButton" id="bl"></div>
+        <div class="resizeButton" id="br"></div>
+    </div>
+    <button id="playButton"></button>
+    <div id="piecesContainer">
+        <div class="pieces" id="piece_1" data-pieceID="12" style="background-image: url(/Content/Images/tool/14.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_2" data-pieceID="2" style="background-image: url(/Content/Images/tool/15.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_3" data-pieceID="13" style="background-image: url(/Content/Images/tool/16.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_4" data-pieceID="14" style="background-image: url(/Content/Images/tool/17.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_5" data-pieceID="15" style="background-image: url(/Content/Images/tool/18.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_6" data-pieceID="16" style="background-image: url(/Content/Images/tool/19.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_7" data-pieceID="17" style="background-image: url(/Content/Images/tool/20.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_8" data-pieceID="18" style="background-image: url(/Content/Images/tool/21.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_9" data-pieceID="19" style="background-image: url(/Content/Images/tool/22.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_10" data-pieceID="20" style="background-image: url(/Content/Images/tool/23.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_11" data-pieceID="21" style="background-image: url(/Content/Images/tool/24.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_12" data-pieceID="22" style="background-image: url(/Content/Images/tool/25.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_13" data-pieceID="23" style="background-image: url(/Content/Images/tool/26.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_14" data-pieceID="24" style="background-image: url(/Content/Images/tool/27.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_15" data-pieceID="25" style="background-image: url(/Content/Images/tool/28.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_16" data-pieceID="26" style="background-image: url(/Content/Images/tool/29.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_17" data-pieceID="27" style="background-image: url(/Content/Images/tool/30.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_18" data-pieceID="28" style="background-image: url(/Content/Images/tool/31.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_19" data-pieceID="29" style="background-image: url(/Content/Images/tool/32.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_20" data-pieceID="30" style="background-image: url(/Content/Images/tool/33.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_21" data-pieceID="31" style="background-image: url(/Content/Images/tool/34.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_22" data-pieceID="32" style="background-image: url(/Content/Images/tool/35.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_23" data-pieceID="33" style="background-image: url(/Content/Images/tool/36.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_24" data-pieceID="34" style="background-image: url(/Content/Images/tool/37.jpg); background-size: 100% 100%;"></div>
+        <div class="pieces" id="piece_25" data-pieceID="35" style="background-image: url(/Content/Images/tool/38.jpg); background-size: 100% 100%;"></div>
+    </div>
+</section>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+<section class="mainSections" id="browseSection">
+    <h1>Most Popular</h1>
+    <div id="popularImagesContainer">
+        <img src="/Content/Images/7.jpg" class="topRatedImages" />
+        <img src="/Content/Images/7.jpg" class="topRatedImages" />
+        <img src="/Content/Images/7.jpg" class="topRatedImages" />
+        <img src="/Content/Images/7.jpg" class="topRatedImages" />
+        <img src="/Content/Images/7.jpg" class="topRatedImages" />
+        <img src="/Content/Images/7.jpg" class="topRatedImages" />
+    </div>
+    <a href="@Url.Action("Index", "Browse")" title="Browse art"><img src="/Content/Images/browseArrow.png" alt="browse art" id="browseArrow"></a>
+</section>
+
+<section class="mainSections" id="aboutSection">
+    <h1>Squares</h1>
+    <article id="article-1" class="article-container">
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Released 2016. The Squares prologue:
+            "When no one was watching, he would
+            indulge in puzzles so challenging and
+            unforgiving that they would make him forget
+            the world outside - and the war
+            that consumed the galaxy.
+            And so, all he left behind for the
+            universe to remember him by was a
+            series of puzzles that portrayed the
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    </article>
+    <article id="article-2" class="article-container">
+        <p>
+            “It’s a beautifully presented think
+            piece: a selection of cryptic
+            puzzles told within the framing
+            device of a wistful narrative”
+            — AppSpy/PocketGamer
+            “We loved the experience.
+            It’s not long, but it’s both deep
+            and deeply satisfying.”
+            — Cnet, Best mobile
+            games of March 2015
+        </p>
+    </article>
+    <article id="article-3" class="article-container">
+        <p>
+            Squares is
+            A stylish mix of classic point'n'click'ish puzzles.
+            A graphic novel in the iPhone format.
+            A hardcore, old school and unforgiving experience.
+            A short story where each pages is the puzzle, that
+            unlocks the next.
+            A bunch of Spotify playlists as game music made
+            by cool friends who know their music.
+            A game where the first three levels are for free.
+            A game where the remaining seven levels cost
+            only $ 0,99.
+        </p>
+    </article>
+    <div></div>
+</section>

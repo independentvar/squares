@@ -906,7 +906,7 @@ nav ul #profileMenu:hover ul{
 #wrapper{
 	width: 1152px;
 	margin: 0 auto;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 #loginContainer{
