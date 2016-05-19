@@ -22,6 +22,6 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new {id = Model.Id}) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.Id, squareSetId = Model.SquareSetId }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.Id, squareSetId = Model.SquareSetId, backToAction = "Details", backToController = "SquareSetPieces", backToRouteId = Model.Id }) |
     @Html.ActionLink("Back to List", "Details", "SquareSets", new { id = Model.SquareSetId }, null)
 </p>
