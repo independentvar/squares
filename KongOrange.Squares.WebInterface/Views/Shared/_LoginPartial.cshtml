@@ -1,22 +1,21 @@
 ﻿@using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
+    <li id="mysetsMenu"><a href="@Url.Action("Index", "SquareSets")"><span>My Sets</span><img class="mobile" src="@Url.Content("~/Content/Images/menu/loginIcon.png")" alt="My sets"/></a></li>
+    <li id="profileMenu">
+        <a href="@Url.Action("Index", "Manage")"><img class="mobile" src="@Url.Content("~/Content/Images/menu/aboutIcon.png")" alt="Manage"/><span>@User.Identity.GetUserName()</span></a>
+        <ul class="desktop">
+            <li><a href="@Url.Action("Index", "Manage")"><img src="@Url.Content("~/Content/Images/menu/settingsIcon.png")" alt="Profile"/><span>Settings</span></a></li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li>@Html.ActionLink("Admin", "Index", "Users", new {area = "Admin"}, null)</li>
+            }
+            <li><a href="javascript:document.getElementById('logoutForm').submit()"><span>Log off</span><img src="@Url.Content("~/Content/Images/menu/logoutIcon.png")" alt="Loug off"/></a></li>
+        </ul>
+    </li>
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
-
-        <li id="mysetsMenu"><a href="@Url.Action("Index", "SquareSets")"><span>My Sets</span><img class="mobile" src="@Url.Content("~/Content/Images/menu/loginIcon.png")" alt="My sets"/></a></li>
-        <li id="profileMenu">
-            <a href="@Url.Action("Index", "Manage")"><img class="mobile" src="@Url.Content("~/Content/Images/menu/aboutIcon.png")" alt="Manage" /><span>@User.Identity.GetUserName()</span></a>
-            <ul class="desktop">
-                <li><a href="@Url.Action("Index", "Manage")"><img src="@Url.Content("~/Content/Images/menu/settingsIcon.png")" alt="Profile"/><span>Settings</span></a></li>
-                @if (User.IsInRole("Admin"))
-                {
-                <li>@Html.ActionLink("Admin", "Index", "Users", new { area = "Admin" }, null)</li>
-                }
-                <li><a href="javascript:document.getElementById('logoutForm').submit()"><span>Log off</span><img src="@Url.Content("~/Content/Images/menu/logoutIcon.png")" alt="Loug off" /></a></li>
-            </ul>
-        </li>
+        @Html.AntiForgeryToken()
     }
 }
 else
