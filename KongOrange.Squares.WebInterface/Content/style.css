@@ -301,17 +301,10 @@ table {
     border: 9px solid transparent;
     border-image: url("/Content/Images/pieceBorder.png") 9 stretch; } }
 
-.extend_1 {
-  font-family: "Indie Flower";
-  text-align: center;
-  width: 100%;
-  height: 15px;
-  border: 20px solid transparent;
-  margin: 0 0 0 -15px;
-  border-image: url("/Content/Images/inputBorder.png") 40 stretch; }
-
-.extend_2 {
-  font-family: "Indie Flower";
+.input, .modal input[type="text"],
+.modal input[type="password"],
+.modal input[type="email"] {
+  font-family: "Indie Flower", cursive;
   text-align: center;
   width: 100%;
   height: 15px;
@@ -407,21 +400,16 @@ header {
   width: 100%;
   height: 100%; }
 
-.loginDiv {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 10%;
+.modal {
   margin: 0 auto;
   text-align: center;
   width: 100%;
   padding: 30px;
   background-image: url("/Content/Images/loginBackground.png");
   background-size: 100% 100%; }
-  .loginDiv p {
+  .modal p {
     font-size: 1.2em; }
-  .loginDiv #facebookButton {
+  .modal #facebookButton {
     width: 70px;
     height: 70px;
     background-color: transparent;
@@ -430,17 +418,22 @@ header {
     background-size: 100% 100%;
     margin: 15px 0;
     cursor: pointer; }
-  .loginDiv form {
+  .modal form {
     width: 220px;
     margin: 0 auto; }
-  .loginDiv input {
+  .modal input[type="text"],
+  .modal input[type="password"],
+  .modal input[type="email"] {
     font-size: 1em; }
-    .loginDiv input:focus {
+    .modal input[type="text"]:focus,
+    .modal input[type="password"]:focus,
+    .modal input[type="email"]:focus {
       outline: none; }
-  .loginDiv input[type=submit] {
+  .modal input[type="submit"] {
+    cursor: pointer;
     border: none;
     background-color: transparent;
-    font-family: "Indie Flower";
+    font-family: "Indie Flower", cursive;
     margin-bottom: 15px; }
 
 h1 {
@@ -937,22 +930,16 @@ footer {
     position: relative;
     width: 100%;
     height: 100%; }
-  .loginDiv {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
+  .modal {
     margin: 0 auto;
     text-align: center;
     width: 450px;
     padding: 30px;
     background-image: url("/Content/Images/loginBackground.png");
     background-size: 100% 100%; }
-    .loginDiv p {
+    .modal p {
       font-size: 1.2em; }
-    .loginDiv #facebookButton {
+    .modal #facebookButton {
       width: 140px;
       height: 140px;
       background-color: transparent;
@@ -961,17 +948,17 @@ footer {
       background-size: 100% 100%;
       margin: 15px 0;
       cursor: pointer; }
-    .loginDiv form {
+    .modal form {
       width: 220px;
       margin: 0 auto; }
-    .loginDiv input {
+    .modal input {
       font-size: 1em; }
-      .loginDiv input:focus {
+      .modal input:focus {
         outline: none; }
-    .loginDiv input[type=submit] {
+    .modal input[type=submit] {
       border: none;
       background-color: transparent;
-      font-family: "Indie Flower";
+      font-family: "Indie Flower", cursive;
       margin-bottom: 15px; }
   .mobile {
     display: none; }
@@ -1186,12 +1173,13 @@ footer {
   #browseCombinations article:nth-child(5n + 6) {
     transform: translate(-5%, -10%);
     margin-right: 20%; }
-  #login div {
+  .modal .login-footer {
     width: 100%;
     height: 50px;
+    line-height: 50px;
     background-image: url("/Content/Images/loginButtonsBackground.png");
     background-size: 100% 100%; }
-    #login div button {
+    .modal .login-footer a {
       width: 50%;
       float: left;
       padding: 0;
@@ -1199,7 +1187,7 @@ footer {
       border: none;
       height: 100%;
       background-color: transparent;
-      font-family: "Indie Flower";
+      font-family: "Indie Flower", cursive;
       font-size: 1.2em; }
   #createAccount #userIcon {
     margin: 0 auto;
@@ -1241,7 +1229,7 @@ footer {
             border: none;
             height: 100%;
             background-color: transparent;
-            font-family: $font_7;
+            font-family: $font-family;
             font-size: 1.2em;
         }
     }

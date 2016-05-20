@@ -8,15 +8,7 @@ $black: black;
 $black_30: rgba(0,0,0,0.3);
 $white: white;
 
-//fonts
-$font_0: 'Indie Flower';
-$font_1: 'Indie Flower';
-$font_2: 'Indie Flower';
-$font_3: 'Indie Flower';
-$font_4: cursive;
-$font_5: 'Indie Flower';
-$font_6: 'Indie Flower';
-$font_7: 'Indie Flower';
+$font-family: 'Indie Flower', cursive;
 
 //urls
 $url_1: url('/Content/Images/menuBorderMobile.png');
@@ -40,11 +32,8 @@ $url_18: url('/Content/Images/menuBorder.png');
 $url_19: url('/Content/Images/playButton.png');
 $url_20: url('/Content/Images/h1Border.png');
 
-//@extend-elements
-//original selectors
-//.loginDiv input[type=text], .loginDiv input[type=password], .loginDiv input[type=email]
-.extend_1 {
-    font-family: $font_5;
+.input {
+    font-family: $font-family;
     text-align: center;
     width: 100%;
     height: 15px;
@@ -52,25 +41,12 @@ $url_20: url('/Content/Images/h1Border.png');
     margin: 0 0 0 -15px;
     border-image: $url_4 40 stretch;
 }
-
-//original selectors
-//.loginDiv input[type=text], .loginDiv input[type=password], .loginDiv input[type=email]
-.extend_2 {
-    font-family: $font_0;
-    text-align: center;
-    width: 100%;
-    height: 15px;
-    border: 20px solid transparent;
-    margin: 0 0 0 -15px;
-    border-image: $url_4 40 stretch;
-}
-
 
 html{
     height: 100%;
 }
 body {
-    font-family: $font_3, $font_4;
+    font-family: $font-family;
     font-size: 1.2em;
     position: relative;
     min-height: 100%;
@@ -174,12 +150,7 @@ header{
     height: 100%;
 }
 
-.loginDiv {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 10%;
+.modal {    
     margin: 0 auto;
     text-align: center;
     width: 100%;
@@ -207,7 +178,10 @@ header{
         margin: 0 auto;
     }
 
-    input {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        @extend .input;
         font-size: 1em;
 
         &:focus {
@@ -215,22 +189,11 @@ header{
         }
     }
 
-    input[type=text] {
-        @extend %extend_1;
-    }
-
-    input[type=password] {
-        @extend %extend_1;
-    }
-
-    input[type=email] {
-        @extend %extend_1;
-    }
-
-    input[type=submit] {
+    input[type="submit"] {
+        cursor: pointer;
         border: none;
         background-color: transparent;
-        font-family: $font_6;
+        font-family: $font-family;
         margin-bottom: 15px;
     }
 }
@@ -933,13 +896,7 @@ footer {
         height: 100%;
     }
 
-    .loginDiv {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        transform: translate(0, -50%);
+    .modal {
         margin: 0 auto;
         text-align: center;
         width: 450px;
@@ -990,7 +947,7 @@ footer {
         input[type=submit] {
             border: none;
             background-color: transparent;
-            font-family: $font_1;
+            font-family: $font-family;
             margin-bottom: 15px;
         }
     }
@@ -1323,16 +1280,15 @@ footer {
             margin-right: 20%;
         }
     }
-
-
-
-    #login div {
+    
+    .modal .login-footer {
         width: 100%;
         height: 50px;
+        line-height: 50px;
         background-image: $url_5;
         background-size: 100% 100%;
 
-        button {
+        a {
             width: 50%;
             float: left;
             padding: 0;
@@ -1340,7 +1296,7 @@ footer {
             border: none;
             height: 100%;
             background-color: transparent;
-            font-family: $font_2;
+            font-family: $font-family;
             font-size: 1.2em;
         }
     }
@@ -1404,7 +1360,7 @@ footer {
             border: none;
             height: 100%;
             background-color: transparent;
-            font-family: $font_7;
+            font-family: $font-family;
             font-size: 1.2em;
         }
     }
