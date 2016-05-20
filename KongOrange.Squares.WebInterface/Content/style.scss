@@ -54,7 +54,6 @@ body {
 
 #wrapper {
     width: 100%;
-    position: relative;
     overflow: hidden;
     padding-bottom: 70px;
 }
@@ -158,6 +157,11 @@ header{
     background-image: $url_2;
     background-size: 100% 100%;
 
+    h2 {
+        font-size: 23px;
+        margin: 10px 0;
+    }
+
     p {
         font-size: 1.2em;
     }
@@ -174,8 +178,11 @@ header{
     }
 
     form {
-        width: 220px;
         margin: 0 auto;
+
+        &.form-narrow {
+            width: 220px;
+        }
     }
 
     input[type="text"],
@@ -187,6 +194,11 @@ header{
         &:focus {
             outline: none;
         }
+    }
+
+    input[type="file"] {
+        @extend .input;
+        width: 80%;
     }
 
     input[type="submit"] {
@@ -522,6 +534,11 @@ footer {
         margin: 10px;
         border: 4px solid transparent;
         border-image: $url_17 10% stretch;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
 
         &:nth-child(10n + 1) {
             transform: translate(-7%,15%);
@@ -897,7 +914,10 @@ footer {
     }
 
     .modal {
-        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
         width: 450px;
         padding: 30px;
@@ -920,8 +940,11 @@ footer {
         }
 
         form {
-            width: 220px;
             margin: 0 auto;
+
+            &.form-narrow {
+                width: 220px;
+            }
         }
 
         input {

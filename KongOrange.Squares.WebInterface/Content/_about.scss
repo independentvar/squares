@@ -9,6 +9,7 @@ $url_1: url('/Content/Images/pieceBorder.png');
     text-align: center;
     width: 100%;
     padding-bottom: 50px;
+    position: relative;
 }
 
 .article-container {
@@ -335,10 +336,7 @@ $url_1: url('/Content/Images/pieceBorder.png');
         }    
     }
 
-    #wrapper {
-        position: relative;
-    }
-
+   
     .art-container {
         position: absolute;
         width: 150px;

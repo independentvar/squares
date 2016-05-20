@@ -51,7 +51,8 @@ table {
 #about {
   text-align: center;
   width: 100%;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  position: relative; }
 
 .article-container {
   margin: 0 auto;
@@ -292,8 +293,6 @@ table {
     #article-3 p {
       margin-top: 50px;
       font-size: 1.8em; }
-  #wrapper {
-    position: relative; }
   .art-container {
     position: absolute;
     width: 150px;
@@ -303,7 +302,7 @@ table {
 
 .input, .modal input[type="text"],
 .modal input[type="password"],
-.modal input[type="email"] {
+.modal input[type="email"], .modal input[type="file"] {
   font-family: "Indie Flower", cursive;
   text-align: center;
   width: 100%;
@@ -323,7 +322,6 @@ body {
 
 #wrapper {
   width: 100%;
-  position: relative;
   overflow: hidden;
   padding-bottom: 70px; }
 
@@ -407,6 +405,9 @@ header {
   padding: 30px;
   background-image: url("/Content/Images/loginBackground.png");
   background-size: 100% 100%; }
+  .modal h2 {
+    font-size: 23px;
+    margin: 10px 0; }
   .modal p {
     font-size: 1.2em; }
   .modal #facebookButton {
@@ -419,8 +420,9 @@ header {
     margin: 15px 0;
     cursor: pointer; }
   .modal form {
-    width: 220px;
     margin: 0 auto; }
+    .modal form.form-narrow {
+      width: 220px; }
   .modal input[type="text"],
   .modal input[type="password"],
   .modal input[type="email"] {
@@ -429,6 +431,8 @@ header {
     .modal input[type="password"]:focus,
     .modal input[type="email"]:focus {
       outline: none; }
+  .modal input[type="file"] {
+    width: 80%; }
   .modal input[type="submit"] {
     cursor: pointer;
     border: none;
@@ -685,6 +689,9 @@ footer {
     margin: 10px;
     border: 4px solid transparent;
     border-image: url("/Content/Images/profileSetBorderMobile.png") 10% stretch; }
+    .setPiecesContainer .setPiece img {
+      width: 100%;
+      height: 100%; }
     .setPiecesContainer .setPiece:nth-child(10n + 1) {
       transform: translate(-7%, 15%);
       transform: rotate(-5deg); }
@@ -931,7 +938,10 @@ footer {
     width: 100%;
     height: 100%; }
   .modal {
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     width: 450px;
     padding: 30px;
@@ -949,8 +959,9 @@ footer {
       margin: 15px 0;
       cursor: pointer; }
     .modal form {
-      width: 220px;
       margin: 0 auto; }
+      .modal form.form-narrow {
+        width: 220px; }
     .modal input {
       font-size: 1em; }
       .modal input:focus {

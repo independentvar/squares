@@ -5,51 +5,45 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<div class="modal">
+    <h2>Update a piece</h2>
+    <img src="@Html.DisplayFor(model => model.CurrentImageUrl)" alt="piece" width="300" height="300" />
+    @using (Html.BeginForm("Edit", "SquareSetPieces", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        @Html.AntiForgeryToken()
 
-@using (Html.BeginForm("Edit", "SquareSetPieces", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>SquareSetPiece</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
-        @Html.HiddenFor(model => model.SquareSetId)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CurrentImageUrl, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-10">
-                <img src="@Html.DisplayFor(model => model.CurrentImageUrl)" alt="piece" width="300" height="300" />
+        
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.SquareSetId)
+        
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="file" name="updatedImage" class="form-control"/>
+                    @Html.ValidationMessageFor(model => model.UpdatedImage, "", new {@class = "text-danger"})
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.UpdatedImage, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <input type="file" name="updatedImage" class="form-control" />
-                @Html.ValidationMessageFor(model => model.UpdatedImage, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Update" class="btn btn-default"/>
+                </div>
             </div>
-        </div>
+       
+    }
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Update" class="btn btn-default" />
-            </div>
-        </div>
+    <div>
+        @Html.ActionLink("Delete", "Delete",
+            new
+            {
+                id = Model.Id,
+                squareSetId = Model.SquareSetId,
+                backToAction = "Edit",
+                backToController = "SquareSetPieces",
+                backToRouteId = Model.Id
+            }) |
+        @Html.ActionLink("Back to List", "Edit", "SquareSets", new {id = Model.SquareSetId}, null)
     </div>
-}
-
-<div>
-    @Html.ActionLink("Delete", "Delete",
-    new { id = Model.Id,
-        squareSetId = Model.SquareSetId,
-        backToAction = "Edit",
-        backToController = "SquareSetPieces",
-        backToRouteId = Model.Id
-    }) | 
-    @Html.ActionLink("Back to List", "Edit", "SquareSets", new {id = Model.SquareSetId}, null)
 </div>
 
 @section Scripts {
