@@ -1,280 +1,333 @@
 //colors
-$white: #fff
+$white: #fff;
 
 //urls
-$url_0: url('../images/gridBorder.png')
-$url_1: url('../images/pieceBorder.png')
+$url_0: url('../images/gridBorder.png');
+$url_1: url('../images/pieceBorder.png');
 
-#about 
-	text-align: center
-	width: 100%
-	padding-bottom: 50px
+#about {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
 
-.article-container 
-	margin: 0 auto
-	width: 290px
-	height: 290px
-	margin-top: -10px
-	border: 15px solid transparent
-	border-image: $url_0 40 stretch
-	font-size: 0.8em
-	h1 
-		font-size: 1.4em
-		margin-top: 10px
-		margin-bottom: 30px
+.article-container {
+    margin: 0 auto;
+    width: 290px;
+    height: 290px;
+    margin-top: -10px;
+    border: 15px solid transparent;
+    border-image: $url_0 40 stretch;
+    font-size: 0.8em;
 
-
-#article-2 
-	transform: rotate(-4deg)
-
-#article-3 	
-	transform: rotate(2deg)
-
-#art1 
-	display: none
-
-#art2 
-	display: none
-
-#art3 
-	display: none
-
-#art4 
-	display: none
-
-#twitter 
-	display: none
-
-#spotify 
-	display: none
-
-#inst 
-	display: none
-
-#youtube 
-	display: none
-
-#facebook 
-	display: none
-
-#letter 
-	display: none
-
-#followUsOnFacebook 
-	display: none
-
-#Didyoualredyseeourvideo 
-	display: none
-
-#FollowourinstagramItssoocool 
-	display: none
-
-#Sendmessagetous 
-	display: none
-
-#checkOurTwitter 
-	display: none
-
-#CreateAtmosphere 
-	display: none
-
-@media only screen and(min-width: 600px) 
-	#twitter 
-		position: absolute
-		top: 510px
-		left: 2%
-		display: block
-
-	#spotify 
-		position: absolute
-		top: 800px
-		right: 3%
-		display: block
-
-	#inst 
-		position: absolute
-		top: 900px
-		left: 9%
-		display: block
-
-	#youtube 
-		position: absolute
-		top: 550px
-		right: 6%
-		display: block
-
-	#facebook 
-		width: 80px
-		height: 80px
-		position: absolute
-		top: 160px
-		right: 9%
-		display: block
-
-	#letter 
-		position: absolute
-		top: 250px
-		left: 11%
-		display: block
+    h1 {
+        font-size: 1.4em;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
 
 
-@media only screen and(min-width: 1150px) 
-	#art1 
-		display: block
-		left: 45px
-		top: 400px
-		transform: rotate(45deg)
+#article-2 {
+    transform: rotate(-4deg);
+}
 
-	#art2 
-		display: block
-		z-index: 1
-		right: 250px
-		top: 750px
-		background: $white
-		transform: rotate(-15deg)
+#article-3 {
+    transform: rotate(2deg);
+}
 
-	#art3 
-		display: block
-		right: 150px
-		top: 860px
-		transform: rotate(7deg)
+#art1 {
+    display: none;
+}
 
-	#art4 
-		display: block
-		left: 110px
-		top: 1550px
-		transform: rotate(-15deg)
+#art2 {
+    display: none;
+}
 
-	#twitter 
-		display: block
-		position: absolute
-		top: 660px
-		left: 20px
+#art3 {
+    display: none;
+}
 
-	#spotify 
-		display: block
-		position: absolute
-		top: 1010px
-		right: 380px
+#art4 {
+    display: none;
+}
 
-	#inst 
-		display: block
-		position: absolute
-		top: 1450px
-		left: 330px
+#twitter {
+    display: none;
+}
 
-	#youtube 
-		display: block
-		position: absolute
-		top: 450px
-		right: 110px
+#spotify {
+    display: none;
+}
 
-	#facebook 
-		display: block
-		width: 80px
-		height: 80px
-		position: absolute
-		top: 210px
-		right: 190px
+#inst {
+    display: none;
+}
 
-	#letter 
-		display: block
-		position: absolute
-		top: 300px
-		left: 160px
+#youtube {
+    display: none;
+}
 
-	#followUsOnFacebook 
-		display: block
-		position: absolute
-		top: 300px
-		right: 30px
-		font-size: 1.3em
+#facebook {
+    display: none;
+}
 
-	#Didyoualredyseeourvideo 
-		display: block
-		position: absolute
-		top: 550px
-		right: -90px
-		font-size: 1.3em
-		transform: rotate(90deg)
+#letter {
+    display: none;
+}
 
-	#FollowourinstagramItssoocool 
-		display: block
-		position: absolute
-		top: 1410px
-		left: 110px
-		font-size: 1.3em
-		transform: rotate(-6deg)
+#followUsOnFacebook {
+    display: none;
+}
 
-	#Sendmessagetous 
-		display: block
-		position: absolute
-		top: 250px
-		left: 30px
-		font-size: 1.3em
-		transform: rotate(-20deg)
+#Didyoualredyseeourvideo {
+    display: none;
+}
 
-	#checkOurTwitter 
-		display: block
-		position: absolute
-		top: 630px
-		left: 15px
-		font-size: 1.3em
-		transform: rotate(13deg)
+#FollowourinstagramItssoocool {
+    display: none;
+}
 
-	#CreateAtmosphere 
-		display: block
-		position: absolute
-		top: 1070px
-		right: 20px
-		font-size: 1.3em
+#Sendmessagetous {
+    display: none;
+}
 
-	#about 
-		display: inline-block
-		width: 1150px
-		padding-bottom: 100px
+#checkOurTwitter {
+    display: none;
+}
 
-	.article-container 
-		width: 490px
-		margin: 0 auto
-		height: 490px
-		margin-top: -10px
-		border: 30px solid transparent
-		border-image: $url_0 40 stretch
-		h1 
-			font-size: 2.4em
-			margin-top: 15px
-			margin-bottom: 15px
+#CreateAtmosphere {
+    display: none;
+}
 
-		p 
-			line-height: 38px
-			padding-left: 35px
-			text-align: left
-			white-space: pre-wrap
-			font-size: 1.4em
+@media screen and (min-width: 600px) {
+    #twitter {
+        position: absolute;
+        top: 510px;
+        left: 2%;
+        display: block;
+    }
 
+    #spotify {
+        position: absolute;
+        top: 800px;
+        right: 3%;
+        display: block;
+    }
 
-	#article-2 
-		position: relative
-		z-index: 50
-		background-color: $white
-		width: 570px
-		height: 570px
-		margin-top: 20px
-		transform: translate(-220px,0) rotate(-7deg)
+    #inst {
+        position: absolute;
+        top: 900px;
+        left: 9%;
+        display: block;
+    }
 
-	#article-3 
-		position: relative
-		z-index: 30
-		margin-top: -220px
-		transform: rotate(5deg) translate(250px,0)
+    #youtube {
+        position: absolute;
+        top: 550px;
+        right: 6%;
+        display: block;
+    }
 
-	#wrapper 
-		position: relative
+    #facebook {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 160px;
+        right: 9%;
+        display: block;
+    }
 
-	.art-container 
-		position: absolute
-		width: 150px
-		height: 150px
-		border: 9px solid transparent
-		border-image: $url_1 9 stretch
+    #letter {
+        position: absolute;
+        top: 250px;
+        left: 11%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    #art1 {
+        display: block;
+        left: 45px;
+        top: 400px;
+        transform: rotate(45deg);
+    }
+
+    #art2 {
+        display: block;
+        z-index: 1;
+        right: 250px;
+        top: 750px;
+        background: $white;
+        transform: rotate(-15deg);
+    }
+
+    #art3 {
+        display: block;
+        right: 150px;
+        top: 860px;
+        transform: rotate(7deg);
+    }
+
+    #art4 {
+        display: block;
+        left: 110px;
+        top: 1550px;
+        transform: rotate(-15deg);
+    }
+
+    #twitter {
+        display: block;
+        position: absolute;
+        top: 660px;
+        left: 20px;
+    }
+
+    #spotify {
+        display: block;
+        position: absolute;
+        top: 1010px;
+        right: 380px;
+    }
+
+    #inst {
+        display: block;
+        position: absolute;
+        top: 1450px;
+        left: 330px;
+    }
+
+    #youtube {
+        display: block;
+        position: absolute;
+        top: 450px;
+        right: 110px;
+    }
+
+    #facebook {
+        display: block;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 210px;
+        right: 190px;
+    }
+
+    #letter {
+        display: block;
+        position: absolute;
+        top: 300px;
+        left: 160px;
+    }
+
+    #followUsOnFacebook {
+        display: block;
+        position: absolute;
+        top: 300px;
+        right: 30px;
+        font-size: 1.3em;
+    }
+
+    #Didyoualredyseeourvideo {
+        display: block;
+        position: absolute;
+        top: 550px;
+        right: -90px;
+        font-size: 1.3em;
+        transform: rotate(90deg);
+    }
+
+    #FollowourinstagramItssoocool {
+        display: block;
+        position: absolute;
+        top: 1410px;
+        left: 110px;
+        font-size: 1.3em;
+        transform: rotate(-6deg);
+    }
+
+    #Sendmessagetous {
+        display: block;
+        position: absolute;
+        top: 250px;
+        left: 30px;
+        font-size: 1.3em;
+        transform: rotate(-20deg);
+    }
+
+    #checkOurTwitter {
+        display: block;
+        position: absolute;
+        top: 630px;
+        left: 15px;
+        font-size: 1.3em;
+        transform: rotate(13deg);
+    }
+
+    #CreateAtmosphere {
+        display: block;
+        position: absolute;
+        top: 1070px;
+        right: 20px;
+        font-size: 1.3em;
+    }
+
+    #about {
+        display: inline-block;
+        width: 1150px;
+        padding-bottom: 100px;
+    }
+
+    .article-container {
+        width: 490px;
+        margin: 0 auto;
+        height: 490px;
+        margin-top: -10px;
+        border: 30px solid transparent;
+        border-image: $url_0 40 stretch;
+
+        h1 {
+            font-size: 2.4em;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 38px;
+            padding-left: 35px;
+            text-align: left;
+            white-space: pre-wrap;
+            font-size: 1.4em;
+        }
+    }
+
+    #article-2 {
+        position: relative;
+        z-index: 50;
+        background-color: $white;
+        width: 570px;
+        height: 570px;
+        margin-top: 20px;
+        transform: translate(-220px,0) rotate(-7deg);
+    }
+
+    #article-3 {
+        position: relative;
+        z-index: 30;
+        margin-top: -220px;
+        transform: rotate(5deg) translate(250px,0);
+    }
+
+    #wrapper {
+        position: relative;
+    }
+
+    .art-container {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: 9px solid transparent;
+        border-image: $url_1 9 stretch;
+    }
+}
