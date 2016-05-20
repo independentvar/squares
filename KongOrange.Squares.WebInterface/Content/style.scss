@@ -785,455 +785,466 @@ footer
 			height: 100%
 			float: left
 
-
-
-@media only screen and(min-width: 1152px) 
-	#wrapper 
-		width: 1152px
-		margin: 0 auto
-		border: 1px solid $black
-
-	#loginContainer 
-		position: fixed
-		width: 100%
-		left: 0
-		top: 0
-		height: 100%
-		display: none
-		background-color: $black_30
-		z-index: 10
-
-	#loginContainer2 
-		position: relative
-		width: 100%
-		height: 100%
-
-	.loginDiv 
-		display: none
-		position: absolute
-		left: 0
-		right: 0
-		top: 50%
-		transform: translate(0, -50%)
-		margin: 0 auto
-		text-align: center
-		width: 450px
-		padding: 30px
-		background-image: $url_2
-		background-size: 100% 100%
-		p 
-			font-size: 1.2em
-
-		#facebookButton 
-			width: 140px
-			height: 140px
-			background-color: transparent
-			border: none
-			background-image: $url_3
-			background-size: 100% 100%
-			margin: 15px 0
-			cursor: pointer
-
-		form 
-			width: 220px
-			margin: 0 auto
-
-		input 
-			font-size: 1em
-			&:focus 
-				outline: none
-
-
-		input[type=text] 
-			@extend %extend_2
-
-		input[type=password] 
-			@extend %extend_2
-
-		input[type=email] 
-			@extend %extend_2
-
-		input[type=submit] 
-			border: none
-			background-color: transparent
-			font-family: $font_1
-			margin-bottom: 15px
-
-
-	.mobile 
-		display: none
-
-	.desktop 
-		display: block
-
-	.mainArticle 
-		margin-top: 200px
-
-	.mainSections 
-		margin-bottom: 40px
-
-	footer 
-		display: block
-		text-align: center
-		padding-bottom: 25px
-		img 
-			margin: 0 10px
-
-
-	#canvas 
-		width: 400px
-		height: 400px
-		margin-left: 375px
-		margin-bottom: 30px
-		float: left
-
-	.pieceWrapper 
-		width: 150px
-		height: 150px
-		&:hover .rotationButton 
-			display: block
-
-
-	.rotationButton 
-		width: 20px
-		height: 20px
-		margin-top: -25%
-		margin-left: 21%
-		display: none
-		background-image: $url_9
-
-	.resizeButton 
-		position: absolute
-		width: 30px
-		height: 30px
-		z-index: 3
-
-	#tl 
-		top: -10px
-		left: -10px
-		background-image: $url_10
-		background-size: 100% 100%
-
-	#tr 
-		top: -10px
-		left: 380px
-		left: calc(100% - 20px)
-		background-image: $url_11
-		background-size: 100% 100%
-
-	#bl 
-		top: 380px
-		top: calc(100% - 20px)
-		left: -10px
-		background-image: $url_12
-		background-size: 100% 100%
-
-	#br 
-		top: 380px
-		top: calc(100% - 20px)
-		left: 380px
-		left: calc(100% - 20px)
-		background-image: $url_13
-		background-size: 100% 100%
-
-	#playButton 
-		display: block
-		width: 80px
-		height: 59px
-		background-image: $url_19
-		background-size: 100% 100%
-		background-color: transparent
-		border: none
-		margin-top: 0
-		margin-left: 100px
-		float: left
-
-	#piecesContainer 
-		height: 160px
-		.pieces 
-			left: 105%
-			border: 8px solid transparent
-			border-image: $url_14 12 stretch
-
-
-	.pieces 
-		width: 100px
-		height: 100px
-
-	#browseSection 
-		text-align: center
-		h1 
-			margin-left: 10%
-			text-align: left
-
-		#popularImagesContainer img 
-			width: 250px
-			display: inline-block
-			margin: 20px 20px 40px 20px
-			border: 15px solid transparent
-			border-image: $url_15 20 stretch
-			&:nth-child(3) 
-				transform: translate(-7%,15%)
-
-			&:nth-child(4) 
-				transform: translate(-5%,0)
-
-			&:nth-child(5) 
-				transform: translate(5%,10%)
-
-			&:nth-child(6) 
-				transform: translate(5%,0%)
-
-			&:nth-child(7) 
-				transform: translate(5%,10%)
-
-
-
-	#aboutSection 
-		text-align: center
-		display: block
-		margin-bottom: 0
-		margin-top: -80px
-		p 
-			white-space: pre-wrap
-
-		h1 
-			font-size: 2.2em
-			text-align: center
-			transform: translate(0px, 110px)
-			margin: 0 auto
-			width: 200px
-			height: 200px
-			line-height: 200px
-			background-image: $url_20
-			background-size: 100% 100%
-
-		article 
-			width: calc(33% - 40px)
-			display: inline-block
-			border: 15px solid transparent
-			padding: 5px
-			border-image: $url_7 30 round
-			background-color: $white
-			&:nth-child(2) 
-				font-size: 0.8em
-				line-height: 23px
-				width: 320px
-				height: 320px
-				transform: translate(0,-170px)
-				margin-right: -110px
-
-			&:nth-child(3) 
-				font-size: 0.8em
-				position: relative
-				line-height: 23px
-				z-index: 1
-				width: 250px
-				height: 250px
-				transform: translate(50px,-10px)
-				margin-top: 120px
-
-			&:nth-child(4) 
-				font-size: 0.8em
-				line-height: 23px
-				position: relative
-				z-index: 2
-				width: 350px
-				height: 350px
-				transform: translate(28px,-80px)
-				margin-left: -25px
-
-
-		div 
-			clear: both
-
-
-	#profileMain 
-		h1 
-			margin-bottom: 50px
-
-		p 
-			margin-left: 10%
-
-		div 
-			width: 800px
-
-
-	.browse 
-		article 
-			margin: 0 2% 20px
-			padding-top: 30px
-			div 
-				width: 120%
-				position: absolute
-				margin: 0 auto
-				top: 0
-				left: -10%
-				right: 0
-
-			h1 
-				font-size: 1.3em
-				margin-right: 5px
-
-			h2 
-				font-size: 1.1em
-
-			img 
-				margin: 0 auto
-				display: block
-				width: 260px
-				height: 260px
-				border: 15px solid transparent
-				border-image: $url_15 20 stretch
-
-
-		h1 
-			font-size: 1.6em
-
-
-	#browseCombinations 
-		h1 
-			text-align: left
-			margin-left: 10%
-
-		article:nth-child(5n 
-			+ 2) 
-				
-				transform: translate(0, 10%)
-				margin-left: 5%
-
-			+ 3) 
-				
-				transform: translate(-5%, -10%)
-
-			+ 4) 
-				
-				transform: translate(-5%, -10%)
-
-			+ 5) 
-				
-				transform: translate(-5%, -5%)
-				margin-left: 20%
-
-			+ 6) 
-				
-				transform: translate(-5%, -10%)
-				margin-right: 20%
-
-
-
-	#login div 
-		width: 100%
-		height: 50px
-		background-image: $url_5
-		background-size: 100% 100%
-		button 
-			width: 50%
-			float: left
-			padding: 0
-			
-			transform: translate(0, 5px)
-			border: none
-			height: 100%
-			background-color: transparent
-			font-family: $font_2
-			font-size: 1.2em
-
-
-	#createAccount #userIcon 
-		margin: 0 auto
-		width: 120px
-		height: 120px
-		background-image: $url_6
-		background-size: 100% 100%
-
-	#browseSets article 
-		margin: 0 1% 60px
-		&:nth-child(6n 
-			+ 2) 
-				
-				transform: translate(-5%, -10%)
-
-			+ 3) 
-				
-				transform: translate(5%, 10%)
-
-			+ 4) 
-				
-				transform: translate(5%, -10%)
-
-			+ 5) 
-				
-				transform: translate(0%, -5%)
-
-			+ 6) 
-				
-				transform: translate(-5%, 10%)
-
-			+ 7) 
-				
-				transform: translate(0, -5%)
-
-
-
-
-@media only screen and(min-width: 1920px) 
-	0 
-		#: #
-		: 
-
-
-#login div 
-	width: 100%
-	height: 50px
-	background-image: $url_5
-	background-size: 100% 100%
-	button 
-		width: 50%
-		float: left
-		padding: 0
+}
+@media only screen and (min-width: 1152px) {
+	#wrapper {
+		width: 1152px;
+		margin: 0 auto;
+		border: 1px solid $black;
+    }
+
+	#loginContainer {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 100%;
+		display: none;
+		background-color: $black_30;
+		z-index: 10;
+        }
+
+	#loginContainer2 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+    }
+
+	.loginDiv {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+		margin: 0 auto;
+		text-align: center;
+		width: 450px;
+		padding: 30px;
+		background-image: $url_2;
+		background-size: 100% 100%;
 		
-		transform: translate(0, 5px)
-		border: none
-		height: 100%
-		background-color: transparent
-		font-family: $font_7
-		font-size: 1.2em
+        p{
+			font-size: 1.2em;
+        }
+
+		#facebookButton{
+			width: 140px;
+			height: 140px;
+			background-color: transparent;
+			border: none;
+			background-image: $url_3;
+			background-size: 100% 100%;
+			margin: 15px 0;
+			cursor: pointer;
+        }
+		form{ 
+			width: 220px;
+			margin: 0 auto;
+        }
+
+		input{
+			font-size: 1em;
+			&:focus {
+				outline: none;
+            }
+        }
+
+		input[type=text] {
+			@extend %extend_2;
+        }
+
+		input[type=password] {
+			@extend %extend_2;
+        }
+
+		input[type=email] {
+			@extend %extend_2;
+        }
+
+		input[type=submit]{
+			border: none;
+			background-color: transparent;
+			font-family: $font_1;
+			margin-bottom: 15px;
+        }
+    }
+
+	.mobile {
+		display: none;
+    }
+
+	.desktop {
+		display: block;
+    }
+
+	.mainArticle {
+		margin-top: 200px;
+    }
+
+	.mainSections{ 
+		margin-bottom: 40px;
+    }
+
+	footer{ 
+		display: block;
+		text-align: center;
+		padding-bottom: 25px;
+		img{ 
+			margin: 0 10px;
+        }
+    }
+
+	#canvas{ 
+		width: 400px;
+		height: 400px;
+		margin-left: 375px;
+		margin-bottom: 30px;
+		float: left;
+    }
+
+	.pieceWrapper {
+		width: 150px;
+		height: 150px;
+		&:hover .rotationButton {
+			display: block;
+        }
+    }
+
+	.rotationButton {
+		width: 20px;
+		height: 20px;
+		margin-top: -25%;
+		margin-left: 21%;
+		display: none;
+		background-image: $url_9;
+    }
+
+	.resizeButton{ 
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		z-index: 3;
+    }
+
+	#tl {
+		top: -10px;
+		left: -10px;
+		background-image: $url_10;
+		background-size: 100% 100%;
+    }
+
+	#tr {
+		top: -10px;
+		left: 380px;
+		left: calc(100% - 20px);
+		background-image: $url_11;
+		background-size: 100% 100%;
+    }
+
+	#bl{ 
+		top: 380px;
+		top: calc(100% - 20px);
+		left: -10px;
+		background-image: $url_12;
+		background-size: 100% 100%;
+    }
+
+	#br{ 
+		top: 380px;
+		top: calc(100% - 20px);
+		left: 380px;
+		left: calc(100% - 20px);
+		background-image: $url_13;
+		background-size: 100% 100%;
+    }
+	#playButton{ 
+		display: block;
+		width: 80px;
+		height: 59px;
+		background-image: $url_19;
+		background-size: 100% 100%;
+		background-color: transparent;
+		border: none;
+		margin-top: 0;
+		margin-left: 100px;
+		float: left;
+    }
+
+	#piecesContainer {
+		height: 160px;
+		.pieces {
+			left: 105%;
+			border: 8px solid transparent;
+			border-image: $url_14 12 stretch;
+        }
+    }
+
+	.pieces {
+		width: 100px;
+		height: 100px;
+    }
+
+	#browseSection{ 
+		text-align: center;
+		h1 {
+			margin-left: 10%;
+			text-align: left;
+        }
+		#popularImagesContainer img {
+			width: 250px;
+			display: inline-block;
+			margin: 20px 20px 40px 20px;
+			border: 15px solid transparent;
+			border-image: $url_15 20 stretch;
+			&:nth-child(3) {
+				transform: translate(-7%,15%);
+            }
+			&:nth-child(4) {
+				transform: translate(-5%,0);
+            }
+			&:nth-child(5) {
+				transform: translate(5%,10%);
+            }
+			&:nth-child(6) {
+				transform: translate(5%,0%);
+            }
+			&:nth-child(7) {
+				transform: translate(5%,10%);
+            }
+        }
+    }
+	#aboutSection{ 
+		text-align: center;
+		display: block;
+		margin-bottom: 0;
+		margin-top: -80px;
+		p {
+			white-space: pre-wrap;
+        }
+		h1 {
+			font-size: 2.2em;
+			text-align: center;
+			transform: translate(0px, 110px);
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			background-image: $url_20;
+			background-size: 100% 100%;
+        }
+		article {
+			width: calc(33% - 40px);
+			display: inline-block;
+			border: 15px solid transparent;
+			padding: 5px;
+			border-image: $url_7 30 round;
+			background-color: $white;
+			&:nth-child(2) {
+				font-size: 0.8em;
+				line-height: 23px;
+				width: 320px;
+				height: 320px;
+				transform: translate(0,-170px);
+				margin-right: -110px;
+            }
+			&:nth-child(3) {
+				font-size: 0.8em;
+				position: relative;
+				line-height: 23px;
+				z-index: 1;
+				width: 250px;
+				height: 250px;
+				transform: translate(50px,-10px);
+				margin-top: 120px;
+            }
+			&:nth-child(4) {
+				font-size: 0.8em;
+				line-height: 23px;
+				position: relative;
+				z-index: 2;
+				width: 350px;
+				height: 350px;
+				transform: translate(28px,-80px);
+				margin-left: -25px;
+            }
+        }
+
+		div {
+			clear: both;
+        }
+    }
+
+	#profileMain {
+		h1 {
+			margin-bottom: 50px;
+        }
+		p{ 
+			margin-left: 10%;
+        }
+		div{ 
+			width: 800px;
+        }
+	}
+	.browse{
+		article {
+			margin: 0 2% 20px;
+			padding-top: 30px;
+			div {
+				width: 120%;
+				position: absolute;
+				margin: 0 auto;
+				top: 0;
+				left: -10%;
+				right: 0;
+            }
+			h1 { 
+				font-size: 1.3em;
+				margin-right: 5px;
+            }
+			h2{ 
+				font-size: 1.1em;
+            }
+			img {
+				margin: 0 auto;
+				display: block;
+				width: 260px;
+				height: 260px;
+				border: 15px solid transparent;
+				border-image: $url_15 20 stretch;
+            }
+        }
+
+		h1{ 
+			font-size: 1.6em;
+        }
+    }
+	#browseCombinations {
+		h1 {
+			text-align: left;
+			margin-left: 10%;
+        }
+		article:nth-child(5n + 2){ 
+			transform: translate(0, 10%);
+			margin-left: 5%;
+        }
+		article:nth-child(5n + 3){ 
+			transform: translate(-5%, -10%);
+        }
+		article:nth-child(5n + 4){ 
+			transform: translate(-5%, -10%);
+        }
+		article:nth-child(5n + 5) {
+			transform: translate(-5%, -5%);
+			margin-left: 20%;
+        }
+		article:nth-child(5n + 6) {
+			transform: translate(-5%, -10%);
+			margin-right: 20%;
+        }
+    }
 
 
-#createAccount #userIcon 
-	margin: 0 auto
-	width: 120px
-	height: 120px
-	background-image: $url_6
-	background-size: 100% 100%
 
-#browseSets article:nth-child(6n 
-	+ 2) 
+	#login div {
+		width: 100%;
+		height: 50px;
+		background-image: $url_5;
+		background-size: 100% 100%;
 		
-		transform: translate(-5%, -10%)
-
-	+ 3) 
-		
-		transform: translate(5%, 10%)
-
-	+ 4) 
-		
-		transform: translate(0, -10%)
-
-	+ 5) 
-		
-		transform: translate(-5%, -10%)
-
-	+ 6) 
-		
-		transform: translate(-5%, 5%)
-
-	+ 7) 
-		 
-		transform: translate(0, -10%)
+        button {
+			width: 50%;
+			float: left;
+			padding: 0;
+			transform: translate(0, 5px);
+			border: none;
+			height: 100%;
+			background-color: transparent;
+			font-family: $font_2;
+			font-size: 1.2em;
+        }
+    }
 
 
-.setPiece img 
-	width: 100%
-	height: 100%
+	#createAccount #userIcon{ 
+		margin: 0 auto;
+		width: 120px;
+		height: 120px;
+		background-image: $url_6;
+		background-size: 100% 100%;
+    }
+	#browseSets article {
+		margin: 0 1% 60px;
+
+		&:nth-child(6n + 2) {
+			transform: translate(-5%, -10%);
+        }
+		&:nth-child(6n + 3) {		
+			transform: translate(5%, 10%);
+        }
+		&:nth-child(6n + 4) {		
+			transform: translate(5%, -10%);
+        }
+		&:nth-child(6n + 5) {
+			transform: translate(0%, -5%);
+        }
+		&:nth-child(6n + 6) {
+			transform: translate(-5%, 10%);
+        }
+		&:nth-child(6n + 7) {
+			transform: translate(0, -5%);
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #login div {
+	    width: 100%;
+	    height: 50px;
+	    background-image: $url_5;
+	    background-size: 100% 100%;
+	    
+        button{ 
+		    width: 50%;
+		    float: left;
+		    padding: 0;
+		    transform: translate(0, 5px);
+		    border: none;
+		    height: 100%;
+		    background-color: transparent;
+		    font-family: $font_7;
+		    font-size: 1.2em;
+        }
+    }
+
+    #createAccount #userIcon{
+	    margin: 0 auto;
+	    width: 120px;
+	    height: 120px;
+	    background-image: $url_6;
+	    background-size: 100% 100%;
+    }
+    #browseSets article:nth-child(6n + 2) {
+		transform: translate(-5%, -10%);
+	}
+    #browseSets article:nth-child(6n + 3){ 
+		transform: translate(5%, 10%);
+    }
+	#browseSets article:nth-child(6n + 4){		
+		transform: translate(0, -10%);
+    }
+	#browseSets article:nth-child(6n + 5){
+		transform: translate(-5%, -10%);
+    }
+	#browseSets article:nth-child(6n + 6){
+		transform: translate(-5%, 5%);
+    }
+	#browseSets article:nth-child(6n + 7){
+		transform: translate(0, -10%);
+    }
+
+    .setPiece img{ 
+	    width: 100%;
+	    height: 100%;
+    }
+}
