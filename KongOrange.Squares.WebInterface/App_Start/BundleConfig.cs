@@ -37,11 +37,7 @@ namespace KongOrange.Squares.WebInterface
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/style").Include(
-                      "~/Content/reset.css",
                       "~/Content/style.css"));
-
-            bundles.Add(new StyleBundle("~/Content/about").Include(
-                      "~/Content/about.css"));
         }
     }
 }
