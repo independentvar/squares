@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, a:visited, abbr, acronym, address, big, cite, code,
@@ -58,7 +59,7 @@ table {
   height: 290px;
   margin-top: -10px;
   border: 15px solid transparent;
-  border-image: url("../images/gridBorder.png") 40 stretch;
+  border-image: url("/Content/Images/gridBorder.png") 40 stretch;
   font-size: 0.8em; }
   .article-container h1 {
     font-size: 1.4em;
@@ -258,15 +259,14 @@ table {
     height: 490px;
     margin-top: -10px;
     border: 30px solid transparent;
-    border-image: url("../images/gridBorder.png") 40 stretch; }
+    border-image: url("/Content/Images/gridBorder.png") 40 stretch; }
     .article-container h1 {
       font-size: 2.4em;
       margin-top: 15px;
       margin-bottom: 15px; }
     .article-container p {
       line-height: 38px;
-      padding-left: 35px;
-      text-align: left;
+      text-align: center;
       white-space: pre-wrap;
       font-size: 1.4em; }
   #article-2 {
@@ -277,11 +277,21 @@ table {
     height: 570px;
     margin-top: 20px;
     transform: translate(-220px, 0) rotate(-7deg); }
+    #article-2 h1 {
+      margin-top: 80px; }
+    #article-2 p {
+      margin-top: 50px;
+      font-size: 1.8em; }
   #article-3 {
     position: relative;
     z-index: 30;
     margin-top: -220px;
     transform: rotate(5deg) translate(250px, 0); }
+    #article-3 h1 {
+      margin-top: 80px; }
+    #article-3 p {
+      margin-top: 50px;
+      font-size: 1.8em; }
   #wrapper {
     position: relative; }
   .art-container {
@@ -289,7 +299,7 @@ table {
     width: 150px;
     height: 150px;
     border: 9px solid transparent;
-    border-image: url("../images/pieceBorder.png") 9 stretch; } }
+    border-image: url("/Content/Images/pieceBorder.png") 9 stretch; } }
 
 .extend_1 {
   font-family: "Indie Flower";
@@ -298,7 +308,7 @@ table {
   height: 15px;
   border: 20px solid transparent;
   margin: 0 0 0 -15px;
-  border-image: url("../images/inputBorder.png") 40 stretch; }
+  border-image: url("/Content/Images/inputBorder.png") 40 stretch; }
 
 .extend_2 {
   font-family: "Indie Flower";
@@ -307,10 +317,10 @@ table {
   height: 15px;
   border: 20px solid transparent;
   margin: 0 0 0 -15px;
-  border-image: url("../images/inputBorder.png") 40 stretch; }
+  border-image: url("/Content/Images/inputBorder.png") 40 stretch; }
 
 body {
-  font-family: "Indie Flower", "cursive";
+  font-family: "Indie Flower", cursive;
   font-size: 1.2em;
   position: relative; }
 
@@ -350,7 +360,7 @@ header {
       right: -193px;
       transition: right 300ms ease-in-out;
       border-left: 13px solid transparent;
-      border-image: url("../images/menuBorderMobile.png") 0 0 0 13 stretch;
+      border-image: url("/Content/Images/menuBorderMobile.png") 0 0 0 13 stretch;
       position: static;
       background-color: transparent;
       width: auto;
@@ -435,7 +445,7 @@ nav li span {
   text-align: center;
   width: 100%;
   padding: 30px;
-  background-image: url("../images/loginBackground.png");
+  background-image: url("/Content/Images/loginBackground.png");
   background-size: 100% 100%; }
   .loginDiv p {
     font-size: 1.2em; }
@@ -444,7 +454,7 @@ nav li span {
     height: 70px;
     background-color: transparent;
     border: none;
-    background-image: url("../images/facebook.png");
+    background-image: url("/Content/Images/facebook.png");
     background-size: 100% 100%;
     margin: 15px 0;
     cursor: pointer; }
@@ -484,7 +494,7 @@ footer {
   left: -3.75%;
   top: -3.75%;
   z-index: 1;
-  background-image: url("../images/gridBorder.png");
+  background-image: url("/Content/Images/gridBorder.png");
   background-size: 100% 100%;
   transition: all 100ms linear; }
 
@@ -493,7 +503,7 @@ footer {
   height: 100%;
   z-index: 2;
   position: absolute;
-  background-image: url("../images/grid4.png");
+  background-image: url("/Content/Images/grid4.png");
   background-size: 100% 100%; }
 
 .pieceWrapper {
@@ -515,7 +525,7 @@ footer {
   margin-top: -25%;
   margin-left: 16%;
   z-index: 5;
-  background-image: url("../images/rotate.png");
+  background-image: url("/Content/Images/rotate.png");
   background-size: 100% 100%;
   cursor: pointer; }
 
@@ -529,21 +539,21 @@ footer {
 #tl {
   top: -10px;
   left: -10px;
-  background-image: url("../images/button_tl.png");
+  background-image: url("/Content/Images/button_tl.png");
   background-size: 100% 100%; }
 
 #tr {
   top: -10px;
   left: 260px;
   left: calc(100% - 20px);
-  background-image: url("../images/button_tr.png");
+  background-image: url("/Content/Images/button_tr.png");
   background-size: 100% 100%; }
 
 #bl {
   top: 260px;
   top: calc(100% - 20px);
   left: -10px;
-  background-image: url("../images/button_bl.png");
+  background-image: url("/Content/Images/button_bl.png");
   background-size: 100% 100%; }
 
 #br {
@@ -551,7 +561,7 @@ footer {
   top: calc(100% - 20px);
   left: 260px;
   left: calc(100% - 20px);
-  background-image: url("../images/button_br.png");
+  background-image: url("/Content/Images/button_br.png");
   background-size: 100% 100%; }
 
 #playButton {
@@ -568,7 +578,7 @@ footer {
     position: absolute;
     left: 110%;
     border: 4px solid transparent;
-    border-image: url("../images/pieceBorder.png") 8 stretch; }
+    border-image: url("/Content/Images/pieceBorder.png") 8 stretch; }
 
 .pieces {
   cursor: pointer;
@@ -594,7 +604,7 @@ footer {
     display: inline-block;
     margin: 10px 3%;
     border: 12px solid transparent;
-    border-image: url("../images/MainGalleryBorder.png") 20 stretch; }
+    border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
     #browseSection #popularImagesContainer img:nth-child(3) {
       transform: translate(-7%, 15%); }
     #browseSection #popularImagesContainer img:nth-child(4) {
@@ -639,7 +649,7 @@ footer {
       width: 100px;
       height: 100px;
       border: 10px solid transparent;
-      border-image: url("../images/MainGalleryBorder.png") 20 stretch; }
+      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
   .browse h1 {
     font-size: 1.3em; }
 
@@ -675,7 +685,7 @@ footer {
     padding: 15px;
     margin: 20px auto;
     border: 10px solid transparent;
-    border-image: url("../images/profileUploadBorderMobile.png") 10 round; }
+    border-image: url("/Content/Images/profileUploadBorderMobile.png") 10 round; }
     #profileMain div p {
       text-align: center; }
 
@@ -698,7 +708,7 @@ footer {
     display: inline-block;
     margin: 10px;
     border: 4px solid transparent;
-    border-image: url("../images/profileSetBorderMobile.png") 10% stretch; }
+    border-image: url("/Content/Images/profileSetBorderMobile.png") 10% stretch; }
     .setPiecesContainer .setPiece:nth-child(10n + 1) {
       transform: translate(-7%, 15%);
       transform: rotate(-5deg); }
@@ -747,26 +757,26 @@ footer {
   #tl {
     top: -10px;
     left: -10px;
-    background-image: url("../images/button_tl.png");
+    background-image: url("/Content/Images/button_tl.png");
     background-size: 100% 100%; }
   #tr {
     top: -10px;
     left: 380px;
     left: calc(100% - 20px);
-    background-image: url("../images/button_tr.png");
+    background-image: url("/Content/Images/button_tr.png");
     background-size: 100% 100%; }
   #bl {
     top: 380px;
     top: calc(100% - 20px);
     left: -10px;
-    background-image: url("../images/button_bl.png");
+    background-image: url("/Content/Images/button_bl.png");
     background-size: 100% 100%; }
   #br {
     top: 380px;
     top: calc(100% - 20px);
     left: 380px;
     left: calc(100% - 20px);
-    background-image: url("../images/button_br.png");
+    background-image: url("/Content/Images/button_br.png");
     background-size: 100% 100%; }
   #piecesContainer {
     height: 160px; }
@@ -775,14 +785,14 @@ footer {
       height: 120px;
       left: 105%;
       border: 8px solid transparent;
-      border-image: url("../images/pieceBorder.png") 12 stretch; }
+      border-image: url("/Content/Images/pieceBorder.png") 12 stretch; }
   #browseSection #browseArrow {
     float: right; }
   #browseSection #popularImagesContainer img {
     width: 160px;
     margin: 20px 5%;
     border: 12px solid transparent;
-    border-image: url("../images/MainGalleryBorder.png") 20 stretch; }
+    border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
   .setContainer {
     width: 100%; }
     .setContainer h1 {
@@ -798,28 +808,28 @@ footer {
     display: inline-block;
     margin: 20px 25px;
     border: 4px solid transparent;
-    border-image: url("../images/profileSetBorderMobile.png") 10% stretch; }
+    border-image: url("/Content/Images/profileSetBorderMobile.png") 10% stretch; }
   .browse article {
     margin: 0 2% 20px;
     padding-top: 20px; }
-  div {
-    width: 150%;
-    position: absolute;
-    margin: 0 auto;
-    top: 0;
-    left: -25%;
-    right: 0; }
-  h1 {
-    font-size: 0.9em;
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 10px; }
-  h2 {
-    font-size: 0.7em;
-    display: inline-block; }
-  img {
-    width: 140px;
-    height: 140px; }
+    .browse article div {
+      width: 150%;
+      position: absolute;
+      margin: 0 auto;
+      top: 0;
+      left: -25%;
+      right: 0; }
+    .browse article h1 {
+      font-size: 0.9em;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 10px; }
+    .browse article h2 {
+      font-size: 0.7em;
+      display: inline-block; }
+    .browse article img {
+      width: 140px;
+      height: 140px; }
   #browseSets article {
     margin: 0 6% 30px; }
     #browseSets article:nth-child(6n+ 2) {
@@ -861,7 +871,7 @@ footer {
     border-left: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-image: url("../images/menuBorder.png") 8 round;
+    border-image: url("/Content/Images/menuBorder.png") 8 round;
     font-size: 0.8em; }
   #profileMenu li a {
     float: none;
@@ -907,7 +917,7 @@ footer {
     text-align: center;
     width: 450px;
     padding: 30px;
-    background-image: url("../images/loginBackground.png");
+    background-image: url("/Content/Images/loginBackground.png");
     background-size: 100% 100%; }
     .loginDiv p {
       font-size: 1.2em; }
@@ -916,7 +926,7 @@ footer {
       height: 140px;
       background-color: transparent;
       border: none;
-      background-image: url("../images/facebook.png");
+      background-image: url("/Content/Images/facebook.png");
       background-size: 100% 100%;
       margin: 15px 0;
       cursor: pointer; }
@@ -963,7 +973,7 @@ footer {
     margin-top: -25%;
     margin-left: 21%;
     display: none;
-    background-image: url("../images/rotate.png"); }
+    background-image: url("/Content/Images/rotate.png"); }
   .resizeButton {
     position: absolute;
     width: 30px;
@@ -972,32 +982,32 @@ footer {
   #tl {
     top: -10px;
     left: -10px;
-    background-image: url("../images/button_tl.png");
+    background-image: url("/Content/Images/button_tl.png");
     background-size: 100% 100%; }
   #tr {
     top: -10px;
     left: 380px;
     left: calc(100% - 20px);
-    background-image: url("../images/button_tr.png");
+    background-image: url("/Content/Images/button_tr.png");
     background-size: 100% 100%; }
   #bl {
     top: 380px;
     top: calc(100% - 20px);
     left: -10px;
-    background-image: url("../images/button_bl.png");
+    background-image: url("/Content/Images/button_bl.png");
     background-size: 100% 100%; }
   #br {
     top: 380px;
     top: calc(100% - 20px);
     left: 380px;
     left: calc(100% - 20px);
-    background-image: url("../images/button_br.png");
+    background-image: url("/Content/Images/button_br.png");
     background-size: 100% 100%; }
   #playButton {
     display: block;
     width: 80px;
     height: 59px;
-    background-image: url("../images/playButton.png");
+    background-image: url("/Content/Images/playButton.png");
     background-size: 100% 100%;
     background-color: transparent;
     border: none;
@@ -1009,7 +1019,7 @@ footer {
     #piecesContainer .pieces {
       left: 105%;
       border: 8px solid transparent;
-      border-image: url("../images/pieceBorder.png") 12 stretch; }
+      border-image: url("/Content/Images/pieceBorder.png") 12 stretch; }
   .pieces {
     width: 100px;
     height: 100px; }
@@ -1023,7 +1033,7 @@ footer {
       display: inline-block;
       margin: 20px 20px 40px 20px;
       border: 15px solid transparent;
-      border-image: url("../images/MainGalleryBorder.png") 20 stretch; }
+      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
       #browseSection #popularImagesContainer img:nth-child(3) {
         transform: translate(-7%, 15%); }
       #browseSection #popularImagesContainer img:nth-child(4) {
@@ -1049,14 +1059,14 @@ footer {
       width: 200px;
       height: 200px;
       line-height: 200px;
-      background-image: url("../images/h1Border.png");
+      background-image: url("/Content/Images/h1Border.png");
       background-size: 100% 100%; }
     #aboutSection article {
       width: calc(33% - 40px);
       display: inline-block;
       border: 15px solid transparent;
       padding: 5px;
-      border-image: url("../images/gridBorder.png") 30 round;
+      border-image: url("/Content/Images/gridBorder.png") 30 round;
       background-color: white; }
       #aboutSection article:nth-child(2) {
         font-size: 0.8em;
@@ -1112,7 +1122,7 @@ footer {
       width: 260px;
       height: 260px;
       border: 15px solid transparent;
-      border-image: url("../images/MainGalleryBorder.png") 20 stretch; }
+      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
   .browse h1 {
     font-size: 1.6em; }
   #browseCombinations h1 {
@@ -1134,7 +1144,7 @@ footer {
   #login div {
     width: 100%;
     height: 50px;
-    background-image: url("../images/loginButtonsBackground.png");
+    background-image: url("/Content/Images/loginButtonsBackground.png");
     background-size: 100% 100%; }
     #login div button {
       width: 50%;
@@ -1150,7 +1160,7 @@ footer {
     margin: 0 auto;
     width: 120px;
     height: 120px;
-    background-image: url("../images/userIcon.png");
+    background-image: url("/Content/Images/userIcon.png");
     background-size: 100% 100%; }
   #browseSets article {
     margin: 0 1% 60px; }
@@ -1171,7 +1181,7 @@ footer {
   #login div {
     width: 100%;
     height: 50px;
-    background-image: url("../images/loginButtonsBackground.png");
+    background-image: url("/Content/Images/loginButtonsBackground.png");
     background-size: 100% 100%; }
     #login div button {
       width: 50%;
@@ -1187,7 +1197,7 @@ footer {
     margin: 0 auto;
     width: 120px;
     height: 120px;
-    background-image: url("../images/userIcon.png");
+    background-image: url("/Content/Images/userIcon.png");
     background-size: 100% 100%; }
   #browseSets article:nth-child(6n + 2) {
     transform: translate(-5%, -10%); }

@@ -2,8 +2,8 @@
 $white: #fff;
 
 //urls
-$url_0: url('../images/gridBorder.png');
-$url_1: url('../images/pieceBorder.png');
+$url_0: url('/Content/Images/gridBorder.png');
+$url_1: url('/Content/Images/pieceBorder.png');
 
 #about {
     text-align: center;
@@ -295,8 +295,7 @@ $url_1: url('../images/pieceBorder.png');
 
         p {
             line-height: 38px;
-            padding-left: 35px;
-            text-align: left;
+            text-align: center;
             white-space: pre-wrap;
             font-size: 1.4em;
         }
@@ -310,6 +309,15 @@ $url_1: url('../images/pieceBorder.png');
         height: 570px;
         margin-top: 20px;
         transform: translate(-220px,0) rotate(-7deg);
+
+        h1{
+            margin-top: 80px;
+        }
+        p{
+            margin-top: 50px;
+            font-size: 1.8em;
+        }
+
     }
 
     #article-3 {
@@ -317,6 +325,14 @@ $url_1: url('../images/pieceBorder.png');
         z-index: 30;
         margin-top: -220px;
         transform: rotate(5deg) translate(250px,0);
+
+        h1{
+            margin-top: 80px;
+        }
+        p{
+            margin-top: 50px;
+            font-size: 1.8em;
+        }
     }
 
     #wrapper {

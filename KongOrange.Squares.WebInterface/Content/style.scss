@@ -1,6 +1,6 @@
 @import 'reset';
-@import 'about';
-
+@import '_about.scss';
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 
 //colors
@@ -13,33 +13,32 @@ $font_0: 'Indie Flower';
 $font_1: 'Indie Flower';
 $font_2: 'Indie Flower';
 $font_3: 'Indie Flower';
-$font_4: 'cursive';
+$font_4: cursive;
 $font_5: 'Indie Flower';
 $font_6: 'Indie Flower';
 $font_7: 'Indie Flower';
 
 //urls
-$url_0: url('https://fonts.googleapis.com/css?family=Indie+Flower');
-$url_1: url('../images/menuBorderMobile.png');
-$url_2: url('../images/loginBackground.png');
-$url_3: url('../images/facebook.png');
-$url_4: url('../images/inputBorder.png');
-$url_5: url('../images/loginButtonsBackground.png');
-$url_6: url('../images/userIcon.png');
-$url_7: url('../images/gridBorder.png');
-$url_8: url('../images/grid4.png');
-$url_9: url('../images/rotate.png');
-$url_10: url('../images/button_tl.png');
-$url_11: url('../images/button_tr.png');
-$url_12: url('../images/button_bl.png');
-$url_13: url('../images/button_br.png');
-$url_14: url('../images/pieceBorder.png');
-$url_15: url('../images/MainGalleryBorder.png');
-$url_16: url('../images/profileUploadBorderMobile.png');
-$url_17: url('../images/profileSetBorderMobile.png');
-$url_18: url('../images/menuBorder.png');
-$url_19: url('../images/playButton.png');
-$url_20: url('../images/h1Border.png');
+$url_1: url('/Content/Images/menuBorderMobile.png');
+$url_2: url('/Content/Images/loginBackground.png');
+$url_3: url('/Content/Images/facebook.png');
+$url_4: url('/Content/Images/inputBorder.png');
+$url_5: url('/Content/Images/loginButtonsBackground.png');
+$url_6: url('/Content/Images/userIcon.png');
+$url_7: url('/Content/Images/gridBorder.png');
+$url_8: url('/Content/Images/grid4.png');
+$url_9: url('/Content/Images/rotate.png');
+$url_10: url('/Content/Images/button_tl.png');
+$url_11: url('/Content/Images/button_tr.png');
+$url_12: url('/Content/Images/button_bl.png');
+$url_13: url('/Content/Images/button_br.png');
+$url_14: url('/Content/Images/pieceBorder.png');
+$url_15: url('/Content/Images/MainGalleryBorder.png');
+$url_16: url('/Content/Images/profileUploadBorderMobile.png');
+$url_17: url('/Content/Images/profileSetBorderMobile.png');
+$url_18: url('/Content/Images/menuBorder.png');
+$url_19: url('/Content/Images/playButton.png');
+$url_20: url('/Content/Images/h1Border.png');
 
 //@extend-elements
 //original selectors
@@ -751,32 +750,32 @@ footer {
     .browse article {
         margin: 0 2% 20px;
         padding-top: 20px;
-    }
 
-    div {
-        width: 150%;
-        position: absolute;
-        margin: 0 auto;
-        top: 0;
-        left: -25%;
-        right: 0;
-    }
+        div {
+            width: 150%;
+            position: absolute;
+            margin: 0 auto;
+            top: 0;
+            left: -25%;
+            right: 0;
+        }
 
-    h1 {
-        font-size: 0.9em;
-        display: inline-block;
-        margin-right: 5px;
-        margin-bottom: 10px;
-    }
+        h1 {
+            font-size: 0.9em;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
 
-    h2 {
-        font-size: 0.7em;
-        display: inline-block;
-    }
+        h2 {
+            font-size: 0.7em;
+            display: inline-block;
+        }
 
-    img {
-        width: 140px;
-        height: 140px;
+        img {
+            width: 140px;
+            height: 140px;
+        }
     }
 
     #browseSets article {
