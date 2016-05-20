@@ -191,7 +191,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\about.scss" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -276,7 +275,6 @@
     <Content Include="Content\Images\tool\37.jpg" />
     <Content Include="Content\Images\tool\38.jpg" />
     <Content Include="Content\Images\userIcon.png" />
-    <None Include="Content\reset.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
