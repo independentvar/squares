@@ -66,137 +66,94 @@ $url_20: url('/Content/Images/h1Border.png');
 }
 
 
-
+html{
+    height: 100%;
+}
 body {
     font-family: $font_3, $font_4;
     font-size: 1.2em;
     position: relative;
+    min-height: 100%;
 }
 
 #wrapper {
     width: 100%;
     position: relative;
     overflow: hidden;
+    padding-bottom: 70px;
 }
 
-header {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 20px;
-    position: relative;
-    margin-bottom: 30px;
-
-    #logo {
-        float: left;
-        width: 60px;
-        margin-left: 40px;
-        margin-top: 10px;
-        position: absolute;
-        left: 0;
-        width: 134px;
-        height: auto;
+header{
+	width: 100%;
+	height: 80px;
+	margin-bottom: 20px;
+    
+    #logo{
+	    float: left;
+	    width: 60px;
+	    margin-left: 40px;
+	    margin-top: 10px;
+	    height: auto;
     }
 
-    nav {
-        float: right;
-        position: relative;
-        position: static;
-        margin-right: 30px;
+    nav{
+	    float: right;
+	    position: relative;
+         
+        ul{
+	        height: 100vh;
+	        width: 160px;
+	        padding-bottom: 100px;
+	        background-color: white;
+	        position: fixed;
+	        top: 0;
+	        z-index: 10;
+	        right: -193px;
+	        transition: right 300ms ease-in-out;
+	        border-left: 13px solid transparent;
+	        -webkit-border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch; /* Safari 3.1-5 */
+            -o-border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch; /* Opera 11-12.1 */
+            border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch;
+        
+            li{
+	            width: 100%;
+	            clear: both;
+	            margin: 30px 0;
+	            height: 25px;
+	            cursor: pointer;
 
-        ul {
-            height: 100vh;
-            width: 160px;
-            padding-bottom: 100px;
-            background-color: $white;
-            position: fixed;
-            top: 0;
-            z-index: 10;
-            right: -193px;
-            transition: right 300ms ease-in-out;
-            border-left: 13px solid transparent;
-            border-image: $url_1 0 0 0 13 stretch;
-            position: static;
-            background-color: transparent;
-            width: auto;
-            height: auto;
-            border: none;
-            border-image: none;
-            padding: 0;
-        }
-    }
-
-    .mobile {
-        display: none;
-    }
-}
-
-nav {
-    ul {
-        li {
-            width: 100%;
-            clear: both;
-            margin: 30px 0;
-            height: 25px;
-            cursor: pointer;
-            display: inline-block;
-            width: auto;
-            margin: 0;
-            height: auto;
-
-            a {
-                float: none;
-                height: 100%;
-                line-height: normal;
-                padding: 30px 20px;
-                margin: 0;
-                display: block;
-                font-size: 1.1em;
+                a{
+	                font-size: 1.1em;
+                }
+                img{
+	                float: left;
+	                margin: 10px;
+	                height: 25px;
+	                width: auto;
+                }
+                span{
+	                float: left;
+	                line-height: 25px;
+	                padding: 10px;
+                }
             }
-
-            img {
-                float: left;
-                margin: 10px;
-                height: 25px;
-                width: auto;
-            }
-
-            span {
-                float: none;
+            #closeMenu{
+	            height: 50px;
+                
+                img{
+	                height: 25px;
+	                margin-top: -10px;
+                }
+                span{
+	                margin-left: 40px;
+                }
             }
         }
-
-        #closeMenu {
-            height: 50px;
-
-            img {
-                height: 25px;
-                margin-top: -10px;
-            }
-
-            span {
-                margin-left: 40px;
-            }
+        button{
+	        cursor: pointer;
+	        background-color: transparent;
+	        border: none;
         }
-
-        #profileMenu {
-            position: relative;
-
-            &:hover ul {
-                display: block;
-            }
-        }
-    }
-
-    button {
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-    }
-
-    li span {
-        float: left;
-        line-height: 25px;
-        padding: 10px;
     }
 }
 
@@ -284,7 +241,18 @@ h1 {
 }
 
 footer {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: auto;
+    text-align: center;
+    
+    img{
+        width: 40px;
+        margin: 5px 0;
+    }
 }
 
 .desktop {
@@ -429,7 +397,9 @@ footer {
         margin-right: 10%;
         margin-bottom: 50px;
     }
-
+    #browseArrow:hover{
+	    background-image: url(/Content/Images/browseArrowBold.png);
+    }
     #popularImagesContainer img {
         width: 110px;
         display: inline-block;
@@ -831,45 +801,109 @@ footer {
 }
 
 @media only screen and (min-width: 950px) {
-
-
-
-    #profileMenu {
-        ul {
-            display: none;
-            background-color: $white;
-            width: 110px;
-            position: absolute;
-            z-index: 99;
-            padding-bottom: 10px;
-            right: -8px;
-            top: 60%;
-            border-left: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-image: $url_18 8 round;
-            font-size: 0.8em;
+    header{
+	    position: relative;
+	    margin-bottom: 30px;
+        .mobile{
+	        display: none;
         }
+        #logo{
+	        position: absolute;
+	        left: 0;
+	        width: 134px;
+	        height: auto;
+        }
+        nav{
+	        position: static;
+	        margin-right: 30px;
+            
+            ul{
+	            position: static;
+	            background-color: transparent;
+	            width: auto;
+	            height: auto;
+	            border: none;
+	            border-image: none;
+	            padding: 0;
+            
+                li{
+	                display: inline-block;
+	                width: auto;
+	                margin: 0;
+	                height: auto;
 
-        li {
-            a {
-                float: none;
-                height: 20px;
-                padding: 10px;
-                display: block;
-            }
+                    &:hover{
+                        a{
+	                        text-decoration: underline;
+                        }
+                    }
+                    
+                    a{
+	                    float: none;
+	                    height: 100%;
+	                    line-height: normal;
+	                    padding: 30px 20px;
+	                    margin: 0;
+	                    display: block;
+	                    font-size: 1.1em;
+                    }
+                    span{
+	                    float: none;
+                    }
+                }
+                
+                #profileMenu{
+	                position: relative;
+                    
+                    &:hover{
+                        ul{
+	                        display: block;
+                        }
+                    }
 
-            span {
-                float: left;
-                padding: 0 3px;
-                line-height: 20px;
-            }
+                    ul{
+	                    display: none;
+	                    background-color: white;
+	                    width: 110px;
+	                    position: absolute;
+	                    z-index: 99;
+	                    padding-bottom: 10px;
+	                    right: -8px;
+	                    top: 60%;
+	                    border-left: 8px solid transparent;
+	                    border-bottom: 8px solid transparent;
+	                    border-right: 8px solid transparent;
+	                    -webkit-border-image: url(../images/menuBorder.png) 8 round; /* Safari 3.1-5 */
+                        -o-border-image: url(../images/menuBorder.png) 8 round; /* Opera 11-12.1 */
+                        border-image: url(../images/menuBorder.png) 8 round;
+	                    font-size: 0.8em; 
+                        
+                        li{
+                            a{
+	                            float: none;
+	                            height: 20px !important;
+	                            padding: 10px 10px;
+	                            display: block;
+                            }
+                            span{
+	                            float: left;
+	                            padding: 0 3px;
+	                            line-height: 20px;
+                            }
+                            
+                            img{
+	                            margin: 0 3px;
+	                            width: auto;
+	                            height: 100%;
+	                            float: left;
+                            }
 
-            img {
-                margin: 0 3px;
-                width: auto;
-                height: 100%;
-                float: left;
+                            &:hover span{
+	                            text-decoration: underline;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -879,6 +913,7 @@ footer {
     #wrapper {
         width: 1152px;
         margin: 0 auto;
+        padding-bottom: 150px;
         border: 1px solid $black;
     }
 
@@ -978,12 +1013,9 @@ footer {
     }
 
     footer {
-        display: block;
-        text-align: center;
-        padding-bottom: 25px;
-
         img {
-            margin: 0 10px;
+            margin: 20px 10px;
+            width: auto;
         }
     }
 
@@ -1121,7 +1153,9 @@ footer {
         text-align: center;
         display: block;
         margin-bottom: 0;
-        margin-top: -80px;
+        margin-top: 90px;
+        position:relative;
+        height: 600px;//add
 
         p {
             white-space: pre-wrap;
@@ -1130,7 +1164,7 @@ footer {
         h1 {
             font-size: 2.2em;
             text-align: center;
-            transform: translate(0px, 110px);
+            transform: translate(0px, 10px);
             margin: 0 auto;
             width: 200px;
             height: 200px;
@@ -1140,44 +1174,69 @@ footer {
         }
 
         article {
-            width: calc(33% - 40px);
-            display: inline-block;
+
             border: 15px solid transparent;
             padding: 5px;
             border-image: $url_7 30 round;
             background-color: $white;
 
-            &:nth-child(2) {
-                font-size: 0.8em;
-                line-height: 23px;
-                width: 320px;
-                height: 320px;
-                transform: translate(0,-170px);
-                margin-right: -110px;
+            h2{
+                font-size: 1.5em;
+                margin: 15px 0;
             }
 
-            &:nth-child(3) {
-                font-size: 0.8em;
-                position: relative;
-                line-height: 23px;
-                z-index: 1;
-                width: 250px;
-                height: 250px;
-                transform: translate(50px,-10px);
-                margin-top: 120px;
-            }
-
-            &:nth-child(4) {
-                font-size: 0.8em;
-                line-height: 23px;
-                position: relative;
-                z-index: 2;
-                width: 350px;
-                height: 350px;
-                transform: translate(28px,-80px);
-                margin-left: -25px;
+            p{
+                white-space: normal;
+                font-size: 1.2em;
+                line-height: 180%;
             }
         }
+
+        #index-article-1{
+            font-size: 0.8em;
+            line-height: 23px;
+            width: 320px;
+            height: 320px;
+            left: 110px;
+            top: 80px;
+            position: absolute;
+            p{
+                padding-right: 50px;
+                padding-left: 20px;
+            }
+        }
+
+        #index-article-2 {
+            font-size: 0.8em;
+            position: absolute;
+            line-height: 23px;
+            z-index: 1;
+            width: 280px;
+            height: 280px;
+            top: 250px;
+            left: 420px;
+            p{
+                padding-right: 30px;
+            }
+        }
+
+        #index-article-3 {
+            font-size: 0.8em;
+            line-height: 23px;
+            position: absolute;
+            z-index: 2;
+            width: 350px;
+            height: 350px;
+            left: 695px;
+            top: 100px;
+            p{
+                margin-top: 40px;
+                span{
+                    font-size: 1.3em;
+                }
+            }
+        }
+       
 
         div {
             clear: both;
@@ -1326,7 +1385,13 @@ footer {
 }
 
 @media only screen and (min-width: 1920px) {
-    #login div {
+    #canvas{
+	    width: 550px;
+	    height: 550px;
+	    margin-left: 301px;
+    }
+    
+    /*#login div {
         width: 100%;
         height: 50px;
         background-image: $url_5;
@@ -1380,5 +1445,5 @@ footer {
     .setPiece img {
         width: 100%;
         height: 100%;
-    }
+    }*/
 }

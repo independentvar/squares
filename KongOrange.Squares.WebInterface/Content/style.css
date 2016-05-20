@@ -275,7 +275,7 @@ table {
     background-color: #fff;
     width: 570px;
     height: 570px;
-    margin-top: 20px;
+    margin-top: 25px;
     transform: translate(-220px, 0) rotate(-7deg); }
     #article-2 h1 {
       margin-top: 80px; }
@@ -319,36 +319,34 @@ table {
   margin: 0 0 0 -15px;
   border-image: url("/Content/Images/inputBorder.png") 40 stretch; }
 
+html {
+  height: 100%; }
+
 body {
   font-family: "Indie Flower", cursive;
   font-size: 1.2em;
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
 
 #wrapper {
   width: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 70px; }
 
 header {
   width: 100%;
   height: 80px;
-  margin-bottom: 20px;
-  position: relative;
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
   header #logo {
     float: left;
     width: 60px;
     margin-left: 40px;
     margin-top: 10px;
-    position: absolute;
-    left: 0;
-    width: 134px;
     height: auto; }
   header nav {
     float: right;
-    position: relative;
-    position: static;
-    margin-right: 30px; }
+    position: relative; }
     header nav ul {
       height: 100vh;
       width: 160px;
@@ -360,65 +358,39 @@ header {
       right: -193px;
       transition: right 300ms ease-in-out;
       border-left: 13px solid transparent;
-      border-image: url("/Content/Images/menuBorderMobile.png") 0 0 0 13 stretch;
-      position: static;
+      -webkit-border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch;
+      /* Safari 3.1-5 */
+      -o-border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch;
+      /* Opera 11-12.1 */
+      border-image: url(../images/menuBorderMobile.png) 0 0 0 13 stretch; }
+      header nav ul li {
+        width: 100%;
+        clear: both;
+        margin: 30px 0;
+        height: 25px;
+        cursor: pointer; }
+        header nav ul li a {
+          font-size: 1.1em; }
+        header nav ul li img {
+          float: left;
+          margin: 10px;
+          height: 25px;
+          width: auto; }
+        header nav ul li span {
+          float: left;
+          line-height: 25px;
+          padding: 10px; }
+      header nav ul #closeMenu {
+        height: 50px; }
+        header nav ul #closeMenu img {
+          height: 25px;
+          margin-top: -10px; }
+        header nav ul #closeMenu span {
+          margin-left: 40px; }
+    header nav button {
+      cursor: pointer;
       background-color: transparent;
-      width: auto;
-      height: auto;
-      border: none;
-      border-image: none;
-      padding: 0; }
-  header .mobile {
-    display: none; }
-
-nav ul li {
-  width: 100%;
-  clear: both;
-  margin: 30px 0;
-  height: 25px;
-  cursor: pointer;
-  display: inline-block;
-  width: auto;
-  margin: 0;
-  height: auto; }
-  nav ul li a {
-    float: none;
-    height: 100%;
-    line-height: normal;
-    padding: 30px 20px;
-    margin: 0;
-    display: block;
-    font-size: 1.1em; }
-  nav ul li img {
-    float: left;
-    margin: 10px;
-    height: 25px;
-    width: auto; }
-  nav ul li span {
-    float: none; }
-
-nav ul #closeMenu {
-  height: 50px; }
-  nav ul #closeMenu img {
-    height: 25px;
-    margin-top: -10px; }
-  nav ul #closeMenu span {
-    margin-left: 40px; }
-
-nav ul #profileMenu {
-  position: relative; }
-  nav ul #profileMenu:hover ul {
-    display: block; }
-
-nav button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none; }
-
-nav li span {
-  float: left;
-  line-height: 25px;
-  padding: 10px; }
+      border: none; }
 
 #loginContainer {
   position: fixed;
@@ -476,7 +448,16 @@ h1 {
   margin-bottom: 50px; }
 
 footer {
-  display: none; }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: auto;
+  text-align: center; }
+  footer img {
+    width: 40px;
+    margin: 5px 0; }
 
 .desktop {
   display: none; }
@@ -599,6 +580,8 @@ footer {
     float: right;
     margin-right: 10%;
     margin-bottom: 50px; }
+  #browseSection #browseArrow:hover {
+    background-image: url(/Content/Images/browseArrowBold.png); }
   #browseSection #popularImagesContainer img {
     width: 110px;
     display: inline-block;
@@ -859,39 +842,88 @@ footer {
     margin-right: 23%; } }
 
 @media only screen and (min-width: 950px) {
-  #profileMenu ul {
-    display: none;
-    background-color: white;
-    width: 110px;
-    position: absolute;
-    z-index: 99;
-    padding-bottom: 10px;
-    right: -8px;
-    top: 60%;
-    border-left: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-image: url("/Content/Images/menuBorder.png") 8 round;
-    font-size: 0.8em; }
-  #profileMenu li a {
-    float: none;
-    height: 20px;
-    padding: 10px;
-    display: block; }
-  #profileMenu li span {
-    float: left;
-    padding: 0 3px;
-    line-height: 20px; }
-  #profileMenu li img {
-    margin: 0 3px;
-    width: auto;
-    height: 100%;
-    float: left; } }
+  header {
+    position: relative;
+    margin-bottom: 30px; }
+    header .mobile {
+      display: none; }
+    header #logo {
+      position: absolute;
+      left: 0;
+      width: 134px;
+      height: auto; }
+    header nav {
+      position: static;
+      margin-right: 30px; }
+      header nav ul {
+        position: static;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        border: none;
+        border-image: none;
+        padding: 0; }
+        header nav ul li {
+          display: inline-block;
+          width: auto;
+          margin: 0;
+          height: auto; }
+          header nav ul li:hover a {
+            text-decoration: underline; }
+          header nav ul li a {
+            float: none;
+            height: 100%;
+            line-height: normal;
+            padding: 30px 20px;
+            margin: 0;
+            display: block;
+            font-size: 1.1em; }
+          header nav ul li span {
+            float: none; }
+        header nav ul #profileMenu {
+          position: relative; }
+          header nav ul #profileMenu:hover ul {
+            display: block; }
+          header nav ul #profileMenu ul {
+            display: none;
+            background-color: white;
+            width: 110px;
+            position: absolute;
+            z-index: 99;
+            padding-bottom: 10px;
+            right: -8px;
+            top: 60%;
+            border-left: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 8px solid transparent;
+            -webkit-border-image: url(../images/menuBorder.png) 8 round;
+            /* Safari 3.1-5 */
+            -o-border-image: url(../images/menuBorder.png) 8 round;
+            /* Opera 11-12.1 */
+            border-image: url(../images/menuBorder.png) 8 round;
+            font-size: 0.8em; }
+            header nav ul #profileMenu ul li a {
+              float: none;
+              height: 20px !important;
+              padding: 10px 10px;
+              display: block; }
+            header nav ul #profileMenu ul li span {
+              float: left;
+              padding: 0 3px;
+              line-height: 20px; }
+            header nav ul #profileMenu ul li img {
+              margin: 0 3px;
+              width: auto;
+              height: 100%;
+              float: left; }
+            header nav ul #profileMenu ul li:hover span {
+              text-decoration: underline; } }
 
 @media only screen and (min-width: 1152px) {
   #wrapper {
     width: 1152px;
     margin: 0 auto;
+    padding-bottom: 150px;
     border: 1px solid black; }
   #loginContainer {
     position: fixed;
@@ -950,12 +982,9 @@ footer {
     margin-top: 200px; }
   .mainSections {
     margin-bottom: 40px; }
-  footer {
-    display: block;
-    text-align: center;
-    padding-bottom: 25px; }
-    footer img {
-      margin: 0 10px; }
+  footer img {
+    margin: 20px 10px;
+    width: auto; }
   #canvas {
     width: 400px;
     height: 400px;
@@ -1048,13 +1077,15 @@ footer {
     text-align: center;
     display: block;
     margin-bottom: 0;
-    margin-top: -80px; }
+    margin-top: 90px;
+    position: relative;
+    height: 600px; }
     #aboutSection p {
       white-space: pre-wrap; }
     #aboutSection h1 {
       font-size: 2.2em;
       text-align: center;
-      transform: translate(0px, 110px);
+      transform: translate(0px, 10px);
       margin: 0 auto;
       width: 200px;
       height: 200px;
@@ -1062,37 +1093,52 @@ footer {
       background-image: url("/Content/Images/h1Border.png");
       background-size: 100% 100%; }
     #aboutSection article {
-      width: calc(33% - 40px);
-      display: inline-block;
       border: 15px solid transparent;
       padding: 5px;
       border-image: url("/Content/Images/gridBorder.png") 30 round;
       background-color: white; }
-      #aboutSection article:nth-child(2) {
-        font-size: 0.8em;
-        line-height: 23px;
-        width: 320px;
-        height: 320px;
-        transform: translate(0, -170px);
-        margin-right: -110px; }
-      #aboutSection article:nth-child(3) {
-        font-size: 0.8em;
-        position: relative;
-        line-height: 23px;
-        z-index: 1;
-        width: 250px;
-        height: 250px;
-        transform: translate(50px, -10px);
-        margin-top: 120px; }
-      #aboutSection article:nth-child(4) {
-        font-size: 0.8em;
-        line-height: 23px;
-        position: relative;
-        z-index: 2;
-        width: 350px;
-        height: 350px;
-        transform: translate(28px, -80px);
-        margin-left: -25px; }
+      #aboutSection article h2 {
+        font-size: 1.5em;
+        margin: 15px 0; }
+      #aboutSection article p {
+        white-space: normal;
+        font-size: 1.2em;
+        line-height: 180%; }
+    #aboutSection #index-article-1 {
+      font-size: 0.8em;
+      line-height: 23px;
+      width: 320px;
+      height: 320px;
+      left: 110px;
+      top: 80px;
+      position: absolute; }
+      #aboutSection #index-article-1 p {
+        padding-right: 50px;
+        padding-left: 20px; }
+    #aboutSection #index-article-2 {
+      font-size: 0.8em;
+      position: absolute;
+      line-height: 23px;
+      z-index: 1;
+      width: 280px;
+      height: 280px;
+      top: 250px;
+      left: 420px; }
+      #aboutSection #index-article-2 p {
+        padding-right: 30px; }
+    #aboutSection #index-article-3 {
+      font-size: 0.8em;
+      line-height: 23px;
+      position: absolute;
+      z-index: 2;
+      width: 350px;
+      height: 350px;
+      left: 695px;
+      top: 100px; }
+      #aboutSection #index-article-3 p {
+        margin-top: 40px; }
+        #aboutSection #index-article-3 p span {
+          font-size: 1.3em; }
     #aboutSection div {
       clear: both; }
   #profileMain h1 {
@@ -1178,40 +1224,63 @@ footer {
       transform: translate(0, -5%); } }
 
 @media only screen and (min-width: 1920px) {
-  #login div {
-    width: 100%;
-    height: 50px;
-    background-image: url("/Content/Images/loginButtonsBackground.png");
-    background-size: 100% 100%; }
-    #login div button {
-      width: 50%;
-      float: left;
-      padding: 0;
-      transform: translate(0, 5px);
-      border: none;
-      height: 100%;
-      background-color: transparent;
-      font-family: "Indie Flower";
-      font-size: 1.2em; }
-  #createAccount #userIcon {
-    margin: 0 auto;
-    width: 120px;
-    height: 120px;
-    background-image: url("/Content/Images/userIcon.png");
-    background-size: 100% 100%; }
-  #browseSets article:nth-child(6n + 2) {
-    transform: translate(-5%, -10%); }
-  #browseSets article:nth-child(6n + 3) {
-    transform: translate(5%, 10%); }
-  #browseSets article:nth-child(6n + 4) {
-    transform: translate(0, -10%); }
-  #browseSets article:nth-child(6n + 5) {
-    transform: translate(-5%, -10%); }
-  #browseSets article:nth-child(6n + 6) {
-    transform: translate(-5%, 5%); }
-  #browseSets article:nth-child(6n + 7) {
-    transform: translate(0, -10%); }
-  .setPiece img {
-    width: 100%;
-    height: 100%; } }
+  #canvas {
+    width: 550px;
+    height: 550px;
+    margin-left: 301px; }
+  /*#login div {
+        width: 100%;
+        height: 50px;
+        background-image: $url_5;
+        background-size: 100% 100%;
+
+        button {
+            width: 50%;
+            float: left;
+            padding: 0;
+            transform: translate(0, 5px);
+            border: none;
+            height: 100%;
+            background-color: transparent;
+            font-family: $font_7;
+            font-size: 1.2em;
+        }
+    }
+
+    #createAccount #userIcon {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+        background-image: $url_6;
+        background-size: 100% 100%;
+    }
+
+    #browseSets article:nth-child(6n + 2) {
+        transform: translate(-5%, -10%);
+    }
+
+    #browseSets article:nth-child(6n + 3) {
+        transform: translate(5%, 10%);
+    }
+
+    #browseSets article:nth-child(6n + 4) {
+        transform: translate(0, -10%);
+    }
+
+    #browseSets article:nth-child(6n + 5) {
+        transform: translate(-5%, -10%);
+    }
+
+    #browseSets article:nth-child(6n + 6) {
+        transform: translate(-5%, 5%);
+    }
+
+    #browseSets article:nth-child(6n + 7) {
+        transform: translate(0, -10%);
+    }
+
+    .setPiece img {
+        width: 100%;
+        height: 100%;
+    }*/ }
 
