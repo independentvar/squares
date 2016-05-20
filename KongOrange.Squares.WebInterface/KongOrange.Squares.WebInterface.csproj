@@ -315,6 +315,9 @@
     <Content Include="Areas\Admin\Views\SquareSetPieces\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\SquareSetPieces\Details.cshtml" />
     <Content Include="Areas\Admin\Views\SquareSetPieces\Edit.cshtml" />
+    <Content Include="Content\_about.scss" />
+    <Content Include="Content\_profile.scss" />
+    <Content Include="Content\_reset.scss" />
     <None Include="Properties\PublishProfiles\KongOrangeSquares.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\carousel.js" />
