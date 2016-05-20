@@ -274,6 +274,14 @@
     <Content Include="Content\Images\tool\36.jpg" />
     <Content Include="Content\Images\tool\37.jpg" />
     <Content Include="Content\Images\tool\38.jpg" />
+    <Content Include="Content\Images\tool\blizniak.jpg" />
+    <Content Include="Content\Images\tool\panibut.jpg" />
+    <Content Include="Content\Images\tool\panie.jpg" />
+    <Content Include="Content\Images\tool\panimrowa.jpg" />
+    <Content Include="Content\Images\tool\panipan.jpg" />
+    <Content Include="Content\Images\tool\panreka.jpg" />
+    <Content Include="Content\Images\tool\panzegar.jpg" />
+    <Content Include="Content\Images\tool\ulvogkat.jpg" />
     <Content Include="Content\Images\userIcon.png" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

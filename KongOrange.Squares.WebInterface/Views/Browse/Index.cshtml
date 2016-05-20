@@ -14,15 +14,43 @@
         {
             return;
         }
-        
+
         <article>
             <div>
                 <h1>@Html.DisplayFor(modelItem => set.Name)</h1>
                 <h2>by @Html.DisplayFor(modelItem => set.User.UserName)</h2>
             </div>
-            <a href="@Url.Action("Details", "SquareSets", new { id = set.Id })"><img src="@piece.ImageUrl" class="topRatedImages" alt="@Html.DisplayFor(modelItem => set.Name)" /></a>
+            <a href="@Url.Action("Details", "SquareSets", new {id = set.Id})"><img src="@piece.ImageUrl" class="topRatedImages" alt="@Html.DisplayFor(modelItem => set.Name)"/></a>
         </article>
     }
-    
+
     <a id="browseShowMore" href="#" title="Browse art">Show more...</a>
+</section>
+
+<section id="browseCombinations" class="browse">
+    <h1>User combinations</h1>
+    <article>
+        <img src="/Content/Images/tool/blizniak.jpg" class="topRatedImages" alt="blizniak" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/panibut.jpg" class="topRatedImages" alt="panibut" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/panie.jpg" class="topRatedImages" alt="panie" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/panimrowa.jpg" class="topRatedImages" alt="panimrowa" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/panipan.jpg" class="topRatedImages" alt="panipan" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/panreka.jpg" class="topRatedImages" alt="panreka" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/panzegar.jpg" class="topRatedImages" alt="panzegar" />
+    </article>
+    <article>
+        <img src="/Content/Images/tool/ulvogkat.jpg" class="topRatedImages" alt="ulvogkat" />
+    </article>
 </section>
