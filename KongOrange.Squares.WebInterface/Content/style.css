@@ -889,11 +889,11 @@ footer {
             border-left: 8px solid transparent;
             border-bottom: 8px solid transparent;
             border-right: 8px solid transparent;
-            -webkit-border-image: url(../images/menuBorder.png) 8 round;
+            -webkit-border-image: url(/Content/images/menuBorder.png) 8 round;
             /* Safari 3.1-5 */
-            -o-border-image: url(../images/menuBorder.png) 8 round;
+            -o-border-image: url(/Content/images/menuBorder.png) 8 round;
             /* Opera 11-12.1 */
-            border-image: url(../images/menuBorder.png) 8 round;
+            border-image: url(/Content/images/menuBorder.png) 8 round;
             font-size: 0.8em; }
             header nav ul #profileMenu ul li a {
               float: none;
