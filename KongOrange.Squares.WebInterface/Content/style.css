@@ -923,8 +923,7 @@ footer {
   #wrapper {
     width: 1152px;
     margin: 0 auto;
-    padding-bottom: 150px;
-    border: 1px solid black; }
+    padding-bottom: 150px; }
   #loginContainer {
     position: fixed;
     width: 100%;
