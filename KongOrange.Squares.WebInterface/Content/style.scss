@@ -1,10 +1,10 @@
 @import 'reset';
 @import 'about';
-@import 'profile';
+
 
 
 //colors
-$black:  black;
+$black: black;
 $black_30: rgba(0,0,0,0.3);
 $white: white;
 
@@ -45,1206 +45,1341 @@ $url_20: url('../images/h1Border.png');
 //original selectors
 //.loginDiv input[type=text], .loginDiv input[type=password], .loginDiv input[type=email]
 .extend_1 {
-	font-family: $font_5;
-	text-align: center;
-	width: 100%;
-	height: 15px;
-	border: 20px solid transparent;
-	margin: 0 0 0 -15px;
-	border-image: $url_4 40 stretch;
+    font-family: $font_5;
+    text-align: center;
+    width: 100%;
+    height: 15px;
+    border: 20px solid transparent;
+    margin: 0 0 0 -15px;
+    border-image: $url_4 40 stretch;
 }
 
 //original selectors
 //.loginDiv input[type=text], .loginDiv input[type=password], .loginDiv input[type=email]
 .extend_2 {
-	font-family: $font_0;
-	text-align: center;
-	width: 100%;
-	height: 15px;
-	border: 20px solid transparent;
-	margin: 0 0 0 -15px;
-	border-image: $url_4 40 stretch;
+    font-family: $font_0;
+    text-align: center;
+    width: 100%;
+    height: 15px;
+    border: 20px solid transparent;
+    margin: 0 0 0 -15px;
+    border-image: $url_4 40 stretch;
 }
 
 
-@import $url_0;
+
 body {
-    background: black;
-	font-family: $font_3, $font_4;
-	font-size: 1.2em;
-	position: relative;
+    font-family: $font_3, $font_4;
+    font-size: 1.2em;
+    position: relative;
 }
+
 #wrapper {
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-        }
-header {
-	width: 100%;
-	height: 80px;
-	margin-bottom: 20px;
-	position: relative;
-	margin-bottom: 30px;
-    }
-	#logo {
-		float: left;
-		width: 60px;
-		margin-left: 40px;
-		margin-top: 10px;
-		position: absolute;
-		left: 0;
-		width: 134px;
-		height: auto;
-            }
-	nav 
-		float: right
-		position: relative
-		position: static
-		margin-right: 30px
-		ul 
-			height: 100vh
-			width: 160px
-			padding-bottom: 100px
-			background-color: $white
-			position: fixed
-			top: 0
-			z-index: 10
-			right: -193px
-			transition: right 300ms ease-in-out
-			border-left: 13px solid transparent			
-			border-image: $url_1 0 0 0 13 stretch
-			position: static
-			background-color: transparent
-			width: auto
-			height: auto
-			border: none			
-			border-image: none
-			padding: 0
-
-
-	.mobile 
-		display: none
-
-
-nav 
-	ul 
-		li 
-			width: 100%
-			clear: both
-			margin: 30px 0
-			height: 25px
-			cursor: pointer
-			display: inline-block
-			width: auto
-			margin: 0
-			height: auto
-			a 
-				float: none
-				height: 100%
-				line-height: normal
-				padding: 30px 20px
-				margin: 0
-				display: block
-				font-size: 1.1em
-
-			img 
-				float: left
-				margin: 10px
-				height: 25px
-				width: auto
-
-			span 
-				float: none
-
-
-		#closeMenu 
-			height: 50px
-			img 
-				height: 25px
-				margin-top: -10px
-
-			span 
-				margin-left: 40px
-
-
-		#profileMenu 
-			position: relative
-			&:hover ul 
-				display: block
-
-
-
-	button 
-		cursor: pointer
-		background-color: transparent
-		border: none
-
-	li span 
-		float: left
-		line-height: 25px
-		padding: 10px
-
-
-#loginContainer 
-	position: fixed
-	width: 100%
-	left: 0
-	top: 0
-	height: 100%
-	display: none
-	background-color: $black_30
-	z-index: 10
-
-#loginContainer2 
-	position: relative
-	width: 100%
-	height: 100%
-
-.loginDiv 
-	display: none
-	position: absolute
-	left: 0
-	right: 0
-	top: 10%
-	margin: 0 auto
-	text-align: center
-	width: 100%
-	padding: 30px
-	background-image: $url_2
-	background-size: 100% 100%
-	p 
-		font-size: 1.2em
-
-	#facebookButton 
-		width: 70px
-		height: 70px
-		background-color: transparent
-		border: none
-		background-image: $url_3
-		background-size: 100% 100%
-		margin: 15px 0
-		cursor: pointer
-
-	form 
-		width: 220px
-		margin: 0 auto
-
-	input 
-		font-size: 1em
-		&:focus 
-			outline: none
-
-
-	input[type=text] 
-		@extend %extend_1
-
-	input[type=password] 
-		@extend %extend_1
-
-	input[type=email] 
-		@extend %extend_1
-
-	input[type=submit] 
-		border: none
-		background-color: transparent
-		font-family: $font_6
-		margin-bottom: 15px
-
-
-h1 
-	font-size: 2.1em
-	margin-bottom: 50px
-
-footer 
-	display: none
-
-.desktop 
-	display: none
-
-#canvas 
-	width: 280px
-	height: 280px
-	margin: 0 auto
-	position: relative
-
-#gridBorder 
-	width: 107.5%
-	height: 107.5%
-	position: absolute
-	left: -3.75%
-	top: -3.75%
-	z-index: 1
-	background-image: $url_7
-	background-size: 100% 100%
-	transition: all 100ms linear
-
-#grid 
-	width: 100%
-	height: 100%
-	z-index: 2
-	position: absolute
-	background-image: $url_8
-	background-size: 100% 100%
-
-.pieceWrapper 
-	width: 70px
-	height: 70px
-	float: left
-
-.pieceHolder 
-	width: 100%
-	height: 100%
-	background-size: 100% 100%
-	opacity: 1
-	z-index: 4
-
-.rotationButton 
-	position: absolute
-	width: 20px
-	height: 20px
-	margin-top: -25%
-	margin-left: 16%
-	z-index: 5
-	background-image: $url_9
-	background-size: 100% 100%
-	cursor: pointer
-
-.resizeButton 
-	display: none
-	position: absolute
-	width: 30px
-	height: 30px
-	z-index: 3
-
-#tl 
-	top: -10px
-	left: -10px
-	background-image: $url_10
-	background-size: 100% 100%
-
-#tr 
-	top: -10px
-	left: 260px
-	left: calc(100% - 20px)
-	background-image: $url_11
-	background-size: 100% 100%
-
-#bl 
-	top: 260px
-	top: calc(100% - 20px)
-	left: -10px
-	background-image: $url_12
-	background-size: 100% 100%
-
-#br 
-	top: 260px
-	top: calc(100% - 20px)
-	left: 260px
-	left: calc(100% - 20px)
-	background-image: $url_13
-	background-size: 100% 100%
-
-#playButton 
-	display: none
-
-#piecesContainer 
-	padding-top: 25px
-	width: 100%
-	overflow: hidden
-	margin-top: 20px
-	position: relative
-	height: 100px
-	.pieces 
-		position: absolute
-		left: 110%
-		border: 4px solid transparent		
-		border-image: $url_14 8 stretch
-
-.pieces 
-	cursor: pointer
-	width: 60px
-	height: 60px
-	z-index: 5
-	background-repeat: no-repeat
-
-#browseSection 
-	margin-top: 20px
-	text-align: center
-	h1 
-		margin-left: 10%
-		font-size: 1.4em
-		text-align: left
-		margin-bottom: 10px
-
-	#browseArrow 
-		float: right
-		margin-right: 10%
-		margin-bottom: 50px
-
-	#popularImagesContainer img 
-		width: 110px
-		display: inline-block
-		margin: 10px 3%
-		border: 12px solid transparent		
-		border-image: $url_15 20 stretch
-		&:nth-child(3) 			
-			transform: translate(-7%,15%)
-
-		&:nth-child(4) 			
-			transform: translate(-5%,0)
-
-		&:nth-child(5) 			
-			transform: translate(5%,10%)
-
-		&:nth-child(6) 			
-			transform: translate(5%,0%)
-
-		&:nth-child(7) 			
-			transform: translate(5%,10%)
-
-#aboutSection 
-	display: none
-
-.browse 
-	text-align: center
-	margin-bottom: 30px
-	article 
-		display: inline-block
-		text-align: center
-		margin: 0 5% 20px
-		position: relative
-		padding-top: 20px
-		div 
-			width: 150%
-			position: absolute
-			margin: 0 auto
-			top: 0
-			left: -25%
-			right: 0
-
-		h1 
-			font-size: 0.9em
-			display: inline-block
-			margin-right: 5px
-			margin-bottom: 10px
-
-		h2 
-			font-size: 0.7em
-			display: inline-block
-
-		img 
-			margin: 0 auto
-			display: block
-			width: 100px
-			height: 100px
-			border: 10px solid transparent			
-			border-image: $url_15 20 stretch
-
-
-	h1 
-		font-size: 1.3em
-
-
-#browseCombinations 
-	h1 
-		text-align: left
-		margin-left: 10%
-
-	article:nth-child(6n 
-		+ 2) 
-			
-			transform: translate(0, 10)
-
-		+ 3) 
-			
-			transform: translate(-5%, -10%)
-
-		+ 4) 
-			
-			transform: translate(-5%, -10%)
-
-		+ 5) 
-			
-			transform: translate(-5%, -10%)
-
-		+ 6) 
-			
-			transform: translate(-5%, -10%)
-
-
-
-#profileMain 
-	padding: 0 10px
-	text-align: center
-	h1 
-		font-size: 1.4em
-		margin: 0 0 20px 0
-
-	p 
-		text-align: left
-
-	div 
-		width: 210px
-		padding: 15px
-		margin: 20px auto
-		border: 10px solid transparent
-		border-image: $url_16 10 round
-		p 
-			text-align: center
-
-
-
-.setContainer 
-	width: 100%
-	max-width: 1000px
-	margin: 0 auto 40px auto
-	h1 
-		font-size: 1.3em
-		margin: 0 0 10px 10px
-
-	&:nth-child(odd) h1 
-		text-align: center
-
-
-.setPiecesContainer 
-	width: 100%
-	text-align: center
-	.setPiece 
-		width: 72px
-		height: 72px
-		display: inline-block
-		margin: 10px
-		border: 4px solid transparent
-		
-		border-image: $url_17 10% stretch
-		&:nth-child(10n 
-			+ 1) 
-				
-				transform: translate(-7%,15%)
-				transform: rotate(-5deg)
-
-			+ 2) 
-				
-				transform: translate(5%,10%)
-				transform: rotate(-10deg)
-
-			+ 3) 
-			
-				transform: translate(-7%,15%)
-				
-				transform: rotate(10deg)
-
-			+ 4) 
-				
-				transform: translate(-5%,0)
-				
-				transform: rotate(-3deg)
-
-			+ 5) 
-				
-				transform: translate(5%,10%)
-				
-				transform: rotate(14deg)
-
-			+ 6) 
-				
-				transform: translate(-7%,15%)
-				
-				transform: rotate(-5deg)
-
-			+ 7) 
-				
-				transform: translate(5%,10%)
-				
-				transform: rotate(-10deg)
-
-			+ 8) 
-				
-				transform: translate(-7%,15%)
-				
-				transform: rotate(10deg)
-
-			+ 9) 
-				
-				transform: translate(-5%,0)
-				
-				transform: rotate(-3deg)
-
-			+ 10) 
-				
-				transform: translate(5%,10%)
-				
-				transform: rotate(14deg)
-
-
-
-
-@media only screen and(min-width: 670px) 
-	#canvas 
-		width: 400px
-		height: 400px
-		margin-bottom: 30px
-
-	.pieceWrapper 
-		width: 130px
-		height: 130px
-
-	.resizeButton 
-		display: block
-		position: absolute
-		width: 30px
-		height: 30px
-		z-index: 3
-
-	#tl 
-		top: -10px
-		left: -10px
-		background-image: $url_10
-		background-size: 100% 100%
-
-	#tr 
-		top: -10px
-		left: 380px
-		left: calc(100% - 20px)
-		background-image: $url_11
-		background-size: 100% 100%
-
-	#bl 
-		top: 380px
-		top: calc(100% - 20px)
-		left: -10px
-		background-image: $url_12
-		background-size: 100% 100%
-
-	#br 
-		top: 380px
-		top: calc(100% - 20px)
-		left: 380px
-		left: calc(100% - 20px)
-		background-image: $url_13
-		background-size: 100% 100%
-
-	#piecesContainer 
-		height: 160px
-		.pieces 
-			width: 120px
-			height: 120px
-			left: 105%
-			border: 8px solid transparent			
-			border-image: $url_14 12 stretch
-
-
-	#browseSection 
-		#browseArrow 
-			float: right
-
-		#popularImagesContainer img 
-			width: 160px
-			margin: 20px 5%
-			border: 12px solid transparent		
-			border-image: $url_15 20 stretch
-
-
-	.setContainer 
-		width: 100%
-		h1 
-			font-size: 1.8em
-			margin: 0 0 10px 10px
-
-		&:nth-child(even) h1 
-			margin-left: 20%
-
-
-	#profileMain 
-		font-size: 1.8em
-
-	.setPiecesContainer .setPiece 
-		width: 132px
-		height: 132px
-		display: inline-block
-		margin: 20px 25px
-		border: 4px solid transparent	
-		border-image: $url_17 10% stretch
-
-	.browse article 
-		margin: 0 2% 20px
-		padding-top: 20px
-		div 
-			width: 150%
-			position: absolute
-			margin: 0 auto
-			top: 0
-			left: -25%
-			right: 0
-
-		h1 
-			font-size: 0.9em
-			display: inline-block
-			margin-right: 5px
-			margin-bottom: 10px
-
-		h2 
-			font-size: 0.7em
-			display: inline-block
-
-		img 
-			width: 140px
-			height: 140px
-
-
-	#browseSets article 
-		margin: 0 6% 30px
-		&:nth-child(6n 
-			+ 2) 
-				transform: translate(-5%, -10%)
-
-			+ 3) 
-				transform: translate(5%, 10%)
-
-			+ 4) 
-				
-				transform: translate(0, -10%)
-
-			+ 5) 
-				
-				transform: translate(-5%, -10%)
-
-			+ 6) 
-				
-				transform: translate(-5%, 5%)
-
-			+ 7) 
-			
-				transform: translate(0, -10%)
-
-
-
-	#browseCombinations article:nth-child(5n 
-		+ 2) 
-			
-			transform: translate(0, 10%)
-			margin-left: 5%
-
-		+ 3) 
-			
-			transform: translate(-5%, -10%)
-
-		+ 4) 
-			
-			transform: translate(-5%, -10%)
-
-		+ 5) 
-			
-			transform: translate(-5%, -10%)
-			margin-left: 23%
-
-		+ 6) 
-			
-			transform: translate(-5%, -10%)
-			margin-right: 23%
-
-
-
-@media only screen and(min-width: 950px) 
-	0 
-		.: .
-		: 
-
-
-#profileMenu 
-	ul 
-		display: none
-		background-color: $white
-		width: 110px
-		position: absolute
-		z-index: 99
-		padding-bottom: 10px
-		right: -8px
-		top: 60%
-		border-left: 8px solid transparent
-		border-bottom: 8px solid transparent
-		border-right: 8px solid transparent
-		border-image: $url_18 8 round
-		font-size: 0.8em
-
-	li 
-		a 
-			float: none
-			height: 20px !important
-			padding: 10px
-			display: block
-
-		span 
-			float: left
-			padding: 0 3px
-			line-height: 20px
-
-		img 
-			margin: 0 3px
-			width: auto
-			height: 100%
-			float: left
-
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
+
+header {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 30px;
+
+    #logo {
+        float: left;
+        width: 60px;
+        margin-left: 40px;
+        margin-top: 10px;
+        position: absolute;
+        left: 0;
+        width: 134px;
+        height: auto;
+    }
+
+    nav {
+        float: right;
+        position: relative;
+        position: static;
+        margin-right: 30px;
+
+        ul {
+            height: 100vh;
+            width: 160px;
+            padding-bottom: 100px;
+            background-color: $white;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            right: -193px;
+            transition: right 300ms ease-in-out;
+            border-left: 13px solid transparent;
+            border-image: $url_1 0 0 0 13 stretch;
+            position: static;
+            background-color: transparent;
+            width: auto;
+            height: auto;
+            border: none;
+            border-image: none;
+            padding: 0;
+        }
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+
+nav {
+    ul {
+        li {
+            width: 100%;
+            clear: both;
+            margin: 30px 0;
+            height: 25px;
+            cursor: pointer;
+            display: inline-block;
+            width: auto;
+            margin: 0;
+            height: auto;
+
+            a {
+                float: none;
+                height: 100%;
+                line-height: normal;
+                padding: 30px 20px;
+                margin: 0;
+                display: block;
+                font-size: 1.1em;
+            }
+
+            img {
+                float: left;
+                margin: 10px;
+                height: 25px;
+                width: auto;
+            }
+
+            span {
+                float: none;
+            }
+        }
+
+        #closeMenu {
+            height: 50px;
+
+            img {
+                height: 25px;
+                margin-top: -10px;
+            }
+
+            span {
+                margin-left: 40px;
+            }
+        }
+
+        #profileMenu {
+            position: relative;
+
+            &:hover ul {
+                display: block;
+            }
+        }
+    }
+
+    button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+
+    li span {
+        float: left;
+        line-height: 25px;
+        padding: 10px;
+    }
+}
+
+#loginContainer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: none;
+    background-color: $black_30;
+    z-index: 10;
+}
+
+#loginContainer2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.loginDiv {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10%;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+    background-image: $url_2;
+    background-size: 100% 100%;
+
+    p {
+        font-size: 1.2em;
+    }
+
+    #facebookButton {
+        width: 70px;
+        height: 70px;
+        background-color: transparent;
+        border: none;
+        background-image: $url_3;
+        background-size: 100% 100%;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+
+    form {
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    input {
+        font-size: 1em;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input[type=text] {
+        @extend %extend_1;
+    }
+
+    input[type=password] {
+        @extend %extend_1;
+    }
+
+    input[type=email] {
+        @extend %extend_1;
+    }
+
+    input[type=submit] {
+        border: none;
+        background-color: transparent;
+        font-family: $font_6;
+        margin-bottom: 15px;
+    }
+}
+
+h1 {
+    font-size: 2.1em;
+    margin-bottom: 50px;
+}
+
+footer {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+#canvas {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#gridBorder {
+    width: 107.5%;
+    height: 107.5%;
+    position: absolute;
+    left: -3.75%;
+    top: -3.75%;
+    z-index: 1;
+    background-image: $url_7;
+    background-size: 100% 100%;
+    transition: all 100ms linear;
+}
+
+#grid {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    background-image: $url_8;
+    background-size: 100% 100%;
+}
+
+.pieceWrapper {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.pieceHolder {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    opacity: 1;
+    z-index: 4;
+}
+
+.rotationButton {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -25%;
+    margin-left: 16%;
+    z-index: 5;
+    background-image: $url_9;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.resizeButton {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+}
+
+#tl {
+    top: -10px;
+    left: -10px;
+    background-image: $url_10;
+    background-size: 100% 100%;
+}
+
+#tr {
+    top: -10px;
+    left: 260px;
+    left: calc(100% - 20px);
+    background-image: $url_11;
+    background-size: 100% 100%;
+}
+
+#bl {
+    top: 260px;
+    top: calc(100% - 20px);
+    left: -10px;
+    background-image: $url_12;
+    background-size: 100% 100%;
+}
+
+#br {
+    top: 260px;
+    top: calc(100% - 20px);
+    left: 260px;
+    left: calc(100% - 20px);
+    background-image: $url_13;
+    background-size: 100% 100%;
+}
+
+#playButton {
+    display: none;
+}
+
+#piecesContainer {
+    padding-top: 25px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    height: 100px;
+
+    .pieces {
+        position: absolute;
+        left: 110%;
+        border: 4px solid transparent;
+        border-image: $url_14 8 stretch;
+    }
+}
+
+.pieces {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+    background-repeat: no-repeat;
+}
+
+#browseSection {
+    margin-top: 20px;
+    text-align: center;
+
+    h1 {
+        margin-left: 10%;
+        font-size: 1.4em;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    #browseArrow {
+        float: right;
+        margin-right: 10%;
+        margin-bottom: 50px;
+    }
+
+    #popularImagesContainer img {
+        width: 110px;
+        display: inline-block;
+        margin: 10px 3%;
+        border: 12px solid transparent;
+        border-image: $url_15 20 stretch;
+
+        &:nth-child(3) {
+            transform: translate(-7%,15%);
+        }
+
+        &:nth-child(4) {
+            transform: translate(-5%,0);
+        }
+
+        &:nth-child(5) {
+            transform: translate(5%,10%);
+        }
+
+        &:nth-child(6) {
+            transform: translate(5%,0%);
+        }
+
+        &:nth-child(7) {
+            transform: translate(5%,10%);
+        }
+    }
+}
+
+#aboutSection {
+    display: none;
+}
+
+.browse {
+    text-align: center;
+    margin-bottom: 30px;
+
+    article {
+        display: inline-block;
+        text-align: center;
+        margin: 0 5% 20px;
+        position: relative;
+        padding-top: 20px;
+
+        div {
+            width: 150%;
+            position: absolute;
+            margin: 0 auto;
+            top: 0;
+            left: -25%;
+            right: 0;
+        }
+
+        h1 {
+            font-size: 0.9em;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 0.7em;
+            display: inline-block;
+        }
+
+        img {
+            margin: 0 auto;
+            display: block;
+            width: 100px;
+            height: 100px;
+            border: 10px solid transparent;
+            border-image: $url_15 20 stretch;
+        }
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+}
+
+#browseCombinations {
+    h1 {
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    article:nth-child(6n + 2) {
+        transform: translate(0, 10);
+    }
+
+    article:nth-child(6n + 3) {
+        transform: translate(-5%, -10%);
+    }
+
+    article:nth-child(6n + 4) {
+        transform: translate(-5%, -10%);
+    }
+
+    article:nth-child(6n + 5) {
+        transform: translate(-5%, -10%);
+    }
+
+    article:nth-child(6n + 6) {
+        transform: translate(-5%, -10%);
+    }
+}
+
+#profileMain {
+    padding: 0 10px;
+    text-align: center;
+
+    h1 {
+        font-size: 1.4em;
+        margin: 0 0 20px 0;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    div {
+        width: 210px;
+        padding: 15px;
+        margin: 20px auto;
+        border: 10px solid transparent;
+        border-image: $url_16 10 round;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.setContainer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+
+    h1 {
+        font-size: 1.3em;
+        margin: 0 0 10px 10px;
+    }
+
+    &:nth-child(odd) h1 {
+        text-align: center;
+    }
+}
+
+.setPiecesContainer {
+    width: 100%;
+    text-align: center;
+
+    .setPiece {
+        width: 72px;
+        height: 72px;
+        display: inline-block;
+        margin: 10px;
+        border: 4px solid transparent;
+        border-image: $url_17 10% stretch;
+
+        &:nth-child(10n + 1) {
+            transform: translate(-7%,15%);
+            transform: rotate(-5deg);
+        }
+
+        &:nth-child(10n + 2) {
+            transform: translate(5%,10%);
+            transform: rotate(-10deg);
+        }
+
+        &:nth-child(10n + 3) {
+            transform: translate(-7%,15%);
+            transform: rotate(10deg);
+        }
+
+        &:nth-child(10n + 4) {
+            transform: translate(-5%,0);
+            transform: rotate(-3deg);
+        }
+
+        &:nth-child(10n + 5) {
+            transform: translate(5%,10%);
+            transform: rotate(14deg);
+        }
+
+        &:nth-child(10n + 6) {
+            transform: translate(-7%,15%);
+            transform: rotate(-5deg);
+        }
+
+        &:nth-child(10n + 7) {
+            transform: translate(5%,10%);
+            transform: rotate(-10deg);
+        }
+
+        &:nth-child(10n + 8) {
+            transform: translate(-7%,15%);
+            transform: rotate(10deg);
+        }
+
+        &:nth-child(10n + 9) {
+            transform: translate(-5%,0);
+            transform: rotate(-3deg);
+        }
+
+        &:nth-child(10n + 10) {
+            transform: translate(5%,10%);
+            transform: rotate(14deg);
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 670px) {
+    #canvas {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    .pieceWrapper {
+        width: 130px;
+        height: 130px;
+    }
+
+    .resizeButton {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+    }
+
+    #tl {
+        top: -10px;
+        left: -10px;
+        background-image: $url_10;
+        background-size: 100% 100%;
+    }
+
+    #tr {
+        top: -10px;
+        left: 380px;
+        left: calc(100% - 20px);
+        background-image: $url_11;
+        background-size: 100% 100%;
+    }
+
+    #bl {
+        top: 380px;
+        top: calc(100% - 20px);
+        left: -10px;
+        background-image: $url_12;
+        background-size: 100% 100%;
+    }
+
+    #br {
+        top: 380px;
+        top: calc(100% - 20px);
+        left: 380px;
+        left: calc(100% - 20px);
+        background-image: $url_13;
+        background-size: 100% 100%;
+    }
+
+    #piecesContainer {
+        height: 160px;
+
+        .pieces {
+            width: 120px;
+            height: 120px;
+            left: 105%;
+            border: 8px solid transparent;
+            border-image: $url_14 12 stretch;
+        }
+    }
+
+    #browseSection {
+        #browseArrow {
+            float: right;
+        }
+
+        #popularImagesContainer img {
+            width: 160px;
+            margin: 20px 5%;
+            border: 12px solid transparent;
+            border-image: $url_15 20 stretch;
+        }
+    }
+
+    .setContainer {
+        width: 100%;
+
+        h1 {
+            font-size: 1.8em;
+            margin: 0 0 10px 10px;
+        }
+
+        &:nth-child(even) h1 {
+            margin-left: 20%;
+        }
+    }
+
+    #profileMain {
+        font-size: 1.8em;
+    }
+
+    .setPiecesContainer .setPiece {
+        width: 132px;
+        height: 132px;
+        display: inline-block;
+        margin: 20px 25px;
+        border: 4px solid transparent;
+        border-image: $url_17 10% stretch;
+    }
+
+    .browse article {
+        margin: 0 2% 20px;
+        padding-top: 20px;
+    }
+
+    div {
+        width: 150%;
+        position: absolute;
+        margin: 0 auto;
+        top: 0;
+        left: -25%;
+        right: 0;
+    }
+
+    h1 {
+        font-size: 0.9em;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 0.7em;
+        display: inline-block;
+    }
+
+    img {
+        width: 140px;
+        height: 140px;
+    }
+
+    #browseSets article {
+        margin: 0 6% 30px;
+
+        &:nth-child(6n+ 2) {
+            transform: translate(-5%, -10%);
+        }
+
+        &:nth-child(6n+ 3) {
+            transform: translate(5%, 10%);
+        }
+
+        &:nth-child(6n+ 4) {
+            transform: translate(0, -10%);
+        }
+
+        &:nth-child(6n+ 5) {
+            transform: translate(-5%, -10%);
+        }
+
+        &:nth-child(6n+ 6) {
+            transform: translate(-5%, 5%);
+        }
+
+        &:nth-child(6n+ 7) {
+            transform: translate(0, -10%);
+        }
+    }
+
+    #browseCombinations article:nth-child(5n + 2) {
+        transform: translate(0, 10%);
+        margin-left: 5%;
+    }
+
+    article:nth-child(5n + 3) {
+        transform: translate(-5%, -10%);
+    }
+
+    article:nth-child(5n + 4) {
+        transform: translate(-5%, -10%);
+    }
+
+    article:nth-child(5n + 5) {
+        transform: translate(-5%, -10%);
+        margin-left: 23%;
+    }
+
+    article:nth-child(5n + 6) {
+        transform: translate(-5%, -10%);
+        margin-right: 23%;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+
+
+
+    #profileMenu {
+        ul {
+            display: none;
+            background-color: $white;
+            width: 110px;
+            position: absolute;
+            z-index: 99;
+            padding-bottom: 10px;
+            right: -8px;
+            top: 60%;
+            border-left: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-image: $url_18 8 round;
+            font-size: 0.8em;
+        }
+
+        li {
+            a {
+                float: none;
+                height: 20px;
+                padding: 10px;
+                display: block;
+            }
+
+            span {
+                float: left;
+                padding: 0 3px;
+                line-height: 20px;
+            }
+
+            img {
+                margin: 0 3px;
+                width: auto;
+                height: 100%;
+                float: left;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 1152px) {
-	#wrapper {
-		width: 1152px;
-		margin: 0 auto;
-		border: 1px solid $black;
+    #wrapper {
+        width: 1152px;
+        margin: 0 auto;
+        border: 1px solid $black;
     }
 
-	#loginContainer {
-		position: fixed;
-		width: 100%;
-		left: 0;
-		top: 0;
-		height: 100%;
-		display: none;
-		background-color: $black_30;
-		z-index: 10;
-        }
-
-	#loginContainer2 {
-		position: relative;
-		width: 100%;
-		height: 100%;
+    #loginContainer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        display: none;
+        background-color: $black_30;
+        z-index: 10;
     }
 
-	.loginDiv {
-		display: none;
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 50%;
-		transform: translate(0, -50%);
-		margin: 0 auto;
-		text-align: center;
-		width: 450px;
-		padding: 30px;
-		background-image: $url_2;
-		background-size: 100% 100%;
-		
-        p{
-			font-size: 1.2em;
+    #loginContainer2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .loginDiv {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin: 0 auto;
+        text-align: center;
+        width: 450px;
+        padding: 30px;
+        background-image: $url_2;
+        background-size: 100% 100%;
+
+        p {
+            font-size: 1.2em;
         }
 
-		#facebookButton{
-			width: 140px;
-			height: 140px;
-			background-color: transparent;
-			border: none;
-			background-image: $url_3;
-			background-size: 100% 100%;
-			margin: 15px 0;
-			cursor: pointer;
-        }
-		form{ 
-			width: 220px;
-			margin: 0 auto;
+        #facebookButton {
+            width: 140px;
+            height: 140px;
+            background-color: transparent;
+            border: none;
+            background-image: $url_3;
+            background-size: 100% 100%;
+            margin: 15px 0;
+            cursor: pointer;
         }
 
-		input{
-			font-size: 1em;
-			&:focus {
-				outline: none;
+        form {
+            width: 220px;
+            margin: 0 auto;
+        }
+
+        input {
+            font-size: 1em;
+
+            &:focus {
+                outline: none;
             }
         }
 
-		input[type=text] {
-			@extend %extend_2;
+        input[type=text] {
+            @extend %extend_2;
         }
 
-		input[type=password] {
-			@extend %extend_2;
+        input[type=password] {
+            @extend %extend_2;
         }
 
-		input[type=email] {
-			@extend %extend_2;
+        input[type=email] {
+            @extend %extend_2;
         }
 
-		input[type=submit]{
-			border: none;
-			background-color: transparent;
-			font-family: $font_1;
-			margin-bottom: 15px;
-        }
-    }
-
-	.mobile {
-		display: none;
-    }
-
-	.desktop {
-		display: block;
-    }
-
-	.mainArticle {
-		margin-top: 200px;
-    }
-
-	.mainSections{ 
-		margin-bottom: 40px;
-    }
-
-	footer{ 
-		display: block;
-		text-align: center;
-		padding-bottom: 25px;
-		img{ 
-			margin: 0 10px;
+        input[type=submit] {
+            border: none;
+            background-color: transparent;
+            font-family: $font_1;
+            margin-bottom: 15px;
         }
     }
 
-	#canvas{ 
-		width: 400px;
-		height: 400px;
-		margin-left: 375px;
-		margin-bottom: 30px;
-		float: left;
+    .mobile {
+        display: none;
     }
 
-	.pieceWrapper {
-		width: 150px;
-		height: 150px;
-		&:hover .rotationButton {
-			display: block;
+    .desktop {
+        display: block;
+    }
+
+    .mainArticle {
+        margin-top: 200px;
+    }
+
+    .mainSections {
+        margin-bottom: 40px;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+        padding-bottom: 25px;
+
+        img {
+            margin: 0 10px;
         }
     }
 
-	.rotationButton {
-		width: 20px;
-		height: 20px;
-		margin-top: -25%;
-		margin-left: 21%;
-		display: none;
-		background-image: $url_9;
+    #canvas {
+        width: 400px;
+        height: 400px;
+        margin-left: 375px;
+        margin-bottom: 30px;
+        float: left;
     }
 
-	.resizeButton{ 
-		position: absolute;
-		width: 30px;
-		height: 30px;
-		z-index: 3;
-    }
+    .pieceWrapper {
+        width: 150px;
+        height: 150px;
 
-	#tl {
-		top: -10px;
-		left: -10px;
-		background-image: $url_10;
-		background-size: 100% 100%;
-    }
-
-	#tr {
-		top: -10px;
-		left: 380px;
-		left: calc(100% - 20px);
-		background-image: $url_11;
-		background-size: 100% 100%;
-    }
-
-	#bl{ 
-		top: 380px;
-		top: calc(100% - 20px);
-		left: -10px;
-		background-image: $url_12;
-		background-size: 100% 100%;
-    }
-
-	#br{ 
-		top: 380px;
-		top: calc(100% - 20px);
-		left: 380px;
-		left: calc(100% - 20px);
-		background-image: $url_13;
-		background-size: 100% 100%;
-    }
-	#playButton{ 
-		display: block;
-		width: 80px;
-		height: 59px;
-		background-image: $url_19;
-		background-size: 100% 100%;
-		background-color: transparent;
-		border: none;
-		margin-top: 0;
-		margin-left: 100px;
-		float: left;
-    }
-
-	#piecesContainer {
-		height: 160px;
-		.pieces {
-			left: 105%;
-			border: 8px solid transparent;
-			border-image: $url_14 12 stretch;
+        &:hover .rotationButton {
+            display: block;
         }
     }
 
-	.pieces {
-		width: 100px;
-		height: 100px;
+    .rotationButton {
+        width: 20px;
+        height: 20px;
+        margin-top: -25%;
+        margin-left: 21%;
+        display: none;
+        background-image: $url_9;
     }
 
-	#browseSection{ 
-		text-align: center;
-		h1 {
-			margin-left: 10%;
-			text-align: left;
+    .resizeButton {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+    }
+
+    #tl {
+        top: -10px;
+        left: -10px;
+        background-image: $url_10;
+        background-size: 100% 100%;
+    }
+
+    #tr {
+        top: -10px;
+        left: 380px;
+        left: calc(100% - 20px);
+        background-image: $url_11;
+        background-size: 100% 100%;
+    }
+
+    #bl {
+        top: 380px;
+        top: calc(100% - 20px);
+        left: -10px;
+        background-image: $url_12;
+        background-size: 100% 100%;
+    }
+
+    #br {
+        top: 380px;
+        top: calc(100% - 20px);
+        left: 380px;
+        left: calc(100% - 20px);
+        background-image: $url_13;
+        background-size: 100% 100%;
+    }
+
+    #playButton {
+        display: block;
+        width: 80px;
+        height: 59px;
+        background-image: $url_19;
+        background-size: 100% 100%;
+        background-color: transparent;
+        border: none;
+        margin-top: 0;
+        margin-left: 100px;
+        float: left;
+    }
+
+    #piecesContainer {
+        height: 160px;
+
+        .pieces {
+            left: 105%;
+            border: 8px solid transparent;
+            border-image: $url_14 12 stretch;
         }
-		#popularImagesContainer img {
-			width: 250px;
-			display: inline-block;
-			margin: 20px 20px 40px 20px;
-			border: 15px solid transparent;
-			border-image: $url_15 20 stretch;
-			&:nth-child(3) {
-				transform: translate(-7%,15%);
+    }
+
+    .pieces {
+        width: 100px;
+        height: 100px;
+    }
+
+    #browseSection {
+        text-align: center;
+
+        h1 {
+            margin-left: 10%;
+            text-align: left;
+        }
+
+        #popularImagesContainer img {
+            width: 250px;
+            display: inline-block;
+            margin: 20px 20px 40px 20px;
+            border: 15px solid transparent;
+            border-image: $url_15 20 stretch;
+
+            &:nth-child(3) {
+                transform: translate(-7%,15%);
             }
-			&:nth-child(4) {
-				transform: translate(-5%,0);
+
+            &:nth-child(4) {
+                transform: translate(-5%,0);
             }
-			&:nth-child(5) {
-				transform: translate(5%,10%);
+
+            &:nth-child(5) {
+                transform: translate(5%,10%);
             }
-			&:nth-child(6) {
-				transform: translate(5%,0%);
+
+            &:nth-child(6) {
+                transform: translate(5%,0%);
             }
-			&:nth-child(7) {
-				transform: translate(5%,10%);
-            }
-        }
-    }
-	#aboutSection{ 
-		text-align: center;
-		display: block;
-		margin-bottom: 0;
-		margin-top: -80px;
-		p {
-			white-space: pre-wrap;
-        }
-		h1 {
-			font-size: 2.2em;
-			text-align: center;
-			transform: translate(0px, 110px);
-			margin: 0 auto;
-			width: 200px;
-			height: 200px;
-			line-height: 200px;
-			background-image: $url_20;
-			background-size: 100% 100%;
-        }
-		article {
-			width: calc(33% - 40px);
-			display: inline-block;
-			border: 15px solid transparent;
-			padding: 5px;
-			border-image: $url_7 30 round;
-			background-color: $white;
-			&:nth-child(2) {
-				font-size: 0.8em;
-				line-height: 23px;
-				width: 320px;
-				height: 320px;
-				transform: translate(0,-170px);
-				margin-right: -110px;
-            }
-			&:nth-child(3) {
-				font-size: 0.8em;
-				position: relative;
-				line-height: 23px;
-				z-index: 1;
-				width: 250px;
-				height: 250px;
-				transform: translate(50px,-10px);
-				margin-top: 120px;
-            }
-			&:nth-child(4) {
-				font-size: 0.8em;
-				line-height: 23px;
-				position: relative;
-				z-index: 2;
-				width: 350px;
-				height: 350px;
-				transform: translate(28px,-80px);
-				margin-left: -25px;
+
+            &:nth-child(7) {
+                transform: translate(5%,10%);
             }
         }
-
-		div {
-			clear: both;
-        }
     }
 
-	#profileMain {
-		h1 {
-			margin-bottom: 50px;
+    #aboutSection {
+        text-align: center;
+        display: block;
+        margin-bottom: 0;
+        margin-top: -80px;
+
+        p {
+            white-space: pre-wrap;
         }
-		p{ 
-			margin-left: 10%;
+
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            transform: translate(0px, 110px);
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            background-image: $url_20;
+            background-size: 100% 100%;
         }
-		div{ 
-			width: 800px;
-        }
-	}
-	.browse{
-		article {
-			margin: 0 2% 20px;
-			padding-top: 30px;
-			div {
-				width: 120%;
-				position: absolute;
-				margin: 0 auto;
-				top: 0;
-				left: -10%;
-				right: 0;
+
+        article {
+            width: calc(33% - 40px);
+            display: inline-block;
+            border: 15px solid transparent;
+            padding: 5px;
+            border-image: $url_7 30 round;
+            background-color: $white;
+
+            &:nth-child(2) {
+                font-size: 0.8em;
+                line-height: 23px;
+                width: 320px;
+                height: 320px;
+                transform: translate(0,-170px);
+                margin-right: -110px;
             }
-			h1 { 
-				font-size: 1.3em;
-				margin-right: 5px;
+
+            &:nth-child(3) {
+                font-size: 0.8em;
+                position: relative;
+                line-height: 23px;
+                z-index: 1;
+                width: 250px;
+                height: 250px;
+                transform: translate(50px,-10px);
+                margin-top: 120px;
             }
-			h2{ 
-				font-size: 1.1em;
-            }
-			img {
-				margin: 0 auto;
-				display: block;
-				width: 260px;
-				height: 260px;
-				border: 15px solid transparent;
-				border-image: $url_15 20 stretch;
+
+            &:nth-child(4) {
+                font-size: 0.8em;
+                line-height: 23px;
+                position: relative;
+                z-index: 2;
+                width: 350px;
+                height: 350px;
+                transform: translate(28px,-80px);
+                margin-left: -25px;
             }
         }
 
-		h1{ 
-			font-size: 1.6em;
-        }
-    }
-	#browseCombinations {
-		h1 {
-			text-align: left;
-			margin-left: 10%;
-        }
-		article:nth-child(5n + 2){ 
-			transform: translate(0, 10%);
-			margin-left: 5%;
-        }
-		article:nth-child(5n + 3){ 
-			transform: translate(-5%, -10%);
-        }
-		article:nth-child(5n + 4){ 
-			transform: translate(-5%, -10%);
-        }
-		article:nth-child(5n + 5) {
-			transform: translate(-5%, -5%);
-			margin-left: 20%;
-        }
-		article:nth-child(5n + 6) {
-			transform: translate(-5%, -10%);
-			margin-right: 20%;
+        div {
+            clear: both;
         }
     }
 
+    #profileMain {
+        h1 {
+            margin-bottom: 50px;
+        }
+
+        p {
+            margin-left: 10%;
+        }
+
+        div {
+            width: 800px;
+        }
+    }
+
+    .browse {
+        article {
+            margin: 0 2% 20px;
+            padding-top: 30px;
+
+            div {
+                width: 120%;
+                position: absolute;
+                margin: 0 auto;
+                top: 0;
+                left: -10%;
+                right: 0;
+            }
+
+            h1 {
+                font-size: 1.3em;
+                margin-right: 5px;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            img {
+                margin: 0 auto;
+                display: block;
+                width: 260px;
+                height: 260px;
+                border: 15px solid transparent;
+                border-image: $url_15 20 stretch;
+            }
+        }
+
+        h1 {
+            font-size: 1.6em;
+        }
+    }
+
+    #browseCombinations {
+        h1 {
+            text-align: left;
+            margin-left: 10%;
+        }
+
+        article:nth-child(5n + 2) {
+            transform: translate(0, 10%);
+            margin-left: 5%;
+        }
+
+        article:nth-child(5n + 3) {
+            transform: translate(-5%, -10%);
+        }
+
+        article:nth-child(5n + 4) {
+            transform: translate(-5%, -10%);
+        }
+
+        article:nth-child(5n + 5) {
+            transform: translate(-5%, -5%);
+            margin-left: 20%;
+        }
+
+        article:nth-child(5n + 6) {
+            transform: translate(-5%, -10%);
+            margin-right: 20%;
+        }
+    }
 
 
-	#login div {
-		width: 100%;
-		height: 50px;
-		background-image: $url_5;
-		background-size: 100% 100%;
-		
+
+    #login div {
+        width: 100%;
+        height: 50px;
+        background-image: $url_5;
+        background-size: 100% 100%;
+
         button {
-			width: 50%;
-			float: left;
-			padding: 0;
-			transform: translate(0, 5px);
-			border: none;
-			height: 100%;
-			background-color: transparent;
-			font-family: $font_2;
-			font-size: 1.2em;
+            width: 50%;
+            float: left;
+            padding: 0;
+            transform: translate(0, 5px);
+            border: none;
+            height: 100%;
+            background-color: transparent;
+            font-family: $font_2;
+            font-size: 1.2em;
         }
     }
 
 
-	#createAccount #userIcon{ 
-		margin: 0 auto;
-		width: 120px;
-		height: 120px;
-		background-image: $url_6;
-		background-size: 100% 100%;
+    #createAccount #userIcon {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+        background-image: $url_6;
+        background-size: 100% 100%;
     }
-	#browseSets article {
-		margin: 0 1% 60px;
 
-		&:nth-child(6n + 2) {
-			transform: translate(-5%, -10%);
+    #browseSets article {
+        margin: 0 1% 60px;
+
+        &:nth-child(6n + 2) {
+            transform: translate(-5%, -10%);
         }
-		&:nth-child(6n + 3) {		
-			transform: translate(5%, 10%);
+
+        &:nth-child(6n + 3) {
+            transform: translate(5%, 10%);
         }
-		&:nth-child(6n + 4) {		
-			transform: translate(5%, -10%);
+
+        &:nth-child(6n + 4) {
+            transform: translate(5%, -10%);
         }
-		&:nth-child(6n + 5) {
-			transform: translate(0%, -5%);
+
+        &:nth-child(6n + 5) {
+            transform: translate(0%, -5%);
         }
-		&:nth-child(6n + 6) {
-			transform: translate(-5%, 10%);
+
+        &:nth-child(6n + 6) {
+            transform: translate(-5%, 10%);
         }
-		&:nth-child(6n + 7) {
-			transform: translate(0, -5%);
+
+        &:nth-child(6n + 7) {
+            transform: translate(0, -5%);
         }
     }
 }
 
 @media only screen and (min-width: 1920px) {
     #login div {
-	    width: 100%;
-	    height: 50px;
-	    background-image: $url_5;
-	    background-size: 100% 100%;
-	    
-        button{ 
-		    width: 50%;
-		    float: left;
-		    padding: 0;
-		    transform: translate(0, 5px);
-		    border: none;
-		    height: 100%;
-		    background-color: transparent;
-		    font-family: $font_7;
-		    font-size: 1.2em;
+        width: 100%;
+        height: 50px;
+        background-image: $url_5;
+        background-size: 100% 100%;
+
+        button {
+            width: 50%;
+            float: left;
+            padding: 0;
+            transform: translate(0, 5px);
+            border: none;
+            height: 100%;
+            background-color: transparent;
+            font-family: $font_7;
+            font-size: 1.2em;
         }
     }
 
-    #createAccount #userIcon{
-	    margin: 0 auto;
-	    width: 120px;
-	    height: 120px;
-	    background-image: $url_6;
-	    background-size: 100% 100%;
-    }
-    #browseSets article:nth-child(6n + 2) {
-		transform: translate(-5%, -10%);
-	}
-    #browseSets article:nth-child(6n + 3){ 
-		transform: translate(5%, 10%);
-    }
-	#browseSets article:nth-child(6n + 4){		
-		transform: translate(0, -10%);
-    }
-	#browseSets article:nth-child(6n + 5){
-		transform: translate(-5%, -10%);
-    }
-	#browseSets article:nth-child(6n + 6){
-		transform: translate(-5%, 5%);
-    }
-	#browseSets article:nth-child(6n + 7){
-		transform: translate(0, -10%);
+    #createAccount #userIcon {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+        background-image: $url_6;
+        background-size: 100% 100%;
     }
 
-    .setPiece img{ 
-	    width: 100%;
-	    height: 100%;
+    #browseSets article:nth-child(6n + 2) {
+        transform: translate(-5%, -10%);
+    }
+
+    #browseSets article:nth-child(6n + 3) {
+        transform: translate(5%, 10%);
+    }
+
+    #browseSets article:nth-child(6n + 4) {
+        transform: translate(0, -10%);
+    }
+
+    #browseSets article:nth-child(6n + 5) {
+        transform: translate(-5%, -10%);
+    }
+
+    #browseSets article:nth-child(6n + 6) {
+        transform: translate(-5%, 5%);
+    }
+
+    #browseSets article:nth-child(6n + 7) {
+        transform: translate(0, -10%);
+    }
+
+    .setPiece img {
+        width: 100%;
+        height: 100%;
     }
 }
