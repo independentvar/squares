@@ -65,22 +65,18 @@ if(localStorage.squareData) {
     squareData = JSON.parse(localStorage.squareData);
 }
 
-function data(data) {
+if (squareData) {
     gridLength = squareData.gridLength;
-	squareWidth = gridWidth/gridLength;
-	createGrid(data);
-}
-
-if(squareData){
-	data(squareData);
+    createGrid(squareData);
 }
 else{
 	createGrid();
 }
 	
-function createGrid(data){	
-	$("#grid").empty();
-	$("#grid").css({"background-image": "url(/Content/images/grid"+gridLength+".png)"});
+function createGrid(data){
+    $("#grid").empty();
+    $("#grid").css({ "background-image": "url(/Content/images/grid" + gridLength + ".png)" });
+    squareWidth = gridWidth / gridLength;
 	var x = 1;
 	var y = 1;
 	for(var i=1; i<=(gridLength*gridLength); i++){

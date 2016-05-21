@@ -235,12 +235,14 @@ function releaseButton(e){
 				}
 			});
 			if(resizeStatus == "enlarging"){
-				squareData.gridLength++;
+			    squareData.gridLength++;
+			    gridLength++;
 			}
 			else if(resizeStatus == "shrinking"){
 			    squareData.gridLength--;
+			    gridLength--;
 			}
-			data(squareData);
+			createGrid(squareData);
 		}
 		
 		resizeButton.finish();
