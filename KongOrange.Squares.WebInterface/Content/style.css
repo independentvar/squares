@@ -1039,7 +1039,8 @@ footer {
     border: none;
     margin-top: 0;
     margin-left: 100px;
-    float: left; }
+    float: left; 
+    cursor: pointer; }
   #piecesContainer {
     height: 160px; }
     #piecesContainer .pieces {
@@ -1059,7 +1060,8 @@ footer {
       display: inline-block;
       margin: 20px 20px 40px 20px;
       border: 15px solid transparent;
-      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
+      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch;
+      cursor: pointer; }
       #browseSection #popularImagesContainer img:nth-child(3) {
         transform: translate(-7%, 15%); }
       #browseSection #popularImagesContainer img:nth-child(4) {
@@ -1070,6 +1072,10 @@ footer {
         transform: translate(5%, 0%); }
       #browseSection #popularImagesContainer img:nth-child(7) {
         transform: translate(5%, 10%); }
+      #browseSection #popularImagesContainer img:hover {
+        border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;
+        -webkit-border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;
+        -o-border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;}
   #aboutSection {
     text-align: center;
     display: block;
