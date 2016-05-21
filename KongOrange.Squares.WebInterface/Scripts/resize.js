@@ -193,10 +193,10 @@ function moveButton(e){
 function releaseButton(e){
 	if(resizeActive){
 		if(resizeStatus == "enlarging" || resizeStatus == "shrinking"){
-			var squareData = {"squares":[]};
+		    squareData.squares = [];
 			$(".pieceHolder").each(function(){
 				if($(this).css("background-image") != "none"){
-					var imgSrc = $(this).css("background-image")
+				    var imgSrc = $(this).css("background-image").replace('url("', '').replace('")', '');
 					var coords = $(this).attr("data-coords");
 					var rotation = $(this).attr("data-rotation")
 					var pieceID = $(this).attr("data-pieceID")
@@ -235,10 +235,10 @@ function releaseButton(e){
 				}
 			});
 			if(resizeStatus == "enlarging"){
-				gridLength++;
+				squareData.gridLength++;
 			}
 			else if(resizeStatus == "shrinking"){
-				gridLength--;
+			    squareData.gridLength--;
 			}
 			data(squareData);
 		}

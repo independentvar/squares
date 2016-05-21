@@ -40,25 +40,33 @@ $(window).on("resize", function(){
 });
 
 squareData = {
+    "setID": 3,
+    "gridLength": gridLength,
 	"squares":[
 	{
 		"coords": "2,2",
-		"imgSrc": "url(\"http://squares.thomasleschley.com/images/tool/3.jpg\")",
+		"imgSrc": "/Content/Images/tool/14.jpg",
 		"rotation": 0,
 		"pieceID": 12
 	},{
 		"coords":"3,2",
-		"imgSrc": "url(\"http://squares.thomasleschley.com/images/tool/7.jpg\")",
+		"imgSrc": "/Content/Images/tool/17.jpg",
 		"rotation": -180,
 		"pieceID": 32
 	},{
 		"coords": "2,3",
-		"imgSrc": "url(\"http://squares.thomasleschley.com/images/tool/3.jpg\")",
+		"imgSrc": "/Content/Images/tool/28.jpg",
 		"rotation": 0,
 		"pieceID": 12
-	}]};
+	}]
+};
 
-function data(data){
+if(localStorage.squareData) {
+    squareData = JSON.parse(localStorage.squareData);
+}
+
+function data(data) {
+    gridLength = squareData.gridLength;
 	squareWidth = gridWidth/gridLength;
 	createGrid(data);
 }
@@ -103,8 +111,10 @@ function createGrid(data){
 			var squareImg = data.squares[i].imgSrc;
 			var rotationDegree = data.squares[i].rotation;
 			var pieceID = data.squares[i].pieceID; 
-			$("[data-coords='"+squareCoords+"']").css({"background-image": squareImg, "transform": "rotate("+rotationDegree+"deg)"}).attr({"data-rotation": rotationDegree, "data-pieceID": pieceID});
+			$("[data-coords='"+squareCoords+"']").css({"background-image": "url('"+squareImg+"')", "transform": "rotate("+rotationDegree+"deg)"}).attr({"data-rotation": rotationDegree, "data-pieceID": pieceID});
 		}
+		squareData.gridLength = gridLength;
+		saveWork();
 	}
 	
 	$(".pieceWrapper, .pieceHolder").width(squareWidth+"px").height(squareWidth+"px");
@@ -121,7 +131,7 @@ function rotatePiece(e){
 			rotateThis.css({"transform": "rotate("+now+"deg)"});
 		}
 	});
-	
+	saveWork();
 }
 
 function selectPiece(e){
@@ -205,6 +215,7 @@ function releasePiece(e){
 				$("[data-coords='"+pieceHolderCoords+"']").css({"background-image": imageSrc, "transform": "rotate("+rotation+"deg)"});
 				$("[data-coords='"+pieceHolderCoords+"']").attr({"data-rotation": rotation, "data-pieceID": pieceID});
 				copiedPiece.remove();
+				saveWork();
 				active = false;
 			});
 		}
@@ -218,4 +229,18 @@ function releasePiece(e){
 }
 
 
+//LOCAL STORAGE
+function saveWork() {
+    squareData.squares = [];
+    $(".pieceHolder").each(function () {
+        if ($(this).css("background-image") != "none") {
+            var imgSrc = $(this).css("background-image").replace('url("', '').replace('")', '');
+            var coords = $(this).attr("data-coords");
+            var rotation = $(this).attr("data-rotation")
+            var pieceID = $(this).attr("data-pieceID")
+            squareData.squares.push({ "coords": coords, "imgSrc": imgSrc, "rotation": rotation, "pieceID": pieceID });
+        }
+    });
+    localStorage.squareData = JSON.stringify(squareData);
+}
 
