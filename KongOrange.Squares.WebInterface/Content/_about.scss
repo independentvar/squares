@@ -148,6 +148,12 @@ $url_1: url('/Content/Images/pieceBorder.png');
 }
 
 @media only screen and (min-width: 1150px) {
+    .aboutSocialIcon{
+        transition: all 600ms ease-in-out;
+        &:hover{
+            transform: rotate(360deg);
+        }
+    }
     #art1 {
         display: block;
         left: 45px;

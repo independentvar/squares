@@ -156,6 +156,10 @@ table {
     display: block; } }
 
 @media only screen and (min-width: 1150px) {
+  .aboutSocialIcon {
+    transition: all 600ms ease-in-out; }
+    .aboutSocialIcon:hover {
+      transform: rotate(360deg); }
   #art1 {
     display: block;
     left: 45px;
@@ -452,9 +456,15 @@ footer {
   margin: 0 auto;
   height: auto;
   text-align: center; }
-  footer img {
+  footer a img {
     width: 40px;
     margin: 5px 0; }
+    footer a img:nth-child(2) {
+      display: none; }
+  footer a:hover img:first-child {
+    display: none; }
+  footer a:hover img:nth-child(2) {
+    display: inline-block; }
 
 .desktop {
   display: none; }
@@ -584,7 +594,8 @@ footer {
     display: inline-block;
     margin: 10px 3%;
     border: 12px solid transparent;
-    border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
+    border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch;
+    cursor: pointer; }
     #browseSection #popularImagesContainer img:nth-child(3) {
       transform: translate(-7%, 15%); }
     #browseSection #popularImagesContainer img:nth-child(4) {
@@ -595,6 +606,12 @@ footer {
       transform: translate(5%, 0%); }
     #browseSection #popularImagesContainer img:nth-child(7) {
       transform: translate(5%, 10%); }
+    #browseSection #popularImagesContainer img:hover {
+      -webkit-border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;
+      /* Safari 3.1-5 */
+      -o-border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;
+      /* Opera 11-12.1 */
+      border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch; }
 
 #aboutSection {
   display: none; }
@@ -1039,7 +1056,7 @@ footer {
     border: none;
     margin-top: 0;
     margin-left: 100px;
-    float: left; 
+    float: left;
     cursor: pointer; }
   #piecesContainer {
     height: 160px; }
@@ -1060,8 +1077,7 @@ footer {
       display: inline-block;
       margin: 20px 20px 40px 20px;
       border: 15px solid transparent;
-      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch;
-      cursor: pointer; }
+      border-image: url("/Content/Images/MainGalleryBorder.png") 20 stretch; }
       #browseSection #popularImagesContainer img:nth-child(3) {
         transform: translate(-7%, 15%); }
       #browseSection #popularImagesContainer img:nth-child(4) {
@@ -1072,10 +1088,6 @@ footer {
         transform: translate(5%, 0%); }
       #browseSection #popularImagesContainer img:nth-child(7) {
         transform: translate(5%, 10%); }
-      #browseSection #popularImagesContainer img:hover {
-        border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;
-        -webkit-border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;
-        -o-border-image: url(/Content/Images/MainGalleryBorderBold.png) 20 stretch;}
   #aboutSection {
     text-align: center;
     display: block;

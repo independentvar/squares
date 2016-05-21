@@ -224,9 +224,26 @@ footer {
     height: auto;
     text-align: center;
     
-    img{
-        width: 40px;
-        margin: 5px 0;
+    a{
+        img{
+            width: 40px;
+            margin: 5px 0;
+
+            &:nth-child(2){
+                display: none;
+            }
+        }
+        
+        &:hover{
+            img{
+                &:first-child{
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
 
@@ -661,8 +678,9 @@ footer {
             height: 120px;
             left: 105%;
             border: 8px solid transparent;
-            border-image: $url_14 12 stretch;
+            border-image: $url_14 12 stretch;  
         }
+
     }
 
     #browseSection {
