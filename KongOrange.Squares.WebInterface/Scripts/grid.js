@@ -134,25 +134,22 @@ function selectPiece(e){
 	e.preventDefault();
 	$("#grid .pieces").finish();
 	$(".pieceHolder").finish();
-	if(!mouseDown && !active){
-		var triggerClass = $(this).attr("class");
-		var coords = $(this).attr("data-coords");
-		var rotation = $(this).attr("data-rotation");
+	if(!active){
 		pieceHolderCoords = 0;
 		active = true;
 		mouseDown = true;
-		copiedPiece = $(this).clone().appendTo("#canvas").removeAttr("id");
+		copiedPiece = $(this).clone().appendTo("#grid").removeAttr("id");
+		var triggerClass = $(this).attr("class");
 		if(triggerClass.indexOf("pieceHolder") >= 0){
 			$(this).css({"background-image": "none", "transform": "rotate(0deg)"});
-			pieceHolderCoords = coords; 
+			pieceHolderCoords =  $(this).attr("data-coords");
 			copiedPiece.css({"background-color": "white"});
 		}
 		else{
 			copiedPiece.css({"transform": "rotate(0deg)"});
 		}
 	   
-		var parentOffset = $("#grid").offset(); //coordinates relative to the grid
-		
+		parentOffset = $("#grid").offset(); //grid offset from the top left corner of the document
 		if(device == "touch"){
 			var relX = e.originalEvent.changedTouches[0].pageX - parentOffset.left;  //X coords of touchdown click relative to grid hence the offset substraction
 			var relY = e.originalEvent.changedTouches[0].pageY - parentOffset.top;  //Y coords of touchdown relative to grid
@@ -168,7 +165,6 @@ function selectPiece(e){
 	
 function movePiece(e){
 	if(mouseDown){
-		var parentOffset = $("#grid").offset();
 		if(device == "touch"){
 			var relX = e.originalEvent.changedTouches[0].pageX - parentOffset.left;
 			var relY = e.originalEvent.changedTouches[0].pageY - parentOffset.top;
