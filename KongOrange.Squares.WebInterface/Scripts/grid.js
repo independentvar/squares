@@ -109,7 +109,6 @@ function createGrid(data){
 			var pieceID = data.squares[i].pieceID; 
 			$("[data-coords='"+squareCoords+"']").css({"background-image": "url('"+squareImg+"')", "transform": "rotate("+rotationDegree+"deg)"}).attr({"data-rotation": rotationDegree, "data-pieceID": pieceID});
 		}
-		squareData.gridLength = gridLength;
 		saveWork();
 	}
 	
@@ -163,7 +162,8 @@ function selectPiece(e){
 	}
 }
 	
-function movePiece(e){
+function movePiece(e) {
+    e.preventDefault();
 	if(mouseDown){
 		if(device == "touch"){
 			var relX = e.originalEvent.changedTouches[0].pageX - parentOffset.left;
