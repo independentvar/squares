@@ -41,9 +41,9 @@ $(window).on("resize", function(){
 
 squareData = {
     "setID": 3,
-    "gridLength": gridLength,
+    "gridLength": 3,
 	"squares":[
-	{
+	/*{
 		"coords": "2,2",
 		"imgSrc": "/Content/Images/tool/14.jpg",
 		"rotation": 0,
@@ -58,20 +58,16 @@ squareData = {
 		"imgSrc": "/Content/Images/tool/28.jpg",
 		"rotation": 0,
 		"pieceID": 12
-	}]
+	}*/]
 };
 
 if(localStorage.squareData) {
     squareData = JSON.parse(localStorage.squareData);
 }
 
-if (squareData) {
-    gridLength = squareData.gridLength;
-    createGrid(squareData);
-}
-else{
-	createGrid();
-}
+gridLength = squareData.gridLength;
+createGrid(squareData);
+
 	
 function createGrid(data){
     $("#grid").empty();
@@ -209,6 +205,19 @@ function releasePiece(e){
 				copiedPiece.remove();
 				saveWork();
 				active = false;
+                
+                //STUFF 
+				//$("#grid").css("background-image", "none");
+				html2canvas($("#grid"), {
+				    onrendered: function (canvas) {
+				        // canvas is the final rendered <canvas> element
+				        var myImage = canvas.toDataURL("image/png");
+				        //console.log(myImage);
+				        //window.open(myImage);
+				    }
+				});
+
+				
 			});
 		}
 		else{

@@ -14,7 +14,8 @@ namespace KongOrange.Squares.WebInterface
             bundles.Add(new ScriptBundle("~/bundles/squareTool").Include(
                         "~/Scripts/grid.js",
                         "~/Scripts/resize.js",
-                        "~/Scripts/carousel.js"));
+                        "~/Scripts/carousel.js",
+                        "~/Scripts/html2canvas.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/site").Include(
                         "~/Scripts/mobileMenu.js",
