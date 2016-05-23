@@ -162,9 +162,9 @@ function selectPiece(e){
 	}
 }
 	
-function movePiece(e) {
-    e.preventDefault();
-	if(mouseDown){
+function movePiece(e){
+    if (mouseDown) {
+        e.preventDefault();
 		if(device == "touch"){
 			var relX = e.originalEvent.changedTouches[0].pageX - parentOffset.left;
 			var relY = e.originalEvent.changedTouches[0].pageY - parentOffset.top;
