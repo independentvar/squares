@@ -19,7 +19,6 @@ var i=0;
 function floatLeft(){
 	i++;
 	var random=Math.floor((Math.random() * 3000) + 7000);
-	var left = $('#piece_'+i).offset().left;
 	$("#piece_"+i).animate({"left":"-20%"},random, function(){
     	$(this).css({"left": "110%"});
 	});

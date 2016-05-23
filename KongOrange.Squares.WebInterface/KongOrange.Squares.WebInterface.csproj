@@ -212,6 +212,7 @@
     <Content Include="Content\Images\button_br.png" />
     <Content Include="Content\Images\button_tl.png" />
     <Content Include="Content\Images\button_tr.png" />
+    <Content Include="Content\Images\downArrow.png" />
     <Content Include="Content\Images\facebook.png" />
     <Content Include="Content\Images\grid2.png" />
     <Content Include="Content\Images\grid3.png" />
@@ -431,6 +432,7 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50574</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
