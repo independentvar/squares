@@ -4,13 +4,13 @@ Proof of concept for Kong Orange
 http://kongorangesquares.azurewebsites.net/
 
 ## Users
-Admin
-admin@email.com
-bobcat_01
+### Admin
+* admin@email.com
+* bobcat_01
 
-Normal
-julie@email.com
-bobcat_01
+### Normal
+* julie@email.com
+* bobcat_01
 
 ## How to run locally
 1. Restore NuGet packages.
