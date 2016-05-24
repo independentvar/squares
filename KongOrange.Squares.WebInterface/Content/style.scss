@@ -356,6 +356,9 @@ footer {
 #playButton {
     display: none;
 }
+#saveButton{
+    display: none;
+}
 
 #piecesContainer {
     padding-top: 25px;
@@ -726,6 +729,7 @@ footer {
 
     #profileMain {
         font-size: 1.8em;
+        margin-bottom: 50px;
     }
 
     .setPiecesContainer .setPiece {
@@ -796,27 +800,29 @@ footer {
         }
     }
 
-    #browseCombinations article:nth-child(5n + 2) {
-        transform: translate(0, 10%);
-        margin-left: 5%;
-    }
+    #browseCombinations{
+        article:nth-child(5n + 2) {
+            transform: translate(0, 10%);
+            margin-left: 5%;
+        }
 
-    article:nth-child(5n + 3) {
-        transform: translate(-5%, -10%);
-    }
+        article:nth-child(5n + 3) {
+            transform: translate(-5%, -10%);
+        }
 
-    article:nth-child(5n + 4) {
-        transform: translate(-5%, -10%);
-    }
+        article:nth-child(5n + 4) {
+            transform: translate(-5%, -10%);
+        }
 
-    article:nth-child(5n + 5) {
-        transform: translate(-5%, -10%);
-        margin-left: 23%;
-    }
+        article:nth-child(5n + 5) {
+            transform: translate(-5%, -10%);
+            margin-left: 23%;
+        }
 
-    article:nth-child(5n + 6) {
-        transform: translate(-5%, -10%);
-        margin-right: 23%;
+        article:nth-child(5n + 6) {
+            transform: translate(-5%, -10%);
+            margin-right: 23%;
+        }
     }
 }
 
@@ -1096,6 +1102,23 @@ footer {
         float: left;
         cursor: pointer;
     }
+    #saveButton{
+        display: block;
+        border: none;
+        background-color: transparent;
+        float: left;
+        margin-left: 100px;
+        margin-top: 50px;
+        height: auto;
+        font-family: INHERIT;
+        font-size: 1.3em;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    
+    }
+
 
     #piecesContainer {
         height: 160px;

@@ -205,19 +205,6 @@ function releasePiece(e){
 				copiedPiece.remove();
 				saveWork();
 				active = false;
-                
-                //STUFF 
-				//$("#grid").css("background-image", "none");
-				html2canvas($("#grid"), {
-				    onrendered: function (canvas) {
-				        // canvas is the final rendered <canvas> element
-				        var myImage = canvas.toDataURL("image/png");
-				        //console.log(myImage);
-				        //window.open(myImage);
-				    }
-				});
-
-				
 			});
 		}
 		else{
@@ -245,3 +232,19 @@ function saveWork() {
     localStorage.squareData = JSON.stringify(squareData);
 }
 
+
+$("#saveButton").on("click", saveImage);
+function saveImage() {
+    //STUFF 
+    var backgroundImage = $("#grid").css("background-image");
+    $("#grid").css("background-image", "none");
+    html2canvas($("#grid"), {
+        onrendered: function (canvas) {
+            // canvas is the final rendered <canvas> element
+            var myImage = canvas.toDataURL("image/png");
+            //console.log(myImage);
+            window.open(myImage);
+            $("#grid").css("background-image", backgroundImage);
+        }
+    });
+}

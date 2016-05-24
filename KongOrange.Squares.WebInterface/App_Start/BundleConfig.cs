@@ -15,7 +15,7 @@ namespace KongOrange.Squares.WebInterface
                         "~/Scripts/grid.js",
                         "~/Scripts/resize.js",
                         "~/Scripts/carousel.js",
-                        "~/Scripts/html2canvas.js"));
+                        "~/Scripts/html2canvas.js")); //this is a library for saving a canvas as an image. It is a work in progress and therefore not included in the report.
 
             bundles.Add(new ScriptBundle("~/bundles/site").Include(
                         "~/Scripts/mobileMenu.js",
